@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You! | Affinity Cellular</title>
+<style>
+  :root{
+    --navy:#0d2542;
+    --navy-deep:#0a1e37;
+    --red:#e01b22;
+    --red-dark:#c8151c;
+    --text:#333b45;
+    --muted:#5d6a78;
+    --border:#e4e8ed;
+    --gold:#f6b21b;
+    --blue-tint:#eaf1f9;
+    --card-shadow:0 2px 10px rgba(13,37,66,.08);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--text);
+    background:#fff;
+    line-height:1.55;
+  }
+  img,svg{max-width:100%;display:block;}
+  a{text-decoration:none;color:inherit;}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 24px;}
+
+  /* ============ TOP BAR ============ */
+  .topbar{background:var(--navy);color:#fff;padding:14px 0;}
+  .topbar-inner{
+    max-width:1160px;margin:0 auto;padding:0 24px;
+    display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;
+  }
+  .brand{display:flex;align-items:center;gap:20px;}
+  .logo{line-height:1.02;}
+  .logo .l1{font-size:30px;font-weight:800;letter-spacing:.2px;}
+  .logo .l1 sup{font-size:11px;font-weight:600;}
+  .logo .l2{font-size:15.5px;font-weight:400;letter-spacing:3.5px;color:#dbe4ee;}
+  .logo .l2 sup{font-size:9px;letter-spacing:0;}
+  .brand-divider{width:1px;height:44px;background:rgba(255,255,255,.28);}
+  .years-badge{display:flex;align-items:center;gap:10px;}
+  .years-coin{
+    width:52px;height:52px;border-radius:50%;flex:0 0 auto;
+    background:radial-gradient(circle at 35% 30%,#ffd75e,#f0a90e 70%);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    color:var(--navy);font-weight:800;box-shadow:0 0 0 3px rgba(246,178,27,.35);
+    position:relative;
+  }
+  .years-coin::before{
+    content:"";position:absolute;inset:3px;border:1.5px dashed rgba(13,37,66,.55);border-radius:50%;
+  }
+  .years-coin .n{font-size:19px;line-height:1;}
+  .years-coin .y{font-size:6.5px;letter-spacing:.6px;line-height:1.4;}
+  .years-text{font-size:13px;font-weight:800;line-height:1.25;letter-spacing:.4px;}
+  .top-phone{text-align:center;}
+  .top-phone .speak{font-size:13px;font-weight:600;color:#e8eef6;margin-bottom:3px;}
+  .top-phone .num{
+    display:flex;align-items:center;justify-content:center;gap:9px;
+    font-size:28px;font-weight:800;letter-spacing:.5px;
+  }
+  .top-phone .hours{font-size:12.5px;color:#c9d5e3;margin-top:2px;}
+  .btn-callnow{
+    background:var(--red);border-radius:8px;padding:10px 22px;text-align:center;
+    box-shadow:0 3px 10px rgba(224,27,34,.35);transition:background .15s;display:block;
+  }
+  .btn-callnow:hover{background:var(--red-dark);}
+  .btn-callnow .t1{
+    display:flex;align-items:center;justify-content:center;gap:8px;
+    color:#fff;font-size:17px;font-weight:800;letter-spacing:.4px;
+  }
+  .btn-callnow .t2{color:#ffd9db;font-size:11.5px;font-weight:600;margin-top:1px;}
+
+  /* ============ HERO ============ */
+  .hero{position:relative;background:#fff;overflow:hidden;}
+  .hero-media{position:absolute;top:0;right:0;bottom:0;width:57%;}
+  .hero-media > img{width:100%;height:100%;object-fit:cover;object-position:center 22%;}
+  .hero-fade{
+    position:absolute;inset:0;pointer-events:none;
+    background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.55) 7%,rgba(255,255,255,0) 22%);
+  }
+  .hero-copy{
+    position:relative;z-index:1;max-width:46%;
+    padding:42px 0 46px;
+  }
+  .hero h1{
+    color:var(--navy);font-size:64px;font-weight:900;letter-spacing:.5px;line-height:1.02;
+    margin-bottom:14px;
+  }
+  .hero .received{font-size:23px;font-weight:800;color:#1d2733;margin-bottom:12px;}
+  .hero .closer{
+    color:var(--red);font-size:30px;font-weight:900;line-height:1.18;text-transform:uppercase;
+    margin-bottom:16px;max-width:520px;
+  }
+  .hero .lede{font-size:17.5px;color:#3c4652;max-width:460px;margin-bottom:26px;}
+  .call-callout{
+    border:2px solid #f0b9bb;border-radius:12px;padding:22px 24px;
+    display:flex;align-items:center;gap:20px;background:#fff;max-width:540px;
+    box-shadow:var(--card-shadow);
+  }
+  .call-callout .icon{
+    width:64px;height:64px;border-radius:50%;background:var(--navy);flex:0 0 auto;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .call-callout .fastest{color:var(--navy);font-size:16px;font-weight:800;letter-spacing:.3px;}
+  .call-callout .rightnow{color:var(--red);font-size:33px;font-weight:900;line-height:1.05;margin:2px 0 6px;}
+  .call-callout .sub{font-size:14.5px;color:#4a5563;}
+
+  .starburst{
+    position:absolute;top:16px;right:26px;width:118px;text-align:center;z-index:2;
+  }
+  .starburst .burst{
+    width:104px;height:104px;margin:0 auto;position:relative;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    color:var(--navy);
+  }
+  .starburst .burst svg{position:absolute;inset:0;}
+  .starburst .burst .inner{position:relative;z-index:1;line-height:1;}
+  .starburst .burst .n{font-size:34px;font-weight:900;}
+  .starburst .burst .y{font-size:12px;font-weight:800;letter-spacing:1px;}
+  .starburst .ribbon{
+    background:var(--navy);color:#fff;font-size:10.5px;font-weight:800;letter-spacing:.6px;
+    padding:5px 10px;margin-top:-8px;position:relative;z-index:1;
+    clip-path:polygon(0 0,100% 0,100% 100%,50% 78%,0 100%);
+    padding-bottom:12px;
+  }
+  .offer-card{
+    position:absolute;right:24px;bottom:22px;width:216px;background:#fff;border-radius:12px;
+    box-shadow:0 8px 28px rgba(13,37,66,.22);padding:18px 16px;text-align:center;z-index:2;
+  }
+  .offer-card .lto{color:var(--navy);font-size:13px;font-weight:800;letter-spacing:.4px;}
+  .offer-card .m3{color:var(--navy);font-size:27px;font-weight:900;letter-spacing:.5px;margin-top:6px;}
+  .offer-card .free{color:var(--red);font-size:52px;font-weight:900;line-height:.95;}
+  .offer-card .free sup{font-size:20px;vertical-align:baseline;position:relative;top:-0.85em;}
+  .offer-card .unl{
+    color:var(--navy);font-size:14px;font-weight:800;line-height:1.25;margin-top:4px;
+    padding-bottom:10px;border-bottom:1px solid var(--border);
+  }
+  .offer-card .asl{font-size:12.5px;color:#4a5563;margin-top:10px;}
+  .offer-card .price{color:var(--navy);font-weight:900;font-size:52px;line-height:1;}
+  .offer-card .price .cur{font-size:26px;vertical-align:24px;}
+  .offer-card .price .mo{font-size:16px;font-weight:800;}
+  .offer-card .after{color:var(--navy);font-size:11.5px;font-weight:800;letter-spacing:.5px;margin-top:2px;}
+
+  /* ============ COUNTDOWN BAR ============ */
+  .cd-bar{background:var(--navy);color:#fff;padding:26px 0;}
+  .cd-inner{
+    max-width:1160px;margin:0 auto;padding:0 24px;
+    display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap;
+  }
+  .cd-left{display:flex;align-items:center;gap:16px;min-width:260px;}
+  .cd-left .txt .t1{font-size:19px;font-weight:800;letter-spacing:.3px;}
+  .cd-left .txt .t2{font-size:13.5px;color:#c9d5e3;max-width:220px;}
+  .cd-mid{text-align:center;}
+  .cd-mid .exp{font-size:13px;font-weight:800;letter-spacing:.8px;margin-bottom:8px;}
+  .cd-static{font-size:18px;font-weight:700;line-height:1.35;color:#fff;}
+  .cd-units{display:flex;align-items:center;gap:8px;justify-content:center;}
+  .cd-box{
+    background:#fff;color:var(--navy);border-radius:8px;width:66px;padding:8px 0 6px;text-align:center;
+  }
+  .cd-box .v{font-size:30px;font-weight:900;line-height:1;}
+  .cd-box .l{font-size:10px;font-weight:800;letter-spacing:1px;color:#5d6a78;margin-top:3px;}
+  .cd-colon{color:var(--red);font-size:26px;font-weight:900;line-height:1;padding-bottom:14px;}
+  .cd-cta{
+    background:var(--red);border-radius:10px;padding:12px 24px;text-align:center;display:block;
+    box-shadow:0 4px 14px rgba(0,0,0,.25);transition:background .15s;
+  }
+  .cd-cta:hover{background:var(--red-dark);}
+  .cd-cta .n{
+    display:flex;align-items:center;justify-content:center;gap:9px;
+    font-size:23px;font-weight:900;color:#fff;letter-spacing:.5px;
+  }
+  .cd-cta .s{font-size:12px;font-weight:800;color:#fff;letter-spacing:.3px;margin-top:2px;}
+
+  /* ============ SECTION HEADINGS ============ */
+  .sec-head{
+    display:flex;align-items:center;gap:22px;margin-bottom:34px;
+  }
+  .sec-head::before,.sec-head::after{content:"";flex:1;height:1px;background:#c9d2dc;}
+  .sec-head h2{
+    color:var(--navy);font-size:26px;font-weight:900;letter-spacing:.4px;text-align:center;
+    text-transform:uppercase;white-space:normal;
+  }
+
+  /* ============ TESTIMONIALS ============ */
+  .testimonials{padding:52px 0 44px;}
+  .t-row{display:flex;align-items:center;gap:14px;}
+  .t-arrow{
+    background:none;border:none;color:var(--navy);cursor:pointer;flex:0 0 auto;padding:6px;
+  }
+  .t-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;flex:1;}
+  .t-card{
+    border:1px solid var(--border);border-radius:12px;padding:24px 22px 20px;background:#fff;
+    box-shadow:var(--card-shadow);display:flex;flex-direction:column;
+  }
+  .stars{display:flex;gap:4px;justify-content:center;margin-bottom:16px;}
+  .star{width:22px;height:22px;fill:var(--gold);}
+  .t-quote{display:flex;gap:10px;font-size:15px;color:#39434f;flex:1;}
+  .t-quote .qm{color:#b9c3cf;font-size:40px;font-weight:900;line-height:.8;font-family:Georgia,serif;flex:0 0 auto;}
+  .t-meta{display:flex;align-items:center;justify-content:flex-end;gap:14px;margin-top:16px;}
+  .t-meta .who{text-align:right;}
+  .t-meta .name{color:var(--navy);font-weight:800;font-size:16px;}
+  .t-meta .loc{color:var(--muted);font-size:13.5px;}
+  .avatar{
+    width:64px;height:64px;border-radius:50%;flex:0 0 auto;overflow:hidden;
+    background:linear-gradient(160deg,#d5dee8,#b9c6d4);
+  }
+  .avatar img{width:100%;height:100%;object-fit:cover;}
+  .guarantee{
+    display:flex;align-items:center;justify-content:center;gap:10px;margin-top:34px;
+    font-size:16.5px;color:#39434f;
+  }
+  .guarantee b{color:var(--navy);font-weight:800;}
+  .guarantee a{color:var(--red);font-weight:700;text-decoration:underline;}
+
+  /* ============ WHY SMART CHOICE ============ */
+  .why{padding:14px 0 46px;}
+  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);}
+  .why-item{
+    display:flex;gap:16px;padding:6px 26px;align-items:flex-start;
+    border-left:1px solid #dde3ea;
+  }
+  .why-item:first-child{border-left:none;padding-left:0;}
+  .why-item .icon{flex:0 0 auto;color:var(--red);}
+  .why-item h3{color:var(--navy);font-size:16px;font-weight:800;line-height:1.3;margin-bottom:5px;}
+  .why-item p{font-size:14px;color:#4a5563;line-height:1.45;}
+
+  /* ============ ORDER ONLINE ============ */
+  .order{padding:6px 0 46px;}
+  .order-box{
+    background:var(--blue-tint);border-radius:16px;padding:36px 40px;
+    display:grid;grid-template-columns:1.1fr auto 1.1fr;gap:36px;align-items:center;
+  }
+  .order-left .head{display:flex;gap:16px;align-items:flex-start;}
+  .order-left .cart{color:var(--navy);flex:0 0 auto;margin-top:2px;}
+  .order-left h3{color:var(--navy);font-size:23px;font-weight:800;margin-bottom:4px;}
+  .order-left p{font-size:15px;color:#4a5563;max-width:300px;}
+  .btn-order{
+    display:inline-flex;align-items:center;gap:10px;margin-top:20px;margin-left:56px;
+    background:var(--navy);color:#fff;font-size:15px;font-weight:800;letter-spacing:.5px;
+    padding:14px 26px;border-radius:8px;transition:background .15s;
+  }
+  .btn-order:hover{background:var(--navy-deep);}
+  .phone-mock{
+    width:150px;height:220px;position:relative;justify-self:center;
+    filter:drop-shadow(0 14px 22px rgba(13,37,66,.25));
+  }
+  .phone-mock img{
+    width:100%;height:100%;object-fit:cover;object-position:center 30%;
+    border-radius:24px;
+  }
+  .order-right h3{color:var(--red);font-size:23px;font-weight:900;line-height:1.2;margin-bottom:8px;}
+  .order-right p{font-size:15.5px;color:#39434f;max-width:360px;}
+  .btn-hurry{
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;margin-top:18px;
+    background:#fff;border:2px solid var(--red);color:var(--red);
+    font-size:24px;font-weight:900;letter-spacing:.5px;
+    padding:12px 34px;border-radius:10px;transition:all .15s;
+  }
+  .btn-hurry:hover{background:var(--red);color:#fff;}
+  .btn-hurry:hover svg{fill:#fff;}
+  .btn-hurry svg{fill:var(--red);transition:fill .15s;}
+
+  /* ============ TRUST FOOTER ============ */
+  .trust{padding:8px 0 30px;}
+  .trust-grid{display:grid;grid-template-columns:repeat(4,1fr);}
+  .trust-item{
+    display:flex;gap:14px;padding:10px 24px;align-items:flex-start;
+    border-left:1px solid #dde3ea;
+  }
+  .trust-item:first-child{border-left:none;padding-left:0;}
+  .trust-item .icon{color:var(--navy);flex:0 0 auto;}
+  .trust-item h4{color:var(--navy);font-size:14.5px;font-weight:800;line-height:1.3;margin-bottom:4px;}
+  .trust-item p{font-size:13px;color:#4a5563;line-height:1.45;}
+  .mini-stars{display:flex;gap:2px;margin:4px 0 4px;}
+  .mini-stars .star{width:15px;height:15px;}
+
+  .disclaimer{
+    max-width:1160px;margin:0 auto;padding:6px 24px 26px;
+    font-size:11.5px;color:#8a94a0;line-height:1.5;
+  }
+  .disclaimer p{margin-bottom:8px;}
+  .disclaimer a{color:#5d6a78;text-decoration:underline;}
+  .d-links{font-size:13.5px;font-weight:800;margin-bottom:12px;}
+  .d-links a{color:var(--navy);text-decoration:underline;}
+  .footrule{height:10px;background:var(--navy);}
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:1020px){
+    .hero h1{font-size:52px;}
+    .hero-copy{max-width:52%;}
+    .hero-media{width:52%;}
+    .starburst{width:96px;}
+    .starburst .burst{width:86px;height:86px;}
+    .starburst .burst .n{font-size:27px;}
+    .why-grid,.trust-grid{grid-template-columns:repeat(2,1fr);gap:22px 0;}
+    .why-item:nth-child(3),.trust-item:nth-child(3){border-left:none;padding-left:0;}
+    .t-cards{grid-template-columns:1fr;}
+    .order-box{grid-template-columns:1fr;text-align:center;}
+    .order-left .head{justify-content:center;text-align:left;}
+    .btn-order{margin-left:0;}
+  }
+  @media (max-width:760px){
+    .order-box{padding:28px 18px;}
+    .btn-hurry{font-size:19px;white-space:nowrap;padding:12px 22px;}
+    .call-callout{flex-direction:column;text-align:center;gap:14px;padding:20px 18px;}
+    .call-callout .rightnow{font-size:27px;}
+    .guarantee{align-items:flex-start;text-align:left;}
+    .guarantee svg{flex:0 0 auto;margin-top:2px;}
+    .cd-cta .n{font-size:20px;white-space:nowrap;}
+    .topbar-inner{justify-content:center;text-align:center;}
+    .hero-media{position:relative;width:100%;}
+    .hero-media > img{height:340px;}
+    .hero-fade{display:none;}
+    .hero-copy{max-width:100%;padding:30px 0 36px;}
+    .hero h1{font-size:46px;}
+    .hero .closer{font-size:25px;}
+    .cd-inner{justify-content:center;text-align:center;}
+    .why-grid,.trust-grid{grid-template-columns:1fr;}
+    .why-item,.trust-item{border-left:none;padding-left:0;}
+    .offer-card{position:relative;right:auto;bottom:auto;width:auto;margin:-46px 16px 18px;z-index:2;}
+    .t-arrow{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= TOP BAR ================= -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <div class="logo">
+        <div class="l1">Affinity<sup>&reg;</sup></div>
+        <div class="l2">CELLULAR<sup>&reg;</sup></div>
+      </div>
+      <div class="brand-divider"></div>
+      <div class="years-badge">
+        <div class="years-coin"><span class="n">15</span><span class="y">YEARS</span></div>
+        <div class="years-text">OF TRUSTED<br>SERVICE</div>
+      </div>
+    </div>
+    <div class="top-phone">
+      <div class="speak">Speak with a U.S.-Based Specialist</div>
+      <a class="num" href="tel:8557638221">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="#fff"><path d="M6.6 10.8c1.4 2.7 3.6 5 6.4 6.4l2.1-2.1c.3-.3.7-.4 1-.2 1.1.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4.3c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.3 1.9z"/><path d="M15.5 3.5c2.6.8 4.6 2.8 5.3 5.3M15 6.8c1.2.4 2.1 1.3 2.4 2.4" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>
+        855-763-8221
+      </a>
+      <div class="hours">Mon&ndash;Fri 8am&ndash;8pm CT &nbsp;|&nbsp; Sat&ndash;Sun 10am&ndash;7pm CT</div>
+    </div>
+    <a class="btn-callnow" href="tel:8557638221">
+      <span class="t1">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="#fff"><path d="M6.6 10.8c1.4 2.7 3.6 5 6.4 6.4l2.1-2.1c.3-.3.7-.4 1-.2 1.1.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4.3c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.3 1.9z"/></svg>
+        CALL NOW
+      </span>
+      <span class="t2">Lock In Your 3 Free Months!</span>
+    </a>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-media">
+    <img src="images/hero-couple.jpg" alt="Happy senior couple looking at a smartphone together">
+    <div class="hero-fade"></div>
+    <div class="starburst">
+      <div class="burst">
+        <svg viewBox="0 0 100 100">
+          <polygon fill="#fff" points="50,0 58,10 70,4 74,16 87,14 86,27 99,29 93,40 100,50 93,60 99,71 86,73 87,86 74,84 70,96 58,90 50,100 42,90 30,96 26,84 13,86 14,73 1,71 7,60 0,50 7,40 1,29 14,27 13,14 26,16 30,4 42,10"/>
+          <g transform="translate(50,50) scale(0.86) translate(-50,-50)"><polygon fill="#f6b21b" points="50,0 58,10 70,4 74,16 87,14 86,27 99,29 93,40 100,50 93,60 99,71 86,73 87,86 74,84 70,96 58,90 50,100 42,90 30,96 26,84 13,86 14,73 1,71 7,60 0,50 7,40 1,29 14,27 13,14 26,16 30,4 42,10"/></g>
+          <circle cx="50" cy="50" r="32" fill="#ffffff"/>
+        </svg>
+        <div class="inner"><div class="n">15</div><div class="y">YEARS</div></div>
+      </div>
+      <div class="ribbon">OF TRUSTED<br>SERVICE</div>
+    </div>
+    <div class="offer-card">
+      <div class="lto">LIMITED TIME OFFER</div>
+      <div class="m3">3 MONTHS</div>
+      <div class="free">FREE<sup>*</sup></div>
+      <div class="unl">UNLIMITED SERVICE<br>ON ONE LINE</div>
+      <div class="asl">Plans starting as low as</div>
+      <div class="price"><span class="cur">$</span>15<span class="mo">/mo.</span></div>
+      <div class="after">AFTER 3 MONTHS</div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="hero-copy">
+      <h1>THANK YOU!</h1>
+      <div class="received">Your Information Was Received.</div>
+      <div class="closer">You&rsquo;re One Step Closer to 3&nbsp;Months of Free Service!</div>
+      <p class="lede">Our team is reviewing your information now. The fastest way to get started is to speak with a one of our U.S.-based specialists.</p>
+      <div class="call-callout">
+        <div class="icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="#fff"><path d="M6.6 10.8c1.4 2.7 3.6 5 6.4 6.4l2.1-2.1c.3-.3.7-.4 1-.2 1.1.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4.3c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.3 1.9z"/></svg>
+        </div>
+        <div>
+          <div class="fastest">THE FASTEST WAY TO GET STARTED IS TO</div>
+          <div class="rightnow">CALL RIGHT NOW!</div>
+          <div class="sub">Our U.S.-based team is standing by to help you take advantage of your 3 FREE months.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= COUNTDOWN ================= -->
+<section class="cd-bar">
+  <div class="cd-inner">
+    <div class="cd-left">
+      <svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><circle cx="12" cy="14" r="8"/><path d="M12 14l3-3M12 9v1M10 2h4M12 2v2M19 7l1.2-1.2M4.8 5.8L6 7" stroke-linecap="round"/><circle cx="12" cy="14" r="1.4" fill="#fff"/></svg>
+      <div class="txt">
+        <div class="t1">THIS OFFER WON&rsquo;T LAST!</div>
+        <div class="t2">Thousands of seniors are switching every day.</div>
+      </div>
+    </div>
+    <div class="cd-mid">
+      <div class="exp">OFFER EXPIRES IN:</div>
+      <div class="cd-units">
+        <div class="cd-box"><div class="v" id="cd-d">02</div><div class="l">DAYS</div></div>
+        <div class="cd-colon">:</div>
+        <div class="cd-box"><div class="v" id="cd-h">14</div><div class="l">HRS</div></div>
+        <div class="cd-colon">:</div>
+        <div class="cd-box"><div class="v" id="cd-m">37</div><div class="l">MIN</div></div>
+        <div class="cd-colon">:</div>
+        <div class="cd-box"><div class="v" id="cd-s">26</div><div class="l">SEC</div></div>
+      </div>
+    </div>
+    <a class="cd-cta" href="tel:8557638221">
+      <span class="n">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M6.6 10.8c1.4 2.7 3.6 5 6.4 6.4l2.1-2.1c.3-.3.7-.4 1-.2 1.1.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4.3c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.3 1.9z"/></svg>
+        855-763-8221
+      </span>
+      <span class="s">CALL NOW TO LOCK IN<br>YOUR 3 FREE MONTHS!</span>
+    </a>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section class="testimonials">
+  <div class="wrap">
+    <div class="sec-head"><h2>See Why Seniors Are Switching to Affinity Cellular</h2></div>
+    <div class="t-row">
+      <button class="t-arrow" id="t-prev" aria-label="Previous testimonial">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="t-cards" id="t-cards"></div>
+      <button class="t-arrow" id="t-next" aria-label="Next testimonial">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+    <div class="guarantee">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="#0d2542"><path d="M12 1l9 4v6c0 5.5-3.8 10.7-9 12-5.2-1.3-9-6.5-9-12V5l9-4z"/><text x="12" y="14.5" text-anchor="middle" font-size="9" font-weight="900" fill="#fff">$</text></svg>
+      <div><b>30-DAY MONEY-BACK GUARANTEE:</b> Not happy? Return your phone within 30 days for your money back. <a href="https://affinitycellular.com/Support/Returns" target="_blank" rel="noopener">See Return Policy</a>.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY SMART CHOICE ================= -->
+<section class="why">
+  <div class="wrap">
+    <div class="sec-head"><h2>Why Affinity Cellular Is the Smart Choice</h2></div>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="icon">
+          <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9.5h18M8 3v4M16 3v4"/><rect x="7" y="12.5" width="2.4" height="2.4" fill="currentColor" stroke="none"/><rect x="10.8" y="12.5" width="2.4" height="2.4" fill="currentColor" stroke="none"/><rect x="14.6" y="12.5" width="2.4" height="2.4" fill="currentColor" stroke="none"/><rect x="7" y="16.3" width="2.4" height="2.4" fill="currentColor" stroke="none"/><rect x="10.8" y="16.3" width="2.4" height="2.4" fill="currentColor" stroke="none"/></svg>
+        </div>
+        <div>
+          <h3>3 MONTHS FREE*</h3>
+          <p>Unlimited Talk, Text &amp; Data on one line.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="icon">
+          <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><circle cx="12" cy="18" r="1.1" fill="currentColor" stroke="none"/></svg>
+        </div>
+        <div>
+          <h3>ELIGIBLE FREE PHONE<br>OFFER AFTER 12 MONTHS</h3>
+          <p>Device deposit credited to your account after your 12th monthly payment. <a href="terms.html" style="text-decoration:underline;color:inherit;">See terms</a>.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="icon">
+          <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12.6 3.2h6.7c.8 0 1.5.7 1.5 1.5v6.7c0 .4-.2.8-.4 1.1l-8.1 8.1c-.6.6-1.5.6-2.1 0l-6.8-6.8c-.6-.6-.6-1.5 0-2.1l8.1-8.1c.3-.3.7-.4 1.1-.4z"/><circle cx="16.5" cy="7.5" r="1.4"/></svg>
+        </div>
+        <div>
+          <h3>PLANS STARTING<br>AS LOW AS $15/MO.</h3>
+          <p>Real savings. No hidden fees.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="icon">
+          <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="4.5" y="2.5" width="15" height="19" rx="1.8"/><path d="M8 7.5h8M8 11h8M8 14.5h8M8 18h5"/></svg>
+        </div>
+        <div>
+          <h3>NO CONTRACTS.<br>NO CREDIT CHECK.</h3>
+          <p>Just simple, honest service you can count on.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ORDER ONLINE ================= -->
+<section class="order">
+  <div class="wrap">
+    <div class="order-box">
+      <div class="order-left">
+        <div class="head">
+          <div class="cart">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M2.5 3.5h3l2.6 12.2c.15.7.76 1.3 1.5 1.3h9.3c.72 0 1.34-.5 1.5-1.2l1.9-8.3H6.3"/><circle cx="10" cy="20.5" r="1.5"/><circle cx="18" cy="20.5" r="1.5"/></svg>
+          </div>
+          <div>
+            <h3>Prefer to order online?</h3>
+            <p>You can also complete your order securely online anytime.</p>
+          </div>
+        </div>
+        <a class="btn-order" href="#">
+          ORDER NOW ONLINE
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+        </a>
+      </div>
+
+      <div class="phone-mock">
+        <img src="images/iphone-purple.jpg" alt="Purple iPhone 12">
+      </div>
+
+      <div class="order-right">
+        <h3>BUT HURRY &ndash; THIS OFFER IS LIMITED!</h3>
+        <p>Don&rsquo;t miss out on <b>3 MONTHS FREE*</b> and our lowest plans ever. Call now and secure your savings today!</p>
+        <a class="btn-hurry" href="tel:8557638221">
+          <svg width="22" height="22" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.7 3.6 5 6.4 6.4l2.1-2.1c.3-.3.7-.4 1-.2 1.1.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4.3c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.3 1.9z"/></svg>
+          855-763-8221
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TRUST ROW ================= -->
+<section class="trust">
+  <div class="wrap trust-grid">
+    <div class="trust-item">
+      <div class="icon">
+        <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 8v13M8.5 21h7M12 8l-4.5 9M12 8l4.5 9M9.3 14.6h5.4" stroke-linecap="round"/><path d="M7.5 5.5a6.4 6.4 0 0 1 9 0M5.4 3.4a9.3 9.3 0 0 1 13.2 0" stroke-linecap="round"/><circle cx="12" cy="8" r="1.3" fill="currentColor" stroke="none"/></svg>
+      </div>
+      <div>
+        <h4>SAME RELIABLE<br>VERIZON NETWORK</h4>
+        <p>Nationwide coverage you can count on.</p>
+      </div>
+    </div>
+    <div class="trust-item">
+      <div class="icon">
+        <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 13a8 8 0 0 1 16 0" stroke-linecap="round"/><rect x="2.8" y="12.5" width="4" height="6" rx="1.6"/><rect x="17.2" y="12.5" width="4" height="6" rx="1.6"/><path d="M19 18.5v1a2.5 2.5 0 0 1-2.5 2.5H13.5" stroke-linecap="round"/><rect x="11" y="20.6" width="3" height="2.6" rx="1.1" fill="currentColor" stroke="none"/></svg>
+      </div>
+      <div>
+        <h4>U.S.-BASED<br>CUSTOMER SUPPORT</h4>
+        <p>Real people. Real help. Right here in the USA.</p>
+      </div>
+    </div>
+    <div class="trust-item">
+      <div class="icon">
+        <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 1.8l8.2 3.6v5.4c0 5-3.4 9.8-8.2 11-4.8-1.2-8.2-6-8.2-11V5.4L12 1.8z"/><text x="12" y="15" text-anchor="middle" font-size="8.5" font-weight="800" fill="currentColor" stroke="none">15</text></svg>
+      </div>
+      <div>
+        <h4>15+ YEARS<br>OF TRUSTED SERVICE</h4>
+        <p>Proudly serving seniors and members.</p>
+      </div>
+    </div>
+    <div class="trust-item">
+      <div class="icon">
+        <svg width="38" height="38" viewBox="0 0 24 24" fill="currentColor"><circle cx="8.2" cy="8.6" r="2.6"/><circle cx="15.8" cy="8.6" r="2.6"/><path d="M8.2 12.4c-2.9 0-5.2 1.8-5.2 4v1.4h10.4v-1.4c0-2.2-2.3-4-5.2-4zM15.8 12.4c-.7 0-1.4.1-2 .3 1.4.9 2.3 2.2 2.3 3.7v1.4H21v-1.4c0-2.2-2.3-4-5.2-4z"/></svg>
+      </div>
+      <div>
+        <h4>THOUSANDS OF<br>HAPPY CUSTOMERS</h4>
+        <div class="mini-stars">
+          <svg class="star" viewBox="0 0 24 24" fill="#f6b21b"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8L12 2z"/></svg>
+          <svg class="star" viewBox="0 0 24 24" fill="#f6b21b"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8L12 2z"/></svg>
+          <svg class="star" viewBox="0 0 24 24" fill="#f6b21b"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8L12 2z"/></svg>
+          <svg class="star" viewBox="0 0 24 24" fill="#f6b21b"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8L12 2z"/></svg>
+          <svg class="star" viewBox="0 0 24 24" fill="#f6b21b"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8L12 2z" opacity=".45"/></svg>
+        </div>
+        <p>4.8 out of 5 stars over 25,000+ reviews.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="disclaimer">
+  <div class="d-links">
+    <a href="privacy-policy.html">Privacy Policy</a> &nbsp;|&nbsp;
+    <a href="terms.html">Terms &amp; Conditions</a> &nbsp;|&nbsp;
+    <a href="https://affinitycellular.com/Support/Returns" target="_blank" rel="noopener">Return Policy</a> &nbsp;|&nbsp;
+    <a href="https://affinitycellular.com/" target="_blank" rel="noopener">AffinityCellular.com</a>
+  </div>
+  <p>*3 Months Free offer: available to new customers only on select plans &mdash; $0 for the first three months of unlimited service on one line. After the promotional period, plans start as low as $15/month. Limited-time offer; <a href="terms.html">terms and conditions</a> apply.</p>
+  <p>30-Day Money-Back Guarantee: phones may be returned within 30 days of purchase &mdash; provided total usage is under 30 minutes of talk time, 30 text messages, or 30 MB of data (whichever comes first) &mdash; for a refund of the activation fee, handset cost, and prorated plan cost. The cost of additional services is not refundable. See the full <a href="https://affinitycellular.com/Support/Returns" target="_blank" rel="noopener">Return Policy</a> for details.</p>
+  <p>Testimonials reflect the experiences of individual customers; savings and results may vary. Affinity Cellular operates on the Verizon nationwide network. Verizon is a trademark of its respective owner; references do not imply endorsement or affiliation. Questions about how your information is collected and used? See the <a href="privacy-policy.html">Privacy &amp; CPNI Policy</a>, email <a href="mailto:help@affinitycellular.com">help@affinitycellular.com</a>, or call customer support at (833)&nbsp;679-1090. Affinity Cellular, 4245 Kemp Blvd, Suite 120, Wichita Falls, TX 76308.</p>
+</div>
+<div class="footrule"></div>
+
+<script>
+/* ---------- Testimonials ---------- */
+var TESTIMONIALS = [
+  {q:"I was paying over $120 a month with my old provider. Affinity Cellular cut my bill in half and the service is great!", name:"– Linda M.", loc:"Florida", img:"images/avatar-linda.jpg"},
+  {q:"Switching was so easy and I kept my number. The customer service is the best I’ve ever experienced!", name:"– Richard T.", loc:"Ohio", img:"images/avatar-richard.jpg"},
+  {q:"I love that there are no contracts or hidden fees. Honest pricing and great coverage!", name:"– Patricia K.", loc:"Arizona", img:"images/avatar-patricia.jpg"},
+  {q:"My grandkids helped me switch in one phone call. Everything works perfectly and I’m saving every month!", name:"– George W.", loc:"Texas", img:"images/avatar-george.jpg"},
+  {q:"Clear bills, friendly people, and my phone works everywhere I go. I only wish I’d switched sooner!", name:"– Margaret S.", loc:"Michigan", img:"images/avatar-margaret.jpg"}
+];
+var tStart = 0;
+function starRow(){
+  var s='<div class="stars">';
+  for(var i=0;i<5;i++) s+='<svg class="star" viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8L12 2z"/></svg>';
+  return s+'</div>';
+}
+function avatarImg(t){
+  return '<div class="avatar"><img src="'+t.img+'" alt="Photo of '+t.name.replace('– ','')+'"></div>';
+}
+function renderTestimonials(){
+  var per = window.matchMedia('(max-width:1020px)').matches ? 1 : 3;
+  var html='';
+  for(var i=0;i<per;i++){
+    var t=TESTIMONIALS[(tStart+i)%TESTIMONIALS.length];
+    html+='<div class="t-card">'+starRow()
+      +'<div class="t-quote"><span class="qm">“</span><span>'+t.q+'”</span></div>'
+      +'<div class="t-meta"><div class="who"><div class="name">'+t.name+'</div><div class="loc">'+t.loc+'</div></div>'+avatarImg(t)+'</div>'
+      +'</div>';
+  }
+  document.getElementById('t-cards').innerHTML=html;
+}
+document.getElementById('t-prev').onclick=function(){tStart=(tStart-1+TESTIMONIALS.length)%TESTIMONIALS.length;renderTestimonials();};
+document.getElementById('t-next').onclick=function(){tStart=(tStart+1)%TESTIMONIALS.length;renderTestimonials();};
+window.addEventListener('resize',renderTestimonials);
+renderTestimonials();
+
+/* ---------- Countdown (evergreen: 2d 14h 37m 26s per visitor, persisted) ---------- */
+(function(){
+  var KEY='ac_offer_deadline';
+  var DURATION=(2*24*3600+14*3600+37*60+26)*1000;
+  var deadline;
+  try{
+    deadline=parseInt(localStorage.getItem(KEY),10);
+    if(!deadline||deadline<Date.now()){deadline=Date.now()+DURATION;localStorage.setItem(KEY,String(deadline));}
+  }catch(e){deadline=Date.now()+DURATION;}
+  var el={d:document.getElementById('cd-d'),h:document.getElementById('cd-h'),m:document.getElementById('cd-m'),s:document.getElementById('cd-s')};
+  function pad(n){return (n<10?'0':'')+n;}
+  function tick(){
+    var left=Math.max(0,deadline-Date.now());
+    var sec=Math.floor(left/1000);
+    el.d.textContent=pad(Math.floor(sec/86400));
+    el.h.textContent=pad(Math.floor(sec%86400/3600));
+    el.m.textContent=pad(Math.floor(sec%3600/60));
+    el.s.textContent=pad(sec%60);
+  }
+  tick();
+  setInterval(tick,1000);
+})();
+
+</script>
+</body>
+</html>

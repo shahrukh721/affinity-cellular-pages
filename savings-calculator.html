@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>See How Much You Could Save On Your Cell Phone Bill | Affinity Cellular</title>
+<style>
+  :root{
+    --navy:#0d2542;
+    --navy-deep:#0a1e37;
+    --red:#e01b22;
+    --red-dark:#c8151c;
+    --text:#333b45;
+    --muted:#5d6a78;
+    --border:#e4e8ed;
+    --gold:#f6b21b;
+    --green:#1e9e4a;
+    --blue-tint:#eaf1f9;
+    --card-shadow:0 2px 10px rgba(13,37,66,.08);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--text);
+    background:#fff;
+    line-height:1.5;
+  }
+  img,svg{max-width:100%;display:block;}
+  a{text-decoration:none;color:inherit;}
+  .container{max-width:1160px;margin:0 auto;padding:0 24px;}
+
+  /* ============ TOP BAR ============ */
+  .topbar{background:var(--navy);color:#fff;padding:12px 0;}
+  .topbar-inner{
+    max-width:1160px;margin:0 auto;padding:0 24px;
+    display:flex;align-items:center;gap:22px;
+  }
+  .brand{line-height:1.05;flex-shrink:0;}
+  .brand .brand-top{
+    font-size:30px;font-weight:800;letter-spacing:-.5px;
+    font-family:Verdana,Geneva,sans-serif;
+  }
+  .brand .brand-bottom{
+    font-size:14px;font-weight:400;letter-spacing:4.5px;color:#c9d3e0;
+    font-family:Verdana,Geneva,sans-serif;
+  }
+  .brand .brand-bottom sup{font-size:8px;letter-spacing:0;}
+  .top-divider{width:1px;align-self:stretch;background:rgba(255,255,255,.22);}
+  .yearsbox{display:flex;align-items:center;gap:12px;margin-right:auto;}
+  .burst{position:relative;width:66px;height:66px;flex-shrink:0;}
+  .burst svg{position:absolute;inset:0;}
+  .burst .burst-txt{
+    position:absolute;inset:0;display:flex;flex-direction:column;
+    align-items:center;justify-content:center;line-height:1;
+  }
+  .burst .b-15{color:var(--gold);font-size:21px;font-weight:900;}
+  .burst .b-yrs{color:var(--gold);font-size:8.5px;font-weight:800;letter-spacing:1px;margin-top:2px;}
+  .yearsbox .y-title{font-size:15px;font-weight:800;letter-spacing:.8px;color:#fff;line-height:1.2;}
+  .yearsbox .y-sub{font-size:12.5px;color:#aab8c9;margin-top:3px;line-height:1.35;}
+  .callbox{display:flex;align-items:center;gap:12px;text-align:left;flex-shrink:0;}
+  .callbox .phone-ico{
+    width:42px;height:42px;border:2px solid #fff;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  }
+  .callbox .c-help{font-size:13px;font-weight:600;color:#fff;}
+  .callbox .c-num{font-size:27px;font-weight:800;color:#fff;letter-spacing:.5px;line-height:1.1;display:block;}
+  .callbox .c-hours{font-size:11px;color:#aab8c9;margin-top:2px;}
+  .btn-callnow{
+    background:var(--red);color:#fff;font-weight:800;font-size:14.5px;letter-spacing:.5px;
+    padding:14px 22px;border-radius:6px;display:flex;align-items:center;gap:9px;flex-shrink:0;
+    box-shadow:0 3px 8px rgba(224,27,34,.35);transition:background .15s;
+  }
+  .btn-callnow:hover{background:var(--red-dark);}
+
+  /* ============ HERO ============ */
+  .hero{position:relative;overflow:hidden;background:#fff;}
+  .hero-photo{
+    position:absolute;top:0;right:0;bottom:0;width:52%;
+    background:url("images/hero-couple.jpg") center 22%/cover no-repeat;
+  }
+  .hero-photo::before{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.55) 7%,transparent 22%);
+  }
+  .hero-inner{position:relative;padding:52px 0 56px;}
+  .hero-copy{width:47%;min-width:0;}
+  h1{
+    color:var(--navy);font-size:52px;line-height:1.12;font-weight:900;
+    letter-spacing:-.8px;margin-bottom:20px;
+  }
+  .hero-sub{font-size:19px;color:#55606c;line-height:1.5;margin-bottom:28px;max-width:430px;}
+  .hero-points{display:flex;gap:36px;flex-wrap:wrap;}
+  .hpoint{display:flex;align-items:center;gap:12px;}
+  .hpoint .hp-ico{
+    width:46px;height:46px;border:2px solid var(--navy);border-radius:50%;
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  }
+  .hpoint .hp-txt{font-size:15px;font-weight:800;color:var(--navy);line-height:1.3;}
+  .offer-card{
+    position:absolute;right:24px;bottom:40px;z-index:2;
+    background:#fff;border-radius:10px;box-shadow:0 6px 26px rgba(13,37,66,.22);
+    padding:24px 34px 22px;text-align:center;width:300px;
+  }
+  .offer-card .oc-top{font-size:13.5px;font-weight:800;color:var(--navy);letter-spacing:.6px;}
+  .offer-card .oc-price{font-size:66px;font-weight:900;color:var(--navy);line-height:1.05;letter-spacing:-1px;}
+  .offer-card .oc-price .mo{font-size:26px;font-weight:800;letter-spacing:0;}
+  .offer-card .oc-after{font-size:15px;font-weight:800;color:var(--red);letter-spacing:.5px;line-height:1.3;margin-top:6px;}
+
+  /* ============ COUNTDOWN BAR ============ */
+  .countbar{background:var(--navy);color:#fff;padding:22px 0 18px;}
+  .countbar-inner{
+    max-width:1160px;margin:0 auto;padding:0 24px;
+    display:flex;align-items:center;gap:26px;flex-wrap:wrap;
+  }
+  .countbar .cb-clock{
+    width:58px;height:58px;border:2.5px solid #fff;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  }
+  .countbar .cb-copy{margin-right:auto;}
+  .countbar .cb-hurry{font-size:22px;font-weight:900;letter-spacing:.3px;line-height:1.25;}
+  .countbar .cb-hurry .gold{color:var(--gold);}
+  .countbar .cb-sub{font-size:16px;color:#d5dde7;margin-top:3px;line-height:1.35;}
+  .count-right{text-align:center;}
+  .cb-static{font-size:18px;font-weight:700;color:#fff;line-height:1.45;}
+  .count-units{display:flex;gap:14px;justify-content:center;}
+  .cunit{
+    background:#fff;border-radius:8px;width:76px;padding:10px 6px 8px;
+    box-shadow:0 2px 6px rgba(0,0,0,.25);
+  }
+  .cunit .cu-num{color:var(--red);font-size:32px;font-weight:900;line-height:1;font-variant-numeric:tabular-nums;}
+  .cunit .cu-lbl{color:var(--navy);font-size:11px;font-weight:800;letter-spacing:1px;margin-top:4px;}
+  .count-note{font-size:11.5px;font-weight:700;letter-spacing:.8px;color:#d5dde7;margin-top:8px;}
+
+  /* ============ CALCULATOR ============ */
+  .calc-section{padding:44px 0 10px;}
+  .calc-grid{display:grid;grid-template-columns:1fr 1.18fr;gap:26px;align-items:start;}
+  .panel{border-radius:10px;}
+  .panel-form{background:var(--blue-tint);padding:30px 30px 26px;}
+  .panel-results{
+    background:#fff;border:1px solid var(--border);box-shadow:var(--card-shadow);
+    padding:30px 34px 34px;
+  }
+  .panel h2{
+    color:var(--navy);font-size:19px;font-weight:900;letter-spacing:.6px;
+    text-align:center;line-height:1.35;margin-bottom:22px;
+  }
+  .f-label{
+    font-size:14.5px;font-weight:800;color:var(--navy);margin:20px 0 10px;
+  }
+  .f-label:first-of-type{margin-top:0;}
+  .f-group{border-bottom:1px solid #d7e0ec;padding-bottom:18px;}
+  .f-group.no-line{border-bottom:none;padding-bottom:0;}
+
+  /* radios */
+  .radio-list{display:flex;flex-direction:column;gap:9px;}
+  .radio{display:flex;align-items:center;gap:10px;cursor:pointer;font-size:15px;color:#3c4856;}
+  .radio input{position:absolute;opacity:0;pointer-events:none;}
+  .radio .r-dot{
+    width:19px;height:19px;border:2px solid #b4c1d2;border-radius:50%;flex-shrink:0;
+    display:flex;align-items:center;justify-content:center;background:#fff;
+    transition:border-color .12s;
+  }
+  .radio .r-dot::after{
+    content:"";width:9px;height:9px;border-radius:50%;background:var(--red);
+    transform:scale(0);transition:transform .12s;
+  }
+  .radio input:checked + .r-dot{border-color:var(--red);}
+  .radio input:checked + .r-dot::after{transform:scale(1);}
+
+  /* slider */
+  .bill-value{
+    text-align:center;font-weight:900;color:var(--red);
+    font-size:42px;line-height:1;margin:6px 0 14px;
+  }
+  .bill-value .per{font-size:15px;font-weight:700;color:var(--navy);letter-spacing:0;}
+  input[type=range]{
+    -webkit-appearance:none;appearance:none;width:100%;height:8px;border-radius:5px;
+    background:linear-gradient(90deg,var(--red) 0%,var(--red) 53%,#cfd8e3 53%,#cfd8e3 100%);
+    outline:none;cursor:pointer;
+  }
+  input[type=range]::-webkit-slider-thumb{
+    -webkit-appearance:none;appearance:none;width:22px;height:22px;border-radius:50%;
+    background:var(--red);border:3px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.3);
+  }
+  input[type=range]::-moz-range-thumb{
+    width:16px;height:16px;border-radius:50%;
+    background:var(--red);border:3px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.3);
+  }
+  .range-ends{display:flex;justify-content:space-between;font-size:13px;color:#6b7684;font-weight:600;margin-top:6px;}
+
+  /* line buttons */
+  .line-btns{display:flex;gap:10px;}
+  .line-btn{
+    flex:1;text-align:center;padding:11px 6px;border-radius:6px;cursor:pointer;
+    font-size:14px;font-weight:800;letter-spacing:.3px;
+    background:#fff;border:1.5px solid #c4d0de;color:var(--navy);
+    transition:all .12s;user-select:none;
+  }
+  .line-btn.sel{background:var(--red);border-color:var(--red);color:#fff;}
+
+  .btn-calc{
+    display:flex;align-items:center;justify-content:center;gap:12px;
+    width:100%;background:var(--red);color:#fff;border:none;cursor:pointer;
+    font-size:17px;font-weight:900;letter-spacing:.6px;font-family:inherit;
+    padding:16px 10px;border-radius:6px;margin-top:24px;
+    box-shadow:0 3px 8px rgba(224,27,34,.35);transition:background .15s;
+  }
+  .btn-calc:hover{background:var(--red-dark);}
+  .secure-note{
+    display:flex;align-items:center;justify-content:center;gap:7px;
+    font-size:12.5px;color:#5d6a78;margin-top:12px;text-align:center;
+  }
+  .secure-note svg{flex-shrink:0;}
+  .secure-note a{text-decoration:underline;color:#5d6a78;}
+
+  /* results */
+  .goodnews{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .gn-check{
+    width:46px;height:46px;border-radius:50%;background:var(--green);flex-shrink:0;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .gn-title{color:var(--green);font-size:24px;font-weight:900;letter-spacing:.3px;line-height:1.15;}
+  .gn-sub{font-size:14.5px;color:#5d6a78;margin-top:1px;}
+  .res-headline{text-align:center;padding:14px 0 20px;border-bottom:1px solid var(--border);}
+  .res-headline .rh-lead{font-size:20px;font-weight:800;color:var(--navy);}
+  .res-headline .rh-amount{font-size:78px;font-weight:900;color:var(--red);line-height:1;letter-spacing:-1px;margin:4px 0 2px;}
+  .res-headline .rh-more{font-size:21px;font-weight:900;color:var(--red);letter-spacing:.5px;}
+  .res-headline .rh-than{font-size:17px;font-weight:700;color:var(--navy);margin-top:2px;}
+  .res-rows{padding:6px 0 4px;}
+  .res-row{
+    display:flex;align-items:center;gap:16px;padding:13px 0;
+    border-bottom:1px solid var(--border);
+  }
+  .res-row:last-child{border-bottom:none;}
+  .res-row .rr-ico{
+    width:46px;height:46px;border-radius:50%;flex-shrink:0;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .rr-ico.navy{background:var(--navy);}
+  .rr-ico.green{background:var(--green);}
+  .rr-ico.gold{background:var(--gold);}
+  .res-row .rr-lbl{font-size:15.5px;font-weight:700;color:var(--navy);line-height:1.3;flex:1;}
+  .res-row .rr-lbl.caps{font-weight:900;letter-spacing:.4px;font-size:16px;}
+  .res-row .rr-val{text-align:right;line-height:1.05;white-space:nowrap;}
+  .res-row .rr-val .v{font-size:26px;font-weight:900;color:var(--navy);}
+  .res-row .rr-val.big .v{font-size:34px;color:var(--green);}
+  .res-row .rr-val .yr{display:block;font-size:12px;font-weight:700;color:#6b7684;}
+  .enough-bar{
+    background:var(--navy);color:#fff;text-align:center;border-radius:6px;
+    font-size:14px;font-weight:800;letter-spacing:1px;padding:10px;margin:14px 0 22px;
+  }
+  .enough-grid{display:flex;justify-content:space-between;gap:8px;text-align:center;}
+  .enough-item{flex:1;min-width:0;}
+  .enough-item .ei-ico{height:46px;display:flex;align-items:center;justify-content:center;margin-bottom:8px;}
+  .enough-item .ei-lbl{font-size:13px;font-weight:600;color:#3c4856;line-height:1.3;}
+
+  /* ============ OFFER STRIP ============ */
+  .offer-strip-wrap{padding:26px 0 8px;}
+  .offer-strip{
+    background:#fdf6e3;border:1.5px solid #f3dfa5;border-radius:10px;
+    display:flex;align-items:center;gap:26px;padding:24px 34px;
+  }
+  .os-left{display:flex;align-items:center;gap:18px;flex:1;}
+  .os-gift{
+    width:58px;height:58px;border-radius:50%;background:var(--gold);flex-shrink:0;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .os-kicker{font-size:13px;font-weight:800;color:var(--navy);letter-spacing:1px;}
+  .os-big{font-size:30px;font-weight:900;color:var(--red);letter-spacing:.2px;line-height:1.15;}
+  .os-sub{font-size:15px;font-weight:700;color:var(--navy);}
+  .os-plus{
+    width:44px;height:44px;border-radius:50%;background:#fff;border:1.5px solid #f3dfa5;flex-shrink:0;
+    display:flex;align-items:center;justify-content:center;
+    color:var(--red);font-size:26px;font-weight:800;line-height:1;
+  }
+  .os-right{display:flex;align-items:center;gap:18px;flex:1;}
+  .os-iphone{flex-shrink:0;}
+  .os-r-title{font-size:17px;font-weight:900;color:var(--red);letter-spacing:.4px;line-height:1.3;}
+  .os-r-sub{font-size:14.5px;color:var(--navy);font-weight:600;line-height:1.4;margin-top:3px;}
+
+  /* ============ TESTIMONIALS ============ */
+  .testi-section{padding:36px 0 46px;}
+  .testi-head{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-bottom:22px;}
+  .testi-head h2{color:var(--navy);font-size:24px;font-weight:900;letter-spacing:.2px;}
+  .testi-meta{display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+  .testi-meta .stars{color:var(--gold);font-size:20px;letter-spacing:3px;}
+  .testi-meta .t-score{font-size:13px;font-weight:800;color:var(--navy);letter-spacing:.4px;}
+  .testi-meta .t-count{font-size:12.5px;font-weight:800;color:var(--red);letter-spacing:.4px;}
+  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .t-card{
+    background:#fff;border:1px solid var(--border);border-radius:10px;
+    box-shadow:var(--card-shadow);padding:22px 24px;display:flex;flex-direction:column;
+  }
+  .t-card .stars{color:var(--gold);font-size:16px;letter-spacing:2.5px;margin-bottom:12px;}
+  .t-card .t-text{font-size:15px;color:#3c4856;line-height:1.6;flex:1;}
+  .t-card .t-person{display:flex;align-items:center;gap:12px;margin-top:18px;}
+  .t-card .t-avatar{width:52px;height:52px;border-radius:50%;overflow:hidden;flex-shrink:0;background:#dfe6ee;}
+  .t-card .t-avatar img{width:100%;height:100%;object-fit:cover;}
+  .t-card .t-name{font-size:15px;font-weight:800;color:var(--navy);line-height:1.25;}
+  .t-card .t-loc{font-size:13px;color:#6b7684;}
+  .t-card .t-verified{
+    display:flex;align-items:center;gap:6px;font-size:12.5px;font-weight:700;color:#2a7de1;margin-top:4px;
+  }
+
+  /* ============ FOOTER CTA ============ */
+  .footcta{background:var(--navy);color:#fff;position:relative;overflow:hidden;}
+  .footcta-inner{
+    max-width:1160px;margin:0 auto;padding:30px 24px;
+    display:flex;align-items:center;gap:24px;flex-wrap:wrap;
+  }
+  .fc-phone{
+    width:56px;height:56px;border-radius:50%;background:#fff;flex-shrink:0;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .fc-copy{margin-right:auto;padding-right:12px;}
+  .fc-title{font-size:21px;font-weight:900;letter-spacing:.3px;margin-bottom:8px;}
+  .fc-checks{display:flex;flex-direction:column;gap:4px;}
+  .fc-check{display:flex;align-items:center;gap:9px;font-size:14px;font-weight:600;color:#d5dde7;}
+  .fc-check svg{flex-shrink:0;}
+  .fc-callbox{
+    background:var(--red);border-radius:10px;padding:16px 34px;text-align:center;
+    box-shadow:0 4px 14px rgba(0,0,0,.3);margin-right:190px;
+  }
+  .fc-callbox .fcb-kicker{font-size:12.5px;font-weight:800;letter-spacing:.8px;line-height:1.35;}
+  .fc-callbox .fcb-num{
+    display:flex;align-items:center;justify-content:center;gap:12px;
+    font-size:34px;font-weight:900;letter-spacing:.5px;margin-top:6px;line-height:1.1;
+  }
+  .fc-agent{
+    position:absolute;right:12px;bottom:0;width:170px;height:92%;
+    border-radius:10px 10px 0 0;overflow:hidden;
+  }
+  .fc-agent img{width:100%;height:100%;object-fit:cover;object-position:top;}
+
+  /* ============ FOOTER ============ */
+  .site-footer{background:var(--navy-deep);color:#aab8c9;padding:30px 0 36px;border-top:1px solid rgba(255,255,255,.08);}
+  .footer-inner{max-width:1160px;margin:0 auto;padding:0 24px;}
+  .f-links{display:flex;flex-wrap:wrap;gap:12px;align-items:center;font-size:14px;font-weight:700;margin-bottom:18px;}
+  .f-links a{color:#fff;}
+  .f-links a:hover{text-decoration:underline;}
+  .f-links span{color:#5d7189;}
+  .site-footer p{font-size:11.5px;line-height:1.6;margin-bottom:10px;color:#aab8c9;}
+  .site-footer p a{color:#cdd9e6;text-decoration:underline;}
+
+  /* ============ RESPONSIVE ============ */
+  /* ============ LEAD FORM (inline + popup) ============ */
+  .btn-qualify{
+    display:flex;align-items:center;justify-content:center;gap:10px;
+    width:100%;background:var(--red);color:#fff;border:none;cursor:pointer;
+    font-size:18px;font-weight:900;letter-spacing:.6px;
+    padding:15px 18px;border-radius:8px;margin:22px 0 18px;
+    box-shadow:0 3px 10px rgba(224,27,34,.35);transition:background .15s;
+    font-family:inherit;
+  }
+  .btn-qualify:hover{background:var(--red-dark);}
+  .lead-modal{position:fixed;inset:0;z-index:2000;display:none;}
+  .lead-modal.open{display:block;}
+  .lead-modal-backdrop{position:absolute;inset:0;background:rgba(10,30,55,.62);}
+  .lead-modal-card{
+    position:relative;max-width:500px;width:calc(100% - 32px);
+    margin:5vh auto 0;background:#fff;border-radius:12px;overflow:hidden;
+    box-shadow:0 18px 60px rgba(0,0,0,.35);
+    display:flex;flex-direction:column;max-height:90vh;
+  }
+  .lead-modal-head{
+    background:var(--navy);color:#fff;font-weight:800;font-size:15.5px;letter-spacing:.6px;
+    padding:15px 46px 15px 18px;position:relative;text-align:center;line-height:1.3;
+  }
+  .lead-modal-close{
+    position:absolute;right:10px;top:50%;transform:translateY(-50%);
+    width:30px;height:30px;border:none;border-radius:50%;background:rgba(255,255,255,.15);
+    color:#fff;font-size:19px;line-height:1;cursor:pointer;font-weight:700;
+  }
+  .lead-modal-close:hover{background:var(--red);}
+  .lead-modal-body{padding:10px;overflow-y:auto;}
+  .lead-modal-body iframe{width:100%;height:467px;border:none;border-radius:8px;display:block;}
+  .lead-modal-head .lm-sub{display:block;font-size:12px;font-weight:600;color:#c9d5e3;letter-spacing:.2px;margin-top:4px;}
+  .lead-modal-foot{
+    display:flex;align-items:center;justify-content:center;gap:7px;
+    padding:4px 14px 14px;font-size:12px;color:#5d6a78;text-align:center;
+  }
+  .lead-modal-foot a{color:#5d6a78;text-decoration:underline;}
+  body.lead-modal-open{overflow:hidden;}
+
+  /* ============ STICKY URGENCY BAR ============ */
+  .urgent-bar{
+    position:sticky;top:0;z-index:1000;
+    background:var(--red);color:#fff;
+    box-shadow:0 2px 10px rgba(13,37,66,.25);
+  }
+  .urgent-inner{
+    max-width:1160px;margin:0 auto;padding:9px 16px;
+    display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:nowrap;
+  }
+  .urgent-msg{
+    font-size:15px;font-weight:800;letter-spacing:.3px;line-height:1.25;text-align:center;
+    display:flex;align-items:center;gap:9px;min-width:0;
+  }
+  .urgent-msg .u-clock{flex:0 0 auto;display:flex;}
+  .urgent-msg .u-strong{color:#ffe23c;}
+  .urgent-cta{
+    flex:0 0 auto;background:#fff;color:var(--red);text-decoration:none;
+    font-size:14px;font-weight:900;letter-spacing:.6px;
+    padding:9px 18px;border-radius:6px;white-space:nowrap;
+    box-shadow:0 2px 6px rgba(0,0,0,.18);
+    display:flex;align-items:center;gap:7px;
+    transition:transform .12s;
+  }
+  .urgent-cta:hover{transform:scale(1.04);}
+  @media (max-width:640px){
+    .urgent-inner{padding:8px 10px;gap:10px;}
+    .urgent-msg{font-size:12px;gap:6px;}
+    .urgent-cta{font-size:12.5px;padding:8px 12px;}
+  }
+  @media (max-width:360px){
+    .urgent-msg .u-hide-xs{display:none;}
+  }
+
+  @media (max-width: 1080px){
+    h1{font-size:42px;}
+    .yearsbox .y-sub{display:none;}
+    .fc-agent{display:none;}
+    .fc-callbox{margin-right:0;}
+  }
+  @media (max-width: 920px){
+    .topbar-inner{flex-wrap:wrap;justify-content:center;text-align:center;gap:14px;}
+    .top-divider{display:none;}
+    .yearsbox{margin-right:0;}
+    .hero{display:flex;flex-direction:column;}
+    .hero-photo{position:relative;width:100%;height:340px;order:1;}
+    .hero-photo::before{display:none;}
+    .offer-card{
+      position:relative;right:auto;bottom:auto;order:2;
+      width:260px;padding:18px 22px 16px;margin:-85px auto 0;
+    }
+    .offer-card .oc-price{font-size:50px;}
+    .hero-inner{padding:28px 24px 40px;order:3;}
+    .hero-copy{width:100%;}
+    .calc-grid{grid-template-columns:1fr;}
+    .countbar-inner{justify-content:center;text-align:center;}
+    .countbar .cb-copy{margin-right:0;}
+    .cb-hurry br,.cb-sub br,.cb-static br,.rr-lbl br{display:none;}
+    /* larger touch targets for seniors on touch devices */
+    .radio{padding:7px 0;font-size:16px;}
+    .radio .r-dot{width:22px;height:22px;}
+    .radio .r-dot::after{width:11px;height:11px;}
+    .radio-list{gap:4px;}
+    .line-btn{padding:14px 6px;font-size:15px;}
+    input[type=range]::-webkit-slider-thumb{width:30px;height:30px;}
+    input[type=range]::-moz-range-thumb{width:24px;height:24px;}
+    .offer-strip{flex-direction:column;text-align:center;gap:18px;}
+    .os-left,.os-right{flex-direction:column;text-align:center;gap:12px;}
+    .testi-grid{grid-template-columns:1fr;}
+    .enough-grid{flex-wrap:wrap;}
+    .enough-item{flex:1 1 30%;margin-bottom:14px;}
+    .footcta-inner{flex-direction:column;text-align:center;}
+    .fc-copy{margin-right:0;padding-right:0;}
+    .fc-checks{align-items:center;}
+  }
+  @media (max-width: 560px){
+    h1{font-size:32px;}
+    .hero-points{gap:16px;}
+    .countbar .cb-hurry{font-size:19px;}
+    .cb-static{font-size:16px;}
+    .panel-form,.panel-results{padding:22px 20px;}
+    .res-headline .rh-amount{font-size:60px;}
+    .fc-callbox .fcb-num{font-size:26px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= STICKY URGENCY BAR ================= -->
+<div class="urgent-bar">
+  <div class="urgent-inner">
+    <div class="urgent-msg">
+      <span class="u-clock">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M10 2h4"/></svg>
+      </span>
+      <span>Don&rsquo;t Miss Out: <span class="u-strong">3 MONTHS FREE</span><span class="u-hide-xs"> &mdash; Limited-Time Offer for New Customers</span></span>
+    </div>
+    <a class="urgent-cta" href="tel:8557638221">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.7 3.6 5 6.4 6.4l2.1-2.1c.3-.3.7-.4 1-.2 1.1.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4.3c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.3 1.9z"/></svg>
+      CALL NOW
+    </a>
+  </div>
+</div>
+
+<!-- ================= TOP BAR ================= -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <div class="brand-top">Affinity<sup style="font-size:11px;font-weight:400;vertical-align:super;">®</sup></div>
+      <div class="brand-bottom">CELLULAR<sup>®</sup></div>
+    </div>
+    <div class="top-divider"></div>
+    <div class="yearsbox">
+      <div class="burst">
+        <svg viewBox="0 0 66 66">
+          <g fill="none" stroke="#f6b21b" stroke-width="2">
+            <circle cx="33" cy="33" r="27"/>
+          </g>
+          <g fill="#f6b21b">
+            <g id="dots"></g>
+          </g>
+          <path d="M33 2 l3.2 5.6 6-2.4 .9 6.4 6.4 .9-2.4 6 5.6 3.2-5.6 3.2 2.4 6-6.4 .9-.9 6.4-6-2.4-3.2 5.6-3.2-5.6-6 2.4-.9-6.4-6.4-.9 2.4-6-5.6-3.2 5.6-3.2-2.4-6 6.4-.9 .9-6.4 6 2.4z"
+                transform="translate(6.6 6.6) scale(.8)" fill="none" stroke="#f6b21b" stroke-width="2.4" stroke-linejoin="round"/>
+        </svg>
+        <div class="burst-txt"><span class="b-15">15</span><span class="b-yrs">YEARS</span></div>
+      </div>
+      <div>
+        <div class="y-title">OF TRUSTED SERVICE</div>
+        <div class="y-sub">Proudly serving seniors<br>for over 15 years.</div>
+      </div>
+    </div>
+    <div class="callbox">
+      <div class="phone-ico">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+      </div>
+      <div>
+        <div class="c-help">Call Now! We&rsquo;re Here to Help</div>
+        <a class="c-num" href="tel:8557638221">855-763-8221</a>
+        <div class="c-hours">Mon-Fri 8am-8pm CT&nbsp; | &nbsp;Sat-Sun 10am-7pm CT</div>
+      </div>
+    </div>
+    <a class="btn-callnow" href="tel:8557638221">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="#fff">
+        <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.24.2 2.45.57 3.57a1 1 0 0 1-.24 1.02l-2.21 2.2z"/>
+      </svg>
+      CALL NOW
+    </a>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-photo"></div>
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <h1>See How Much You Could Save On Your Cell Phone Bill</h1>
+      <p class="hero-sub">Most seniors are surprised to learn they&rsquo;re paying for data and features they don&rsquo;t actually use.</p>
+      <div class="hero-points">
+        <div class="hpoint">
+          <div class="hp-ico">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0d2542" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/>
+            </svg>
+          </div>
+          <div class="hp-txt">Takes less than<br>60 seconds</div>
+        </div>
+        <div class="hpoint">
+          <div class="hp-ico">
+            <svg width="22" height="24" viewBox="0 0 24 24" fill="none" stroke="#0d2542" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2l8 3.5v5.2c0 5.2-3.4 8.7-8 11.3-4.6-2.6-8-6.1-8-11.3V5.5z"/><path d="M8.5 12l2.4 2.4 4.6-4.8"/>
+            </svg>
+          </div>
+          <div class="hp-txt">100% Free.<br>No obligation.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="offer-card">
+    <div class="oc-top">PLANS STARTING AT JUST</div>
+    <div class="oc-price">$15<span class="mo">/mo.</span></div>
+    <div class="oc-after">AFTER 3 MONTH<br>FREE TRIAL</div>
+  </div>
+</section>
+
+<!-- ================= COUNTDOWN BAR ================= -->
+<section class="countbar">
+  <div class="countbar-inner">
+    <div class="cb-clock">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 1.5"/><path d="M9 2h6"/><path d="M19 5l1.5 1.5"/>
+      </svg>
+    </div>
+    <div class="cb-copy">
+      <div class="cb-hurry"><span class="gold">HURRY!</span> THIS OFFER WON&rsquo;T LAST!</div>
+      <div class="cb-sub">Thousands of seniors switch<br>every month.</div>
+    </div>
+    <div class="count-right">
+      <div class="count-units">
+        <div class="cunit"><div class="cu-num" id="cd-days">02</div><div class="cu-lbl">DAYS</div></div>
+        <div class="cunit"><div class="cu-num" id="cd-hrs">14</div><div class="cu-lbl">HRS</div></div>
+        <div class="cunit"><div class="cu-num" id="cd-min">37</div><div class="cu-lbl">MIN</div></div>
+        <div class="cunit"><div class="cu-num" id="cd-sec">26</div><div class="cu-lbl">SEC</div></div>
+      </div>
+      <div class="count-note">3 MONTH FREE TRIAL IS ONLY AVAILABLE FOR A LIMITED TIME.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CALCULATOR ================= -->
+<section class="calc-section">
+  <div class="container">
+    <div class="calc-grid">
+
+      <!-- FORM PANEL -->
+      <div class="panel panel-form">
+        <h2>1. TELL US ABOUT YOUR CURRENT SERVICE</h2>
+
+        <div class="f-group">
+          <div class="f-label">Current Carrier</div>
+          <div class="radio-list" id="carrier-list">
+            <label class="radio"><input type="radio" name="carrier" value="Verizon" checked><span class="r-dot"></span>Verizon</label>
+            <label class="radio"><input type="radio" name="carrier" value="AT&T"><span class="r-dot"></span>AT&amp;T</label>
+            <label class="radio"><input type="radio" name="carrier" value="T-Mobile"><span class="r-dot"></span>T-Mobile</label>
+            <label class="radio"><input type="radio" name="carrier" value="Consumer Cellular"><span class="r-dot"></span>Consumer Cellular</label>
+            <label class="radio"><input type="radio" name="carrier" value="Mint Mobile"><span class="r-dot"></span>Mint Mobile</label>
+            <label class="radio"><input type="radio" name="carrier" value="Other"><span class="r-dot"></span>Other</label>
+          </div>
+        </div>
+
+        <div class="f-group">
+          <div class="f-label">About How Much Is Your Monthly Phone Bill?</div>
+          <div class="bill-value"><span id="bill-display">$142</span> <span class="per">/month</span></div>
+          <input type="range" id="bill-slider" min="20" max="250" value="142" step="1">
+          <div class="range-ends"><span>$20</span><span>$250+</span></div>
+        </div>
+
+        <div class="f-group">
+          <div class="f-label">How Many Phone Lines?</div>
+          <div class="line-btns" id="line-btns">
+            <div class="line-btn sel" data-lines="1">1 LINE</div>
+            <div class="line-btn" data-lines="2">2 LINES</div>
+            <div class="line-btn" data-lines="3">3+ LINES</div>
+          </div>
+        </div>
+
+        <div class="f-group">
+          <div class="f-label">How Much Data Do You Actually Use?</div>
+          <div class="radio-list">
+            <label class="radio"><input type="radio" name="data" value="calls" checked><span class="r-dot"></span>Mostly calls and texts</label>
+            <label class="radio"><input type="radio" name="data" value="web"><span class="r-dot"></span>Some web browsing and email</label>
+            <label class="radio"><input type="radio" name="data" value="social"><span class="r-dot"></span>Social media and YouTube</label>
+            <label class="radio"><input type="radio" name="data" value="heavy"><span class="r-dot"></span>Heavy streaming</label>
+          </div>
+        </div>
+
+        <div class="f-group no-line">
+          <div class="f-label">Do You Want To Keep Your Current Phone?</div>
+          <div class="radio-list">
+            <label class="radio"><input type="radio" name="keep" value="yes" checked><span class="r-dot"></span>Yes</label>
+            <label class="radio"><input type="radio" name="keep" value="no"><span class="r-dot"></span>No</label>
+            <label class="radio"><input type="radio" name="keep" value="notsure"><span class="r-dot"></span>Not Sure</label>
+          </div>
+        </div>
+
+        <button class="btn-calc" id="btn-calc">
+          CALCULATE MY SAVINGS
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 12h16"/><path d="M13 5l7 7-7 7"/>
+          </svg>
+        </button>
+        <div class="secure-note">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#5d6a78" stroke-width="2"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+          <span>Your information is secure and handled per the <a href="privacy-policy.html">Privacy Policy</a>.</span>
+        </div>
+      </div>
+
+      <!-- RESULTS PANEL -->
+      <div class="panel panel-results">
+        <h2>YOUR PERSONALIZED RESULTS</h2>
+
+        <div class="goodnews">
+          <div class="gn-check">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          </div>
+          <div>
+            <div class="gn-title">GOOD NEWS!</div>
+            <div class="gn-sub">Based on your answers...</div>
+          </div>
+        </div>
+
+        <div class="res-headline">
+          <div class="rh-lead">You&rsquo;re likely paying around</div>
+          <div class="rh-amount" id="res-over">$92</div>
+          <div class="rh-more">MORE EACH MONTH</div>
+          <div class="rh-than">than necessary.</div>
+        </div>
+
+        <div class="res-rows">
+          <div class="res-row">
+            <div class="rr-ico navy">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7z"/><path d="M14 2v5h5"/><path d="M9 13h6"/><path d="M9 17h6"/>
+              </svg>
+            </div>
+            <div class="rr-lbl">Estimated Current <br>Annual Cost</div>
+            <div class="rr-val"><span class="v" id="res-current">$1,704</span><span class="yr">/year</span></div>
+          </div>
+          <div class="res-row">
+            <div class="rr-ico green">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 10c1.1 0 2 .9 2 2v1c0 .55-.45 1-1 1h-.35c-.4 1.4-1.3 2.6-2.65 3.4V19c0 .55-.45 1-1 1h-1.5c-.55 0-1-.45-1-1v-.5h-3V19c0 .55-.45 1-1 1H8c-.55 0-1-.45-1-1v-1.6C5.2 16.2 4 14.4 4 12.3 4 9.1 6.9 6.5 10.5 6.5c1.9 0 3.7.75 4.9 1.95"/>
+                <circle cx="9" cy="11" r="1" fill="#fff" stroke="none"/><path d="M14.5 6.5c.2-1.2 1.2-2.3 2.5-2.5.3 1.1 0 2.3-.8 3.1"/>
+              </svg>
+            </div>
+            <div class="rr-lbl">Estimated Annual Cost <br>With Affinity Cellular</div>
+            <div class="rr-val"><span class="v" id="res-affinity">$720</span><span class="yr">/year</span></div>
+          </div>
+          <div class="res-row">
+            <div class="rr-ico gold">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 5h6l-1.5-3h-3z"/><path d="M10 5c-3.5 3-5.5 6-5.5 10 0 3.5 2.5 6 7.5 6s7.5-2.5 7.5-6c0-4-2-7-5.5-10"/>
+                <path d="M12 10v8"/><path d="M14.5 11.5c-.5-.8-1.4-1.2-2.5-1.2-1.4 0-2.4.7-2.4 1.8 0 2.6 5 1.3 5 3.9 0 1.1-1.1 1.8-2.6 1.8-1.2 0-2.2-.5-2.7-1.3"/>
+              </svg>
+            </div>
+            <div class="rr-lbl caps">ESTIMATED ANNUAL <br>SAVINGS</div>
+            <div class="rr-val big"><span class="v" id="res-savings">$984</span><span class="yr">/year</span></div>
+          </div>
+        </div>
+
+        <button class="btn-qualify" data-qualify>
+          SEE IF YOU ARE QUALIFIED
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 12h16"/><path d="M13 5l7 7-7 7"/>
+          </svg>
+        </button>
+        <div class="enough-grid">
+          <div class="enough-item">
+            <div class="ei-ico">
+              <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#0d2542" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="9" width="16" height="12" rx="1"/><path d="M12 9v12"/><path d="M3 6.5h18V9H3z"/>
+                <path d="M12 6.5c-1.5 0-4-.6-4-2.4C8 2.7 9 2 10 2c1.6 0 2 2.2 2 4.5zM12 6.5c1.5 0 4-.6 4-2.4C16 2.7 15 2 14 2c-1.6 0-2 2.2-2 4.5z"/>
+              </svg>
+            </div>
+            <div class="ei-lbl">Holiday<br>gifts</div>
+          </div>
+          <div class="enough-item">
+            <div class="ei-ico">
+              <svg width="36" height="38" viewBox="0 0 24 24" fill="none" stroke="#0d2542" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="8.5" y="2.5" width="7" height="19" rx="3.5"/><path d="M8.5 12h7"/><path d="M10.8 6.5h2.4"/>
+              </svg>
+            </div>
+            <div class="ei-lbl">Prescription<br>costs</div>
+          </div>
+          <div class="enough-item">
+            <div class="ei-ico">
+              <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#0d2542" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="8" width="16" height="12" rx="2"/><path d="M9 8V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v3"/><path d="M9 8v12"/><path d="M15 8v12"/>
+              </svg>
+            </div>
+            <div class="ei-lbl">Weekend<br>getaway</div>
+          </div>
+          <div class="enough-item">
+            <div class="ei-ico">
+              <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#0d2542" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 11l9-8 9 8"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/>
+              </svg>
+            </div>
+            <div class="ei-lbl">Utility<br>bills</div>
+          </div>
+          <div class="enough-item">
+            <div class="ei-ico">
+              <svg width="34" height="38" viewBox="0 0 24 24" fill="none" stroke="#0d2542" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2l8 3.5v5.2c0 5.2-3.4 8.7-8 11.3-4.6-2.6-8-6.1-8-11.3V5.5z"/>
+                <path d="M12 7.2v9.6M14.4 9.4c-.5-.7-1.3-1.1-2.4-1.1-1.3 0-2.2.65-2.2 1.65 0 2.4 4.7 1.2 4.7 3.6 0 1-1 1.65-2.4 1.65-1.1 0-2-.45-2.5-1.2"/>
+              </svg>
+            </div>
+            <div class="ei-lbl">Emergency<br>savings</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= OFFER STRIP ================= -->
+<section class="offer-strip-wrap">
+  <div class="container">
+    <div class="offer-strip">
+      <div class="os-left">
+        <div class="os-gift">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="9" width="16" height="12" rx="1"/><path d="M12 9v12"/><path d="M3 6.5h18V9H3z"/>
+            <path d="M12 6.5c-1.5 0-4-.6-4-2.4C8 2.7 9 2 10 2c1.6 0 2 2.2 2 4.5zM12 6.5c1.5 0 4-.6 4-2.4C16 2.7 15 2 14 2c-1.6 0-2 2.2-2 4.5z"/>
+          </svg>
+        </div>
+        <div>
+          <div class="os-kicker">LIMITED-TIME OFFER</div>
+          <div class="os-big">3 MONTHS FREE</div>
+          <div class="os-sub">Unlimited Talk, Text &amp; Data</div>
+        </div>
+      </div>
+      <div class="os-plus">+</div>
+      <div class="os-right">
+        <div class="os-iphone">
+          <svg width="34" height="52" viewBox="0 0 34 52" fill="none" stroke="#e01b22" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="2" width="28" height="48" rx="6"/><path d="M13 7h8"/>
+          </svg>
+        </div>
+        <div>
+          <div class="os-r-title">ELIGIBLE IPHONE OFFER<br>AFTER 12 MONTHS</div>
+          <div class="os-r-sub">This limited-time promotion is<br>available to qualifying new customers.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section class="testi-section">
+  <div class="container">
+    <div class="testi-head">
+      <h2>SEE WHAT OTHER SENIORS ARE SAYING</h2>
+      <div class="testi-meta">
+        <span class="stars">★★★★★</span>
+        <span class="t-score">4.8 OUT OF 5 STARS</span>
+        <span class="t-count">OVER 25,000+ REVIEWS</span>
+      </div>
+    </div>
+    <div class="testi-grid">
+      <div class="t-card">
+        <div class="stars">★★★★★</div>
+        <div class="t-text">&ldquo;My Verizon bill was over $120 every month. Switching to Affinity literally cut it in half and I haven&rsquo;t noticed any difference in coverage.&rdquo;</div>
+        <div class="t-person">
+          <div class="t-avatar"><img src="images/avatar-linda.jpg" alt="Linda M."></div>
+          <div>
+            <div class="t-name">Linda M.</div>
+            <div class="t-loc">Florida</div>
+            <div class="t-verified">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#2a7de1"><path d="M12 1l2.4 2 3.1-.4 1 3 2.9 1.2-.5 3.1 2.1 2.3-2.1 2.3.5 3.1-2.9 1.2-1 3-3.1-.4-2.4 2-2.4-2-3.1.4-1-3-2.9-1.2.5-3.1L1 12.2l2.1-2.3-.5-3.1 2.9-1.2 1-3 3.1.4z"/><path d="M8.5 12.2l2.3 2.3 4.7-4.9" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Verified Customer
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="t-card">
+        <div class="stars">★★★★★</div>
+        <div class="t-text">&ldquo;I was worried I&rsquo;d lose my phone number. The entire process took less than an hour and everything transferred perfectly.&rdquo;</div>
+        <div class="t-person">
+          <div class="t-avatar"><img src="images/avatar-richard.jpg" alt="Richard T."></div>
+          <div>
+            <div class="t-name">Richard T.</div>
+            <div class="t-loc">Ohio</div>
+            <div class="t-verified">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#2a7de1"><path d="M12 1l2.4 2 3.1-.4 1 3 2.9 1.2-.5 3.1 2.1 2.3-2.1 2.3.5 3.1-2.9 1.2-1 3-3.1-.4-2.4 2-2.4-2-3.1.4-1-3-2.9-1.2.5-3.1L1 12.2l2.1-2.3-.5-3.1 2.9-1.2 1-3 3.1.4z"/><path d="M8.5 12.2l2.3 2.3 4.7-4.9" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Verified Customer
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="t-card">
+        <div class="stars">★★★★★</div>
+        <div class="t-text">&ldquo;The customer service was incredible. They answered every question I had and helped me choose the right plan.&rdquo;</div>
+        <div class="t-person">
+          <div class="t-avatar"><img src="images/avatar-patricia.jpg" alt="Patricia K."></div>
+          <div>
+            <div class="t-name">Patricia K.</div>
+            <div class="t-loc">Arizona</div>
+            <div class="t-verified">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#2a7de1"><path d="M12 1l2.4 2 3.1-.4 1 3 2.9 1.2-.5 3.1 2.1 2.3-2.1 2.3.5 3.1-2.9 1.2-1 3-3.1-.4-2.4 2-2.4-2-3.1.4-1-3-2.9-1.2.5-3.1L1 12.2l2.1-2.3-.5-3.1 2.9-1.2 1-3 3.1.4z"/><path d="M8.5 12.2l2.3 2.3 4.7-4.9" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Verified Customer
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER CTA ================= -->
+<section class="footcta">
+  <div class="footcta-inner">
+    <div class="fc-phone">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="#0d2542">
+        <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.24.2 2.45.57 3.57a1 1 0 0 1-.24 1.02l-2.21 2.2z"/>
+      </svg>
+    </div>
+    <div class="fc-copy">
+      <div class="fc-title">READY TO STOP OVERPAYING?</div>
+      <div class="fc-checks">
+        <div class="fc-check">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#35c65a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          3 Months FREE
+        </div>
+        <div class="fc-check">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#35c65a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          Plans Starting At Just $15/Month
+        </div>
+        <div class="fc-check">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#35c65a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          Same Rellable Verizon Nationwide Coverage
+        </div>
+      </div>
+    </div>
+    <a class="fc-callbox" href="tel:8557638221">
+      <div class="fcb-kicker">CALL NOW TO SPEAK WITH<br>A U.S.-BASED SPECIALIST</div>
+      <div class="fcb-num">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="#fff">
+          <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.24.2 2.45.57 3.57a1 1 0 0 1-.24 1.02l-2.21 2.2z"/>
+        </svg>
+        855-763-8221
+      </div>
+    </a>
+  </div>
+  <div class="fc-agent"><img src="images/agent-headset.jpg" alt="U.S.-based customer support specialist"></div>
+</section>
+
+<!-- ================= LEGAL FOOTER ================= -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="f-links">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <span>|</span>
+      <a href="terms.html">Terms &amp; Conditions</a>
+      <span>|</span>
+      <a href="https://affinitycellular.com/Support/Returns" target="_blank" rel="noopener">Return Policy</a>
+      <span>|</span>
+      <a href="https://affinitycellular.com/" target="_blank" rel="noopener">AffinityCellular.com</a>
+      <span>|</span>
+      <a href="tel:8557638221">855-763-8221</a>
+    </div>
+    <p>Savings estimates shown by this calculator are for illustration only. They are based on the information you enter and typical plan pricing; your actual savings will vary depending on your current plan, usage, taxes and fees, and the Affinity Cellular plan you select. The calculator does not constitute a quote or guarantee of savings.</p>
+    <p>*3 Months Free offer: available to qualifying new customers only on select plans &mdash; $0 for the first three months of unlimited service on one line. After the promotional period, plans start as low as $15/month. Limited-time offer; <a href="terms.html">terms and conditions</a> apply. Eligible iPhone offer after 12 months is a limited-time promotion available to qualifying new customers; see terms for eligibility.</p>
+    <p>30-Day Money-Back Guarantee: phones may be returned within 30 days of purchase &mdash; provided total usage is under 30 minutes of talk time, 30 text messages, or 30 MB of data (whichever comes first) &mdash; for a refund of the activation fee, handset cost, and prorated plan cost. The cost of additional services is not refundable. See the full <a href="https://affinitycellular.com/Support/Returns" target="_blank" rel="noopener">Return Policy</a> for details.</p>
+    <p>Testimonials reflect the experiences of individual customers; savings and results may vary. Affinity Cellular operates on the Verizon nationwide network. Verizon, AT&amp;T, T-Mobile, Consumer Cellular, and Mint Mobile are trademarks of their respective owners; references do not imply endorsement or affiliation.</p>
+    <p>Questions about how your information is collected and used? See the <a href="privacy-policy.html">Privacy &amp; CPNI Policy</a>, email <a href="mailto:help@affinitycellular.com">help@affinitycellular.com</a>, or call customer support at (833)&nbsp;679-1090. Affinity Cellular, 4245 Kemp Blvd, Suite 120, Wichita Falls, TX 76308.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  /* ---------- Calculator ---------- */
+  /* ---------- Evergreen countdown (per visitor, localStorage) ---------- */
+  var KEY='affinityCalcDeadline';
+  var SEED=((2*24+14)*60+37)*60+26; /* 2d 14h 37m 26s */
+  var deadline=parseInt(localStorage.getItem(KEY),10);
+  if(!deadline||deadline<Date.now()){
+    deadline=Date.now()+SEED*1000;
+    localStorage.setItem(KEY,deadline);
+  }
+  function pad(n){return (n<10?'0':'')+n;}
+  function tick(){
+    var s=Math.max(0,Math.floor((deadline-Date.now())/1000));
+    document.getElementById('cd-days').textContent=pad(Math.floor(s/86400));
+    document.getElementById('cd-hrs').textContent=pad(Math.floor(s%86400/3600));
+    document.getElementById('cd-min').textContent=pad(Math.floor(s%3600/60));
+    document.getElementById('cd-sec').textContent=pad(s%60);
+  }
+  tick();
+  setInterval(tick,1000);
+
+  var slider=document.getElementById('bill-slider');
+  var billDisplay=document.getElementById('bill-display');
+  var lines=1;
+  var FACTORS={calls:.42,web:.48,social:.55,heavy:.62};
+
+  function paintSlider(){
+    var pct=(slider.value-slider.min)/(slider.max-slider.min)*100;
+    slider.style.background='linear-gradient(90deg,#e01b22 0%,#e01b22 '+pct+'%,#cfd8e3 '+pct+'%,#cfd8e3 100%)';
+    billDisplay.textContent='$'+slider.value;
+  }
+  slider.addEventListener('input',paintSlider);
+  paintSlider();
+
+  document.querySelectorAll('#line-btns .line-btn').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      document.querySelectorAll('#line-btns .line-btn').forEach(function(b){b.classList.remove('sel');});
+      btn.classList.add('sel');
+      lines=parseInt(btn.dataset.lines,10);
+    });
+  });
+
+  function fmt(n){return '$'+n.toLocaleString('en-US');}
+  function calculate(){
+    var bill=parseInt(slider.value,10);
+    var data=document.querySelector('input[name=data]:checked').value;
+    var factor=FACTORS[data]+(lines-1)*.04;
+    var affinityMonthly=Math.max(15*lines,Math.round(bill*factor));
+    var savingsMonthly=Math.max(0,bill-affinityMonthly);
+    var currentAnnual=bill*12;
+    var savingsAnnual=savingsMonthly*12;
+    var overMonthly=savingsMonthly>0?Math.round(savingsMonthly+bill*.07):0;
+    document.getElementById('res-over').textContent=fmt(overMonthly);
+    document.getElementById('res-current').textContent=fmt(currentAnnual);
+    document.getElementById('res-affinity').textContent=fmt(currentAnnual-savingsAnnual);
+    document.getElementById('res-savings').textContent=fmt(savingsAnnual);
+  }
+  var leadFormShown=false;
+  document.getElementById('btn-calc').addEventListener('click',function(){
+    if(!leadFormShown){
+      leadFormShown=true;
+      document.getElementById('lead-modal').classList.add('open');
+      document.body.classList.add('lead-modal-open');
+      return;
+    }
+    calculate();
+    var panel=document.querySelector('.panel-results');
+    panel.style.transition='none';panel.style.boxShadow='0 0 0 3px rgba(30,158,74,.45)';
+    setTimeout(function(){panel.style.transition='box-shadow .8s';panel.style.boxShadow='';},60);
+    panel.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+})();
+</script>
+
+<!-- ================= QUALIFY POPUP ================= -->
+<div class="lead-modal" id="lead-modal" role="dialog" aria-modal="true" aria-label="Check if you qualify for this offer">
+  <div class="lead-modal-backdrop" data-close-modal></div>
+  <div class="lead-modal-card">
+    <div class="lead-modal-head">
+      CHECK IF YOU QUALIFY FOR THIS OFFER
+      <span class="lm-sub">3 Months FREE for qualifying new customers &mdash; takes about 30 seconds</span>
+      <button class="lead-modal-close" data-close-modal aria-label="Close">&times;</button>
+    </div>
+    <div class="lead-modal-body">
+      <iframe
+        src="https://link.leadstacker.com/widget/form/37nJkqO1oqpdAsYYVm4K"
+        style="width:100%;height:467px;border:none;border-radius:8px"
+        id="popup-37nJkqO1oqpdAsYYVm4K"
+        data-layout="{'id':'INLINE'}"
+        data-trigger-type="alwaysShow"
+        data-trigger-value=""
+        data-activation-type="alwaysActivated"
+        data-activation-value=""
+        data-deactivation-type="neverDeactivate"
+        data-deactivation-value=""
+        data-form-name="Form 2"
+        data-height="467"
+        data-layout-iframe-id="popup-37nJkqO1oqpdAsYYVm4K"
+        data-form-id="37nJkqO1oqpdAsYYVm4K"
+        title="Form 2">
+      </iframe>
+    <div class="lead-modal-foot">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#5d6a78" stroke-width="2"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+      <span>Your information is secure and handled per our <a href="privacy-policy.html">Privacy Policy</a>. No obligation.</span>
+    </div>
+  </div>
+</div>
+<script src="https://link.leadstacker.com/js/form_embed.js"></script>
+
+<script>
+  (function(){
+    var modal=document.getElementById('lead-modal');
+    function openModal(e){if(e)e.preventDefault();modal.classList.add('open');document.body.classList.add('lead-modal-open');}
+    function closeModal(){modal.classList.remove('open');document.body.classList.remove('lead-modal-open');}
+    document.querySelectorAll('[data-qualify]').forEach(function(el){el.addEventListener('click',openModal);});
+    modal.querySelectorAll('[data-close-modal]').forEach(function(el){el.addEventListener('click',closeModal);});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why Seniors Are Switching to Affinity Cellular</title>
+<style>
+  :root{
+    --navy:#0d2542;
+    --navy-deep:#0a1e37;
+    --red:#e01b22;
+    --red-dark:#c8151c;
+    --text:#333b45;
+    --muted:#5d6a78;
+    --border:#e4e8ed;
+    --gold:#f6b21b;
+    --teal:#2a7de1;
+    --card-shadow:0 2px 10px rgba(13,37,66,.08);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--text);
+    background:#fff;
+    line-height:1.55;
+  }
+  img,svg{max-width:100%;display:block;}
+  a{text-decoration:none;color:inherit;}
+
+  /* ============ STICKY URGENCY BAR ============ */
+  .urgent-bar{
+    position:sticky;top:0;z-index:1000;
+    background:var(--red);color:#fff;
+    box-shadow:0 2px 10px rgba(13,37,66,.25);
+  }
+  .urgent-inner{
+    max-width:1160px;margin:0 auto;padding:9px 16px;
+    display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:nowrap;
+  }
+  .urgent-msg{
+    font-size:15px;font-weight:800;letter-spacing:.3px;line-height:1.25;text-align:center;
+    display:flex;align-items:center;gap:9px;min-width:0;
+  }
+  .urgent-msg .u-clock{flex:0 0 auto;display:flex;}
+  .urgent-msg .u-strong{color:#ffe23c;}
+  .urgent-cta{
+    flex:0 0 auto;background:#fff;color:var(--red);
+    font-size:14px;font-weight:900;letter-spacing:.6px;
+    padding:9px 18px;border-radius:6px;white-space:nowrap;
+    box-shadow:0 2px 6px rgba(0,0,0,.18);
+    display:flex;align-items:center;gap:7px;
+    transition:transform .12s;
+  }
+  .urgent-cta:hover{transform:scale(1.04);}
+  @media (max-width:640px){
+    .urgent-inner{padding:8px 10px;gap:10px;}
+    .urgent-msg{font-size:12px;gap:6px;}
+    .urgent-cta{font-size:12.5px;padding:8px 12px;}
+  }
+  @media (max-width:360px){
+    .urgent-msg .u-hide-xs{display:none;}
+  }
+
+  /* ============ VALUE PROPS STRIP ============ */
+  .value-strip{background:#eef3f9;border-bottom:1px solid var(--border);}
+  .value-strip-inner{
+    max-width:1160px;margin:0 auto;padding:9px 16px;
+    display:flex;align-items:center;justify-content:center;gap:8px 26px;flex-wrap:wrap;
+  }
+  .vp{
+    display:flex;align-items:center;gap:7px;
+    font-size:13.5px;font-weight:700;color:var(--navy);white-space:nowrap;
+  }
+  .vp .vp-chk{
+    width:17px;height:17px;border-radius:50%;background:var(--navy);flex:0 0 auto;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .vp .vp-free{color:var(--red);}
+  @media (max-width:640px){
+    .value-strip-inner{gap:5px 14px;padding:8px 10px;}
+    .vp{font-size:11.5px;gap:5px;}
+    .vp .vp-chk{width:14px;height:14px;}
+  }
+
+  /* ============ TOP BAR ============ */
+  .topbar{
+    background:var(--navy);
+    color:#fff;
+    padding:14px 0;
+  }
+  .topbar-inner{
+    max-width:1160px;margin:0 auto;padding:0 24px;
+    display:flex;align-items:center;justify-content:space-between;gap:24px;
+  }
+  .brand{line-height:1.05;flex-shrink:0;}
+  .brand .brand-top{
+    font-size:30px;font-weight:800;letter-spacing:-.5px;
+    font-family:Verdana,Geneva,sans-serif;
+  }
+  .brand .brand-top sup{font-size:11px;font-weight:400;vertical-align:super;}
+  .brand .brand-bottom{
+    font-size:14px;font-weight:400;letter-spacing:4.5px;color:#c9d3e0;
+    font-family:Verdana,Geneva,sans-serif;
+  }
+  .brand .brand-bottom sup{font-size:8px;letter-spacing:0;}
+  .years{line-height:1.15;margin-right:auto;margin-left:34px;}
+  .years .y-big{color:var(--red);font-size:27px;font-weight:800;letter-spacing:.5px;}
+  .years .y-small{color:#fff;font-size:12px;font-weight:600;letter-spacing:1.6px;}
+  .callbox{display:flex;align-items:center;gap:14px;text-align:left;flex-shrink:0;}
+  .callbox .phone-ico{
+    width:46px;height:46px;border:2px solid #fff;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  }
+  .callbox .c-help{font-size:13px;font-weight:600;color:#fff;}
+  .callbox .c-num{font-size:30px;font-weight:800;color:#fff;letter-spacing:.5px;line-height:1.1;}
+  .callbox .c-hours{font-size:11.5px;color:#aab8c9;margin-top:2px;}
+
+  /* ============ LAYOUT ============ */
+  .container{max-width:1160px;margin:0 auto;padding:0 24px;}
+  .breadcrumb{
+    padding:18px 0 6px;font-size:13px;color:#8a95a1;
+  }
+  .breadcrumb a{color:#4a80c4;display:inline-block;padding:5px 0;}
+  .breadcrumb .sep{margin:0 7px;color:#b6bec7;}
+  .layout{
+    display:flex;gap:40px;align-items:flex-start;padding:14px 0 60px;
+  }
+  main{flex:1 1 auto;min-width:0;}
+  aside{width:340px;flex-shrink:0;display:flex;flex-direction:column;gap:22px;}
+
+  /* ============ ARTICLE ============ */
+  .badge{
+    display:inline-block;background:var(--red);color:#fff;
+    font-size:12.5px;font-weight:700;letter-spacing:1.5px;
+    padding:6px 14px;margin-bottom:16px;
+  }
+  h1{
+    font-family:Georgia,"Times New Roman",serif;
+    color:var(--navy);
+    font-size:44px;line-height:1.16;font-weight:700;
+    letter-spacing:-.3px;margin-bottom:18px;
+  }
+  .subhead{
+    font-size:20px;color:#55606c;line-height:1.45;margin-bottom:22px;font-weight:400;
+  }
+  .byline{
+    display:flex;align-items:center;gap:12px;
+    font-size:13.5px;color:#6b7684;margin-bottom:24px;
+  }
+  .byline .avatar{
+    width:38px;height:38px;border-radius:50%;overflow:hidden;flex-shrink:0;
+    background:#e9d9c8;
+  }
+  .byline .b-author{color:var(--navy);font-weight:600;}
+  .byline .b-sep{color:#c3cad2;margin:0 10px;}
+  .hero{
+    border-radius:6px;overflow:hidden;margin-bottom:28px;
+  }
+  .hero img{width:100%;aspect-ratio:760/430;object-fit:cover;object-position:50% 12%;}
+  .byline .avatar img,.t-avatar img{width:100%;height:100%;object-fit:cover;}
+
+  main p{font-size:17px;line-height:1.65;margin-bottom:18px;color:var(--text);}
+  main .em-red{color:var(--red);font-weight:700;}
+  main .em-red-u{color:var(--red);font-weight:700;}
+  hr.rule{border:none;border-top:1px solid var(--border);margin:30px 0;}
+
+  h2{
+    font-family:Georgia,"Times New Roman",serif;
+    color:var(--navy);font-size:27px;font-weight:700;
+    margin:8px 0 16px;letter-spacing:-.2px;
+  }
+
+  /* ============ COMPARISON TABLE ============ */
+  .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:26px 0 8px;}
+  table.compare{
+    border-collapse:separate;border-spacing:0;width:100%;
+    font-size:13.5px;
+  }
+  table.compare th,table.compare td{
+    border:1px solid var(--border);border-width:0 0 1px 1px;
+    padding:12px 10px;text-align:center;vertical-align:middle;background:#fff;
+  }
+  table.compare tr th:first-child,table.compare tr td:first-child{border-left:none;text-align:left;}
+  table.compare thead th{
+    background:#eef1f5;color:#3c4856;font-weight:700;font-size:13px;
+  }
+  table.compare td.feature{font-weight:600;color:#3c4856;background:#fff;font-size:13px;}
+  table.compare .x{color:#9aa4af;font-size:15px;font-weight:600;}
+  table.compare .chk{color:var(--navy);font-size:16px;font-weight:800;}
+  table.compare .chk-red{color:var(--red);font-size:17px;font-weight:800;}
+  /* Affinity highlighted column */
+  table.compare th.aff,table.compare td.aff{
+    border-left:2px solid var(--red);border-right:2px solid var(--red);
+  }
+  table.compare thead th.aff{
+    background:var(--navy);color:#fff;border-top:2px solid var(--red);
+  }
+  table.compare tbody tr:last-child td.aff{border-bottom:2px solid var(--red);}
+  table.compare td.aff .price{color:var(--red);font-weight:800;font-size:16px;line-height:1.1;}
+  table.compare td.aff .price small{display:block;color:#6b7684;font-weight:600;font-size:9px;letter-spacing:.3px;}
+  .table-note{font-size:12px;color:#8a95a1;margin-bottom:6px;}
+
+  /* ============ FEATURES ROW ============ */
+  .features{
+    display:flex;gap:0;margin:28px 0 10px;text-align:center;
+  }
+  .features .feat{
+    flex:1;padding:0 16px;position:relative;
+  }
+  .features .feat + .feat::before{
+    content:"";position:absolute;left:0;top:8px;bottom:8px;width:1px;background:var(--border);
+  }
+  .feat .f-ico{
+    width:56px;height:56px;margin:0 auto 12px;border-radius:50%;
+    background:var(--navy);display:flex;align-items:center;justify-content:center;
+  }
+  .feat .f-title{font-weight:700;color:var(--navy);font-size:14.5px;line-height:1.3;margin-bottom:6px;}
+  .feat .f-sub{font-size:12.5px;color:#6b7684;line-height:1.45;}
+
+  /* ============ TESTIMONIALS ============ */
+  .testimonial{
+    background:#f5f7fa;border-radius:8px;padding:22px 24px;
+    display:flex;gap:18px;align-items:flex-start;margin:20px 0;
+  }
+  .testimonial .t-avatar{
+    width:74px;height:74px;border-radius:50%;overflow:hidden;flex-shrink:0;background:#dfe6ee;
+  }
+  .testimonial .t-quote-mark{color:#3b78c3;font-family:Georgia,serif;font-size:34px;line-height:.6;display:inline-block;margin-right:4px;}
+  .testimonial .t-text{font-size:15.5px;color:#3c4856;line-height:1.6;}
+  .testimonial .t-attrib{font-size:14px;color:#6b7684;margin-top:8px;}
+  .stars{color:var(--gold);font-size:16px;letter-spacing:2px;margin-top:6px;}
+
+  /* ============ SIDEBAR CARDS ============ */
+  .card{
+    background:#fff;border:1px solid var(--border);border-radius:8px;
+    box-shadow:var(--card-shadow);overflow:hidden;
+  }
+  .card .card-pad{padding:20px 22px;}
+
+  /* Offer card */
+  .offer .offer-head{
+    background:var(--navy);color:#fff;text-align:center;
+    font-size:14px;font-weight:700;letter-spacing:1.5px;padding:12px;
+  }
+  .offer .offer-body{padding:22px 22px 24px;text-align:center;}
+  .offer .o-try{font-size:15px;font-weight:700;color:var(--navy);letter-spacing:1.2px;}
+  .offer .o-months{font-size:40px;font-weight:800;color:var(--red);line-height:1.05;margin-top:6px;letter-spacing:.5px;}
+  .offer .o-free{font-size:64px;font-weight:900;color:var(--red);line-height:1;letter-spacing:1px;}
+  .offer .o-free sup{font-size:26px;font-weight:700;}
+  .offer .o-unlim{font-size:16px;font-weight:800;color:var(--navy);letter-spacing:.8px;margin-top:8px;line-height:1.3;}
+  .offer .o-div{border-top:1px solid var(--border);margin:18px 0 14px;}
+  .offer .o-start{font-size:13px;font-weight:700;color:#55606c;letter-spacing:.8px;}
+  .offer .o-price{font-size:56px;font-weight:800;color:var(--navy);line-height:1.05;}
+  .offer .o-price .mo{font-size:22px;font-weight:700;color:var(--navy);}
+  .offer .o-after{font-size:13px;font-weight:700;color:#55606c;letter-spacing:1px;margin-top:2px;}
+  .cta{
+    display:block;width:100%;background:var(--red);color:#fff;text-align:center;
+    font-size:16.5px;font-weight:800;letter-spacing:.5px;
+    padding:15px 10px;border-radius:5px;margin-top:18px;
+    box-shadow:0 3px 8px rgba(224,27,34,.35);cursor:pointer;border:none;
+    transition:background .15s;
+  }
+  .cta:hover{background:var(--red-dark);}
+  .offer .o-trust{margin-top:14px;font-size:12.5px;color:#55606c;line-height:1.5;}
+  .offer .o-trust .lock{vertical-align:-2px;margin-right:4px;}
+  .offer .o-trust b{color:#3c4856;}
+
+  /* Why switching card */
+  .why h3{
+    font-family:Georgia,"Times New Roman",serif;color:var(--navy);
+    font-size:21px;line-height:1.3;margin-bottom:16px;
+  }
+  .why ul{list-style:none;}
+  .why li{
+    display:flex;gap:12px;align-items:flex-start;
+    font-size:14.5px;color:#3c4856;line-height:1.4;
+    padding:9px 0;font-weight:500;
+  }
+  .why li .chk-ico{
+    width:22px;height:22px;border-radius:50%;background:var(--navy);
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;
+  }
+
+  /* FAQ card */
+  .faq h3{
+    font-family:Georgia,"Times New Roman",serif;color:var(--navy);
+    font-size:21px;line-height:1.3;margin-bottom:8px;
+  }
+  .faq .q{
+    border-top:1px solid var(--border);
+  }
+  .faq .q:first-of-type{border-top:none;}
+  .faq .q-head{
+    display:flex;justify-content:space-between;align-items:center;gap:12px;
+    padding:13px 0;cursor:pointer;font-size:14.5px;font-weight:600;color:#2e3947;
+    line-height:1.35;
+  }
+  .faq .q-plus{
+    width:20px;height:20px;border:1.5px solid var(--red);border-radius:50%;
+    color:var(--red);display:flex;align-items:center;justify-content:center;
+    font-size:14px;font-weight:700;flex-shrink:0;line-height:1;
+    transition:transform .2s;
+  }
+  .faq .q.open .q-plus{transform:rotate(45deg);}
+  .faq .q-body{display:none;font-size:13.5px;color:#5d6a78;padding:0 26px 14px 0;line-height:1.55;}
+  .faq .q.open .q-body{display:block;}
+  .faq .see-all{display:inline-block;color:var(--red);font-weight:700;font-size:14px;margin-top:4px;padding:10px 0;}
+
+  /* Trusted card */
+  .trusted h3{
+    font-family:Georgia,"Times New Roman",serif;color:var(--navy);
+    font-size:20px;margin-bottom:14px;
+  }
+  .trusted .t-row{display:flex;gap:12px;align-items:center;font-size:13.5px;color:#3c4856;font-weight:600;line-height:1.4;}
+  .trusted .shield{flex-shrink:0;}
+  .member-logos{display:flex;align-items:center;gap:26px;margin-top:16px;padding-left:4px;}
+  .logo-aarp{
+    font-family:"Arial Black",Arial,sans-serif;color:var(--red);
+    font-size:30px;font-weight:900;letter-spacing:-1px;font-style:italic;
+  }
+  .logo-aaa{
+    position:relative;background:#00539f;color:#fff;border-radius:50%/38%;
+    width:74px;height:46px;display:flex;align-items:center;justify-content:center;
+    font-family:"Arial Black",Arial,sans-serif;font-size:20px;font-style:italic;letter-spacing:-1px;
+    box-shadow:inset 0 -6px 0 #d5222c;
+  }
+
+  /* As seen in */
+  .seen h3{
+    font-family:Georgia,"Times New Roman",serif;color:var(--navy);
+    font-size:20px;margin-bottom:16px;
+  }
+  .seen-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px 14px;align-items:center;}
+  .logo-forbes{font-family:Georgia,serif;font-weight:700;font-size:26px;color:#22314a;}
+  .logo-usatoday{display:flex;align-items:center;gap:7px;font-family:Arial,sans-serif;font-weight:800;font-size:15px;color:#404b57;letter-spacing:-.5px;}
+  .logo-usatoday .dot{width:22px;height:22px;border-radius:50%;background:#8f9aa6;flex-shrink:0;}
+  .logo-usnews{font-family:Arial,sans-serif;color:#1a3a5c;line-height:1;}
+  .logo-usnews .top{font-weight:800;font-size:19px;letter-spacing:-.5px;}
+  .logo-usnews .bottom{font-size:7px;letter-spacing:1.2px;color:#5d6a78;margin-top:2px;}
+  .logo-aarpmag{font-family:"Arial Black",Arial,sans-serif;color:#1c2735;font-size:24px;font-weight:900;font-style:italic;letter-spacing:-1px;line-height:1;}
+  .logo-aarpmag small{display:block;font-family:Arial,sans-serif;font-weight:400;font-style:normal;font-size:8px;letter-spacing:.5px;color:#5d6a78;text-align:right;}
+
+  /* Reviews card */
+  .reviews h3{
+    font-family:Georgia,"Times New Roman",serif;color:var(--navy);
+    font-size:21px;line-height:1.3;margin-bottom:12px;
+  }
+  .reviews .stars-big{color:var(--gold);font-size:26px;letter-spacing:5px;}
+  .reviews .r-score{font-weight:800;color:#2e3947;font-size:14px;letter-spacing:.5px;margin-top:10px;}
+  .reviews .r-count{font-weight:700;color:#5d6a78;font-size:12.5px;letter-spacing:.5px;margin-top:3px;}
+
+  /* ============ LEAD FORM (inline + popup) ============ */
+  .lead-modal{position:fixed;inset:0;z-index:2000;display:none;}
+  .lead-modal.open{display:block;}
+  .lead-modal-backdrop{position:absolute;inset:0;background:rgba(10,30,55,.62);}
+  .lead-modal-card{
+    position:relative;max-width:500px;width:calc(100% - 32px);
+    margin:5vh auto 0;background:#fff;border-radius:12px;overflow:hidden;
+    box-shadow:0 18px 60px rgba(0,0,0,.35);
+    display:flex;flex-direction:column;max-height:90vh;
+  }
+  .lead-modal-head{
+    background:var(--navy);color:#fff;font-weight:800;font-size:15.5px;letter-spacing:.6px;
+    padding:15px 46px 15px 18px;position:relative;text-align:center;line-height:1.3;
+  }
+  .lead-modal-close{
+    position:absolute;right:10px;top:50%;transform:translateY(-50%);
+    width:30px;height:30px;border:none;border-radius:50%;background:rgba(255,255,255,.15);
+    color:#fff;font-size:19px;line-height:1;cursor:pointer;font-weight:700;
+  }
+  .lead-modal-close:hover{background:var(--red);}
+  .lead-modal-body{padding:10px;overflow-y:auto;}
+  .lead-modal-body iframe{width:100%;height:467px;border:none;border-radius:8px;display:block;}
+  .lead-modal-head .lm-sub{display:block;font-size:12px;font-weight:600;color:#c9d5e3;letter-spacing:.2px;margin-top:4px;}
+  .lead-modal-foot{
+    display:flex;align-items:center;justify-content:center;gap:7px;
+    padding:4px 14px 14px;font-size:12px;color:#5d6a78;text-align:center;
+  }
+  .lead-modal-foot a{color:#5d6a78;text-decoration:underline;}
+  body.lead-modal-open{overflow:hidden;}
+
+  /* ============ FOOTER ============ */
+  .site-footer{background:var(--navy);color:#aab8c9;margin-top:44px;padding:30px 0 36px;}
+  .footer-inner{max-width:1160px;margin:0 auto;padding:0 24px;}
+  .f-links{display:flex;flex-wrap:wrap;gap:12px;align-items:center;font-size:14px;font-weight:700;margin-bottom:18px;}
+  .f-links a{color:#fff;display:inline-block;padding:8px 2px;}
+  .f-links a:hover{text-decoration:underline;}
+  .f-links span{color:#5d7189;}
+  .site-footer p{font-size:11.5px;line-height:1.6;margin-bottom:10px;color:#aab8c9;}
+  .site-footer p a{color:#cdd9e6;text-decoration:underline;}
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width: 980px){
+    .layout{flex-direction:column;align-items:stretch;}
+    main{width:100%;max-width:100%;}
+    aside{width:100%;}
+    h1{font-size:34px;}
+    .years{display:none;}
+  }
+  @media (max-width: 640px){
+    .topbar-inner{flex-direction:column;gap:10px;text-align:center;}
+    .callbox{justify-content:center;}
+    h1{font-size:29px;}
+    table.compare{font-size:11px;}
+    table.compare th,table.compare td{padding:8px 4px;}
+    table.compare thead th{font-size:10px;letter-spacing:.2px;}
+    table.compare td.feature{font-size:10.5px;padding-left:6px;}
+    table.compare td.aff .price{font-size:13px;}
+    table.compare .chk,table.compare .chk-red{font-size:14px;}
+    .features{flex-wrap:wrap;}
+    .features .feat{flex:1 1 45%;margin-bottom:18px;}
+    .features .feat + .feat::before{display:none;}
+  }
+  @media (max-width: 360px){
+    table.compare{font-size:9.5px;}
+    table.compare th,table.compare td{padding:6px 2px;}
+    table.compare thead th{font-size:9px;}
+    table.compare td.feature{font-size:10px;padding-right:1px;}
+    table.compare td.aff .price{font-size:11px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= STICKY URGENCY BAR ================= -->
+<div class="urgent-bar">
+  <div class="urgent-inner">
+    <div class="urgent-msg">
+      <span class="u-clock">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M10 2h4"/></svg>
+      </span>
+      <span>Don&rsquo;t Miss Out: <span class="u-strong">3 MONTHS FREE</span><span class="u-hide-xs"> &mdash; Limited-Time Offer for New Customers</span></span>
+    </div>
+    <a class="urgent-cta" href="tel:8557638221">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.7 3.6 5 6.4 6.4l2.1-2.1c.3-.3.7-.4 1-.2 1.1.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4.3c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.3 1.9z"/></svg>
+      CALL NOW
+    </a>
+  </div>
+</div>
+
+<!-- ================= TOP BAR ================= -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <div class="brand-top">Affinity<sup>®</sup></div>
+      <div class="brand-bottom">CELLULAR<sup>®</sup></div>
+    </div>
+    <div class="years">
+      <div class="y-big">15 YEARS</div>
+      <div class="y-small">OF TRUSTED SERVICE</div>
+    </div>
+    <a class="callbox" href="tel:8557638221">
+      <div class="phone-ico">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+      </div>
+      <div>
+        <div class="c-help">Call Now – We’re Here to Help</div>
+        <div class="c-num">855-763-8221</div>
+        <div class="c-hours">Mon-Fri 8am-8pm CT&nbsp; | &nbsp;Sat-Sun 10am-7pm CT</div>
+      </div>
+    </a>
+  </div>
+</header>
+
+<!-- ================= VALUE PROPS STRIP ================= -->
+<div class="value-strip">
+  <div class="value-strip-inner">
+    <span class="vp"><span class="vp-chk"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>Same Verizon Network</span>
+    <span class="vp"><span class="vp-chk"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>Plans from $15/mo.</span>
+    <span class="vp"><span class="vp-chk"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>No Contracts &amp; No Credit Check</span>
+    <span class="vp"><span class="vp-chk"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="vp-free">3 Months FREE*</span></span>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- ================= BREADCRUMB ================= -->
+  <nav class="breadcrumb">
+    <a href="#">Home</a><span class="sep">›</span><a href="#">Cell Phone Tips for Seniors</a><span class="sep">›</span>Why Seniors Are Switching to Affinity Cellular
+  </nav>
+
+  <div class="layout">
+
+    <!-- ================= MAIN ARTICLE ================= -->
+    <main>
+      <span class="badge">SPECIAL REPORT</span>
+      <h1>Why Thousands of Seniors Are Leaving Verizon, AT&amp;T and&nbsp;T&#8209;Mobile for a Smaller Wireless Company</h1>
+      <p class="subhead">A simple way to keep the same reliable network<br>and start paying a lot less.</p>
+
+      <div class="byline">
+        <div class="avatar">
+          <img src="images/avatar-patricia.jpg" alt="The Senior Savings Team">
+        </div>
+        <span>By <span class="b-author">The Senior Savings Team</span><span class="b-sep">|</span>Updated July 2026<span class="b-sep">|</span>5 minute read</span>
+      </div>
+
+      <!-- HERO IMAGE -->
+      <div class="hero">
+        <img src="images/hero-couple.jpg" alt="Senior couple smiling at a smartphone together" fetchpriority="high">
+      </div>
+
+      <p>If you’re over 50, there’s a good chance you’re paying more for cell phone service than you need to.</p>
+      <p>In fact, the average senior is paying between $80 and $120 every month for wireless service—often for far more data, features and fees than they actually use.</p>
+      <p>That’s why thousands of AARP and AAA members are switching to Affinity Cellular, a smaller wireless company that uses the <span class="em-red" style="text-decoration:underline;">same reliable Verizon network</span>, without the high price tag.</p>
+
+      <hr class="rule">
+
+      <h2>The Big Wireless Companies Are Expensive</h2>
+      <p>Verizon, AT&amp;T and T-Mobile all offer dependable service. But their plans are built for heavy data users who stream all day, every day.</p>
+      <p>Most seniors don’t need that much data. They want a simple plan that just works—at a price that makes sense.</p>
+      <p>Affinity Cellular was created with that in mind.</p>
+
+      <!-- COMPARISON TABLE -->
+      <div class="table-wrap">
+        <table class="compare">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Verizon</th>
+              <th>AT&amp;T</th>
+              <th>T-Mobile</th>
+              <th class="aff">Affinity<br>Cellular</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="feature">Uses Verizon Nationwide Network</td>
+              <td class="chk">✓</td><td class="chk">✓</td><td class="chk">✓</td>
+              <td class="aff chk-red">✔</td>
+            </tr>
+            <tr>
+              <td class="feature">No Contracts</td>
+              <td class="x">✕</td><td class="x">✕</td><td class="x">✕</td>
+              <td class="aff chk-red">✔</td>
+            </tr>
+            <tr>
+              <td class="feature">No Activation Fees</td>
+              <td class="x">✕</td><td class="x">✕</td><td class="x">✕</td>
+              <td class="aff chk-red">✔</td>
+            </tr>
+            <tr>
+              <td class="feature">Plans as Low as $15/mo.</td>
+              <td>$65+/mo.</td><td>$60+/mo.</td><td>$50+/mo.</td>
+              <td class="aff"><div class="price">$15/mo.<small>AFTER 3 MONTHS</small></div></td>
+            </tr>
+            <tr>
+              <td class="feature">3 Months FREE</td>
+              <td class="x">✕</td><td class="x">✕</td><td class="x">✕</td>
+              <td class="aff chk-red">✔</td>
+            </tr>
+            <tr>
+              <td class="feature">Senior-Focused Customer Service</td>
+              <td class="x">✕</td><td class="x">✕</td><td class="x">✕</td>
+              <td class="aff chk-red">✔</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">*Offer valid for new customers on select plans. Limited time. See full terms below.</p>
+
+      <hr class="rule">
+
+      <h2>Same Verizon Network. Lower Price.</h2>
+      <p>Affinity Cellular runs on the exact same Verizon network that the big companies use. You get the same nationwide coverage, the same call quality and the same reliability—without the extra cost.</p>
+
+      <!-- FEATURES -->
+      <div class="features">
+        <div class="feat">
+          <div class="f-ico">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="#fff">
+              <rect x="3" y="14" width="3.2" height="6"/><rect x="8.4" y="11" width="3.2" height="9"/>
+              <rect x="13.8" y="7" width="3.2" height="13"/><rect x="19.2" y="3" width="3.2" height="17"/>
+            </svg>
+          </div>
+          <div class="f-title">Fewer dropped calls</div>
+          <div class="f-sub">Stay connected with crystal-clear calls.</div>
+        </div>
+        <div class="feat">
+          <div class="f-ico">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+              <path d="M15 5a5 5 0 0 1 4 4" /><path d="M15 1a9 9 0 0 1 8 8"/>
+            </svg>
+          </div>
+          <div class="f-title">Fast data &amp; clear connections</div>
+          <div class="f-sub">Browse, text and video call with confidence.</div>
+        </div>
+        <div class="feat">
+          <div class="f-ico">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <div class="f-title">Coverage in the places you already go</div>
+          <div class="f-sub">Nationwide coverage you can count on.</div>
+        </div>
+        <div class="feat">
+          <div class="f-ico">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="#fff">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+          </div>
+          <div class="f-title">Peace of mind</div>
+          <div class="f-sub">U.S.-based support from people who care.</div>
+        </div>
+      </div>
+
+      <hr class="rule">
+
+      <h2>A Special Offer You Won’t Find Anywhere Else</h2>
+      <p>Right now, eligible AARP and AAA members can get <span class="em-red">3 MONTHS OF FREE UNLIMITED SERVICE</span> on one line when they switch to Affinity Cellular.</p>
+      <p>After that, plans start as low as $15 per month.</p>
+      <p>There are no contracts, no activation fees and no credit checks.</p>
+
+      <!-- TESTIMONIALS -->
+      <div class="testimonial">
+        <div class="t-avatar">
+          <img src="images/avatar-linda.jpg" alt="Linda M.">
+        </div>
+        <div>
+          <div class="t-text"><span class="t-quote-mark">“</span>I was paying over $120 a month with my old provider. Affinity Cellular cut my bill in half and the service is great!”</div>
+          <div class="t-attrib">– Linda M., Florida</div>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <div class="t-avatar">
+          <img src="images/avatar-richard.jpg" alt="Robert T.">
+        </div>
+        <div>
+          <div class="t-text"><span class="t-quote-mark">“</span>Switching was so easy and I kept my number. I wish I had done this years ago.”</div>
+          <div class="t-attrib">– Robert T., Ohio</div>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside>
+
+      <!-- OFFER CARD -->
+      <div class="card offer">
+        <div class="offer-head">LIMITED TIME OFFER</div>
+        <div class="offer-body">
+          <div class="o-try">TRY AFFINITY CELLULAR</div>
+          <div class="o-months">3 MONTHS</div>
+          <div class="o-free">FREE<sup>*</sup></div>
+          <div class="o-unlim">UNLIMITED SERVICE<br>ON ONE LINE</div>
+          <div class="o-div"></div>
+          <div class="o-start">PLANS STARTING AS LOW AS</div>
+          <div class="o-price">$15<span class="mo">/mo.</span></div>
+          <div class="o-after">AFTER 3 MONTHS</div>
+          <a class="cta" href="#" data-qualify>CHECK IF YOU QUALIFY »</a>
+          <div class="o-trust">
+            <svg class="lock" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#55606c" stroke-width="2" style="display:inline">
+              <rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/>
+            </svg>
+            It’s free. It’s fast.<br><b>It could save you hundreds.</b>
+          </div>
+        </div>
+      </div>
+
+      <!-- WHY SWITCHING -->
+      <div class="card why">
+        <div class="card-pad">
+          <h3>Why Seniors<br>Are Switching</h3>
+          <ul>
+            <li><span class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>Same reliable Verizon network nationwide</li>
+            <li><span class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>Plans from $15/month</li>
+            <li><span class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>No contracts or activation fees</li>
+            <li><span class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>Keep your phone &amp; number</li>
+            <li><span class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>No credit check</li>
+            <li><span class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>U.S.-based customer support</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div class="card faq">
+        <div class="card-pad">
+          <h3>Questions? We<br>Hear Them Often.</h3>
+          <div class="q">
+            <div class="q-head">Will I keep my phone number?<span class="q-plus">+</span></div>
+            <div class="q-body">Yes. You can transfer your current phone number when you switch—it’s quick and free.</div>
+          </div>
+          <div class="q">
+            <div class="q-head">Can I keep my phone?<span class="q-plus">+</span></div>
+            <div class="q-body">In most cases, yes. If your phone is compatible with the Verizon network, you can bring it with you.</div>
+          </div>
+          <div class="q">
+            <div class="q-head">Is coverage the same?<span class="q-plus">+</span></div>
+            <div class="q-body">Yes. Affinity Cellular runs on the same nationwide Verizon network, so coverage and call quality are the same.</div>
+          </div>
+          <div class="q">
+            <div class="q-head">What happens after 3 months?<span class="q-plus">+</span></div>
+            <div class="q-body">After your 3 free months, plans start as low as $15 per month. You can change or cancel anytime.</div>
+          </div>
+          <div class="q">
+            <div class="q-head">Is there a contract?<span class="q-plus">+</span></div>
+            <div class="q-body">No. There are no contracts and no activation fees—ever.</div>
+          </div>
+          <div class="q">
+            <div class="q-head">Is there a<br>credit check?<span class="q-plus">+</span></div>
+            <div class="q-body">No. There is no credit check required to sign up.</div>
+          </div>
+          <a class="see-all" href="#">See all answers »</a>
+        </div>
+      </div>
+
+      <!-- TRUSTED -->
+      <div class="card trusted">
+        <div class="card-pad">
+          <h3>15+ Years of Trusted Service</h3>
+          <div class="t-row">
+            <svg class="shield" width="40" height="46" viewBox="0 0 40 46">
+              <path d="M20 1L37 7v13c0 12-7.5 20-17 25C10.5 40 3 32 3 20V7z" fill="#0d2542"/>
+              <circle cx="20" cy="20" r="9" fill="none" stroke="#fff" stroke-width="2"/>
+              <text x="20" y="25" text-anchor="middle" fill="#fff" font-size="13" font-weight="700" font-family="Georgia,serif">$</text>
+            </svg>
+            <span>Proudly serving seniors and members of:</span>
+          </div>
+          <div class="member-logos">
+            <span class="logo-aarp">AARP</span>
+            <span class="logo-aaa">AAA</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- AS SEEN IN -->
+      <div class="card seen">
+        <div class="card-pad">
+          <h3>As Seen In</h3>
+          <div class="seen-grid">
+            <span class="logo-forbes">Forbes</span>
+            <span class="logo-usatoday"><span class="dot"></span>USA TODAY</span>
+            <span class="logo-usnews"><div class="top">U.S.News</div><div class="bottom">&amp; WORLD REPORT</div></span>
+            <span class="logo-aarpmag">AARP<small>The Magazine</small></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- REVIEWS -->
+      <div class="card reviews">
+        <div class="card-pad">
+          <h3>Thousands of Customers Already Saving</h3>
+          <div class="stars-big">★★★★★</div>
+          <div class="r-score">4.8 OUT OF 5 STARS</div>
+          <div class="r-count">OVER 25,000+ REVIEWS</div>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="f-links">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <span>|</span>
+      <a href="terms.html">Terms &amp; Conditions</a>
+      <span>|</span>
+      <a href="https://affinitycellular.com/Support/Returns" target="_blank" rel="noopener">Return Policy</a>
+      <span>|</span>
+      <a href="https://affinitycellular.com/" target="_blank" rel="noopener">AffinityCellular.com</a>
+      <span>|</span>
+      <a href="tel:8557638221">855-763-8221</a>
+    </div>
+    <p>*3 Months Free offer: available to new customers only on select plans &mdash; $0 for the first three months of unlimited service on one line. After the promotional period, plans start as low as $15/month. Limited-time offer; <a href="terms.html">terms and conditions</a> apply.</p>
+    <p>30-Day Money-Back Guarantee: phones may be returned within 30 days of purchase &mdash; provided total usage is under 30 minutes of talk time, 30 text messages, or 30 MB of data (whichever comes first) &mdash; for a refund of the activation fee, handset cost, and prorated plan cost. The cost of additional services is not refundable. See the full <a href="https://affinitycellular.com/Support/Returns" target="_blank" rel="noopener">Return Policy</a> for details.</p>
+    <p>Testimonials reflect the experiences of individual customers; savings and results may vary. Affinity Cellular operates on the Verizon nationwide network. Verizon, AT&amp;T, T-Mobile, AARP, and AAA are trademarks of their respective owners; references do not imply endorsement or affiliation.</p>
+    <p>Questions about how your information is collected and used? See the <a href="privacy-policy.html">Privacy &amp; CPNI Policy</a>, email <a href="mailto:help@affinitycellular.com">help@affinitycellular.com</a>, or call customer support at (833)&nbsp;679-1090. Affinity Cellular, 4245 Kemp Blvd, Suite 120, Wichita Falls, TX 76308.</p>
+  </div>
+</footer>
+
+<!-- ================= QUALIFY POPUP ================= -->
+<div class="lead-modal" id="lead-modal" role="dialog" aria-modal="true" aria-label="Check if you qualify for this offer">
+  <div class="lead-modal-backdrop" data-close-modal></div>
+  <div class="lead-modal-card">
+    <div class="lead-modal-head">
+      CHECK IF YOU QUALIFY FOR THIS OFFER
+      <span class="lm-sub">3 Months FREE for qualifying new customers &mdash; takes about 30 seconds</span>
+      <button class="lead-modal-close" data-close-modal aria-label="Close">&times;</button>
+    </div>
+    <div class="lead-modal-body">
+      <iframe
+        src="https://link.leadstacker.com/widget/form/hbtkgtyju4qGRelApfMh"
+        style="width:100%;height:467px;border:none;border-radius:8px"
+        id="popup-hbtkgtyju4qGRelApfMh"
+        data-layout="{'id':'INLINE'}"
+        data-trigger-type="alwaysShow"
+        data-trigger-value=""
+        data-activation-type="alwaysActivated"
+        data-activation-value=""
+        data-deactivation-type="neverDeactivate"
+        data-deactivation-value=""
+        data-form-name="Form 3"
+        data-height="467"
+        data-layout-iframe-id="popup-hbtkgtyju4qGRelApfMh"
+        data-form-id="hbtkgtyju4qGRelApfMh"
+        title="Form 3">
+      </iframe>
+    <div class="lead-modal-foot">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#5d6a78" stroke-width="2"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+      <span>Your information is secure and handled per our <a href="privacy-policy.html">Privacy Policy</a>. No obligation.</span>
+    </div>
+  </div>
+</div>
+<script src="https://link.leadstacker.com/js/form_embed.js"></script>
+
+<script>
+  document.querySelectorAll('.faq .q-head').forEach(function(head){
+    head.addEventListener('click', function(){
+      head.parentElement.classList.toggle('open');
+    });
+  });
+
+  (function(){
+    var modal=document.getElementById('lead-modal');
+    function openModal(e){if(e)e.preventDefault();modal.classList.add('open');document.body.classList.add('lead-modal-open');}
+    function closeModal(){modal.classList.remove('open');document.body.classList.remove('lead-modal-open');}
+    document.querySelectorAll('[data-qualify]').forEach(function(el){el.addEventListener('click',openModal);});
+    modal.querySelectorAll('[data-close-modal]').forEach(function(el){el.addEventListener('click',closeModal);});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
+  })();
+</script>
+
+</body>
+</html>
