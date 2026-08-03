@@ -129,9 +129,7 @@
     font-weight:800;font-size:30px;letter-spacing:.5px;color:var(--navy);
     text-transform:uppercase;
   }
-  .hero-free-line{
-    display:flex;align-items:baseline;gap:14px;margin:2px 0 16px;
-  }
+  .hero-free-line{display:flex;flex-direction:column;align-items:flex-start;gap:10px;margin:2px 0 16px;}
   .hero-free{
     color:var(--red-bright);
     font-weight:900;
@@ -142,8 +140,9 @@
   }
   .hero-free .hero-price-mo{font-size:.42em;letter-spacing:0;}
   .hero-free-months{
-    font-weight:800;font-size:24px;color:var(--red-bright);text-transform:uppercase;
-    line-height:1.05;
+    display:inline-block;background:var(--yellow);color:var(--navy);
+    font-size:22px;font-weight:900;letter-spacing:.3px;text-transform:uppercase;
+    padding:7px 14px;border-radius:8px;
   }
   .hero-checks{list-style:none;margin:6px 0 20px;}
   .hero-checks li{
@@ -905,43 +904,7 @@
     </div>
 
     <div class="hero-right">
-      <div class="badge-years" aria-label="15 years of trusted service">
-        <svg class="starburst" viewBox="0 0 100 100" aria-hidden="true">
-          <g fill="#f6c445">
-            <circle cx="50" cy="50" r="38"/>
-            <g id="rays">
-              <polygon points="50,2 55,14 45,14"/>
-            </g>
-          </g>
-          <g fill="#f6c445">
-            <!-- starburst rays -->
-            <g>
-              <polygon points="50,4 54.5,15 45.5,15" transform="rotate(0 50 50)"/>
-              <polygon points="50,4 54.5,15 45.5,15" transform="rotate(22.5 50 50)"/>
-              <polygon points="50,4 54.5,15 45.5,15" transform="rotate(45 50 50)"/>
-              <polygon points="50,4 54.5,15 45.5,15" transform="rotate(67.5 50 50)"/>
-              <polygon points="50,4 54.5,15 45.5,15" transform="rotate(90 50 50)"/>
-              <polygon points="50,4 54.5,15 45.5,15" transform="rotate(112.5 50 50)"/>
-              <polygon points="50,4 54.5,15 45.5,15" transform="rotate(135 50 50)"/>
-              <polygon points="50,4 54.5,15 45.5,15" transform="rotate(157.5 50 50)"/>
-              <polygon points="50,4 54.5,15 45.5,15" transform="rotate(180 50 50)"/>
-              <polygon points="50,4 54.5,15 45.5,15" transform="rotate(202.5 50 50)"/>
-              <polygon points="50,4 54.5,15 45.5,15" transform="rotate(225 50 50)"/>
-              <polygon points="50,4 54.5,15 45.5,15" transform="rotate(247.5 50 50)"/>
-              <polygon points="50,4 54.5,15 45.5,15" transform="rotate(270 50 50)"/>
-              <polygon points="50,4 54.5,15 45.5,15" transform="rotate(292.5 50 50)"/>
-              <polygon points="50,4 54.5,15 45.5,15" transform="rotate(315 50 50)"/>
-              <polygon points="50,4 54.5,15 45.5,15" transform="rotate(337.5 50 50)"/>
-            </g>
-          </g>
-          <circle cx="50" cy="50" r="33" fill="#fff" opacity=".25"/>
-        </svg>
-        <div class="badge-inner">
-          <div class="badge-num">15</div>
-          <div class="badge-word">Years</div>
-        </div>
-        <div class="badge-ribbon">Of Trusted<br>Service</div>
-      </div>
+      <!-- 15-years badge removed -->
 
     </div>
   </div>
