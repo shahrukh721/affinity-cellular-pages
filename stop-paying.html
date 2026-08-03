@@ -685,9 +685,134 @@
     .feature + .feature{border-left:0;}
     .features-row{grid-template-columns:1fr;}
   }
+
+  /* ============ MOBILE REDESIGN (mobile-first, senior-friendly) ============ */
+  .m-header,.m-subhead,.m-hero-extra,.m-plan-promo,.m-plan-cta,.m-call-hours,.m-only{display:none;}
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{transition:none!important;animation:none!important;}
+    html{scroll-behavior:auto!important;}
+  }
+  @media (max-width:760px){
+    /* ---- section order ---- */
+    body{display:flex;flex-direction:column;font-size:18px;line-height:1.55;}
+    .m-header{order:0;}
+    .hero{order:1;}
+    .pricing{order:2;}
+    .steps{order:3;}
+    .press{order:4;}
+    .testimonials{order:5;}
+    .features{order:6;}
+    .call-band{order:7;}
+    .trust{order:8;}
+    .legal-footer{order:9;}
+
+    /* ---- remove desktop chrome & extra urgency on mobile ---- */
+    .urgent-bar,.site-header,.countdown-bar{display:none;}
+    .hero-divider,.hero-try,.hero-free-line,.hero-offer,.hero-right,.badge-years{display:none;}
+    .plan-featured{display:none;}
+    .call-qr{display:none;}
+    .m-only-hide{display:none;}
+    .m-only{display:block;}
+
+    /* ---- slim sticky header (56px) ---- */
+    .m-header{
+      display:flex;position:sticky;top:0;z-index:1500;
+      align-items:center;justify-content:space-between;gap:10px;
+      height:56px;padding:0 16px;background:var(--navy);color:#fff;
+      box-shadow:0 2px 8px rgba(11,35,78,.28);
+    }
+    .m-logo{display:flex;flex-direction:column;line-height:1;color:#fff;}
+    .m-logo-top{font-weight:800;font-size:20px;letter-spacing:.2px;}
+    .m-logo-sub{font-size:9px;letter-spacing:3px;color:#dbe4ee;margin-top:2px;}
+    .m-call-btn{
+      display:flex;align-items:center;gap:8px;min-height:48px;padding:0 14px;
+      background:#fff;color:var(--navy);border-radius:8px;font-weight:800;font-size:16px;
+      white-space:nowrap;
+    }
+
+    /* ---- hero: headline, subhead, CTA, phone — above the fold ---- */
+    .hero{display:flex;flex-direction:column;}
+    .hero-inner{order:1;display:block;padding:22px 16px 26px;}
+    .hero-photo{position:relative;order:2;width:100%;height:170px;background-position:center 22%;}
+    .hero-photo::before{display:none;}
+    .hero-left{display:flex;flex-direction:column;}
+    .hero-h1{order:1;font-size:31px;line-height:1.16;text-transform:none;letter-spacing:0;margin-bottom:4px;}
+    .hero-h1 .accent{color:var(--navy);}
+    .btn-cta .cta-main,.btn-cta .cta-sub{text-transform:none;}
+    .m-subhead{
+      display:block;order:2;font-size:20px;font-weight:700;color:var(--navy);
+      line-height:1.4;margin:8px 0 2px;
+    }
+    .btn-cta{
+      order:3;display:block;margin:16px 0 0;padding:15px 18px;border-radius:10px;
+      text-align:center;
+    }
+    .btn-cta .cta-main{font-size:20px;}
+    .btn-cta .cta-sub{font-size:14.5px;}
+    .m-hero-extra{display:block;order:4;}
+    .m-hero-tel{
+      display:flex;align-items:center;justify-content:center;min-height:48px;
+      margin-top:6px;font-weight:800;font-size:19px;color:var(--navy);text-decoration:underline;
+    }
+    .m-promo-badge{
+      margin-top:8px;text-align:center;font-size:16px;font-weight:700;color:var(--navy);
+      background:var(--blue-pale);border-radius:8px;padding:11px 12px;line-height:1.45;
+    }
+    .m-promo-terms{margin-top:8px;text-align:center;font-size:16px;color:var(--gray-text);line-height:1.5;}
+    .hero-checks{order:5;margin:16px 0 0;}
+    .hero-checks li{font-size:17px;padding:8px 0;}
+
+    /* ---- pricing cards: identical structure, navy pills, promo-first ---- */
+    .pricing{padding:34px 0 38px;}
+    .plan-white .pw-header.red{background:var(--navy);}
+    .plan-white .pw-price.red{color:var(--navy);}
+    .pw-startingat,.pw-after{display:none;}
+    .m-plan-promo{
+      display:block;text-align:center;font-size:17px;font-weight:800;color:var(--navy);
+      margin:6px 12px 0;line-height:1.4;
+    }
+    .plan-white ul li{font-size:17px;}
+    .m-plan-cta{
+      display:flex;align-items:center;justify-content:center;min-height:52px;
+      margin:16px 14px 16px;background:var(--red-bright);color:#fff;border-radius:10px;
+      font-weight:800;font-size:18px;box-shadow:0 3px 10px rgba(215,33,44,.3);
+    }
+
+    /* ---- typography: sentence case, readable sizes ---- */
+    h2,h3,h4,.call-easy,.pw-header{text-transform:none!important;letter-spacing:.2px!important;}
+    .call-easy{font-size:20px;}
+    .steps h2,.testimonials h2,.features h2{font-size:26px;}
+    .trust-item p,.feature p,.step p{font-size:16.5px;line-height:1.5;}
+
+    /* ---- press logos: higher contrast ---- */
+    .plogo-img{filter:grayscale(1) brightness(.45) contrast(1.5);opacity:1;}
+
+    /* ---- final CTA band ---- */
+    .call-num{font-size:32px;min-height:48px;display:inline-flex;align-items:center;}
+    .call-site{min-height:48px;display:inline-flex;align-items:center;text-decoration:underline;}
+    .m-call-hours{display:block;font-size:16px;color:#d5dde7;margin-top:6px;}
+
+    /* ---- legal floor: nothing below 16px ---- */
+    .fine-print{font-size:16px;line-height:1.5;}
+    .legal-copy{font-size:16px;line-height:1.55;}
+    .legal-links a{font-size:16px;min-height:48px;display:inline-flex;align-items:center;padding:0 6px;}
+    .legal-copyright{font-size:16px;}
+  }
 </style>
 </head>
 <body>
+
+<!-- ================= MOBILE SLIM HEADER ================= -->
+<header class="m-header">
+  <a class="m-logo" href="#" aria-label="Affinity Cellular home">
+    <span class="m-logo-top">Affinity<span style="font-size:9px;vertical-align:super;">&reg;</span></span>
+    <span class="m-logo-sub">CELLULAR</span>
+  </a>
+  <a class="m-call-btn" href="tel:8557638221">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.7 3.6 5 6.4 6.4l2.1-2.1c.3-.3.7-.4 1-.2 1.1.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4.3c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.3 1.9z"/></svg>
+    Call 855-763-8221
+  </a>
+</header>
 
 <!-- ================= STICKY URGENCY BAR ================= -->
 <div class="urgent-bar">
@@ -736,6 +861,7 @@
   <div class="container hero-inner">
     <div class="hero-left">
       <h1 class="hero-h1">Stop paying <span class="accent">$100+</span><br>for cell service!</h1>
+      <div class="m-subhead">Only $15 a month &mdash; plus your first 3 months free.</div>
       <div class="hero-divider"></div>
       <div class="hero-try">Try Affinity Cellular</div>
       <div class="hero-free-line">
@@ -771,6 +897,11 @@
         <span class="cta-main">Get Started for $15 Now</span>
         <span class="cta-sub">Lock In Your 3 Free Months &raquo;</span>
       </a>
+      <div class="m-hero-extra">
+        <a class="m-hero-tel" href="tel:8557638221">Or call 855-763-8221</a>
+        <div class="m-promo-badge">Limited-time offer for new customers &mdash; 3 months free.</div>
+        <div class="m-promo-terms">$0 for your first 3 months, new customers only, then $15/mo.*</div>
+      </div>
     </div>
 
     <div class="hero-right">
@@ -1074,12 +1205,14 @@
           <span class="pw-currency">$</span><span class="pw-amount">15</span><span class="pw-per">/mo.</span>
         </div>
         <div class="pw-after">After 3 months</div>
+        <div class="m-plan-promo">First 3 months free, then $15/mo.</div>
         <div class="pw-divider"></div>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#1670d6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>Unlimited Talk &amp; Text</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#1670d6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>No Contract</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#1670d6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>No Activation Fees</li>
         </ul>
+        <a class="m-plan-cta" href="#" data-qualify>Get started for $15/mo</a>
       </div>
     </div>
 
@@ -1091,6 +1224,7 @@
           <span class="pw-currency">$</span><span class="pw-amount">20</span><span class="pw-per">/mo.</span>
         </div>
         <div class="pw-after">After 3 months</div>
+        <div class="m-plan-promo">First 3 months free, then $20/mo.</div>
         <div class="pw-divider"></div>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#1670d6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>Nationwide 5G Network</li>
@@ -1110,12 +1244,14 @@
         <svg viewBox="0 0 24 24" fill="#fff"><path d="M6.6 2.8c.6-.6 1.6-.5 2.1.2l2.1 2.9c.4.6.4 1.4-.1 1.9l-1.3 1.3a14.4 14.4 0 005.5 5.5l1.3-1.3c.5-.5 1.3-.5 1.9-.1l2.9 2.1c.7.5.8 1.5.2 2.1l-1.6 1.6c-.7.7-1.7 1-2.6.7-6.5-1.9-11.6-7-13.5-13.5-.3-.9 0-1.9.7-2.6l1.6-1.6z"/></svg>
       </div>
       <div class="call-copy">
-        <div class="call-easy">Call Today &ndash; Plans From Just $15/mo.!</div>
+        <div class="call-easy m-only-hide">Call Today &ndash; Plans From Just $15/mo.!</div>
+        <div class="call-easy m-only">Call today &mdash; plans from just $15 a month</div>
         <a class="call-num" href="tel:8557638221">855-763-8221</a>
-        <div class="call-site">
+        <a class="call-site" href="https://affinitycellular.com/" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.4 4 5.6 4 9s-1.5 6.6-4 9c-2.5-2.4-4-5.6-4-9s1.5-6.6 4-9z"/></svg>
           AffinityCellular.com
-        </div>
+        </a>
+        <div class="m-call-hours">Mon&ndash;Fri 8am&ndash;8pm CT &nbsp;&middot;&nbsp; Sat&ndash;Sun 10am&ndash;7pm CT</div>
       </div>
       <div class="call-qr">
         <div class="qr-box">
