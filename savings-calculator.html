@@ -586,9 +586,21 @@
       display:flex;align-items:center;gap:8px;min-height:48px;padding:0 14px;
       background:#fff;color:var(--navy);border-radius:8px;font-weight:800;font-size:16px;white-space:nowrap;
     }
-    /* hero: headline + chips only, calculator right below */
-    .hero-photo,.offer-card{display:none;}
-    .hero-inner{padding:22px 16px 4px;}
+    /* hero: photo behind headline + chips, light wash for contrast */
+    .offer-card{display:none;}
+    .hero{position:relative;}
+    .hero-photo{
+      display:block;position:absolute;inset:0;width:100%;height:100%;
+      background-position:center 24%;background-size:cover;
+    }
+    .hero-photo::before{
+      content:"";display:block;position:absolute;inset:0;
+      background:linear-gradient(180deg,
+        rgba(255,255,255,.97) 0%,
+        rgba(255,255,255,.9) 45%,
+        rgba(255,255,255,.74) 100%);
+    }
+    .hero-inner{position:relative;z-index:1;padding:24px 16px 40px;}
     .hero-copy{width:100%;}
     h1{font-size:29px;line-height:1.2;letter-spacing:-.3px;margin-bottom:8px;}
     .hero-sub{display:none;}
