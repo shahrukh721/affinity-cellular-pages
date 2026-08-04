@@ -409,6 +409,21 @@
     .d-links{font-size:16px;}
     .d-links a{display:inline-block;padding:6px 2px;}
   }
+
+  /* ============ LEGAL FOOTER COLLAPSE (mobile) ============ */
+  .legal-toggle{display:none;}
+  @media (max-width:760px){
+    .legal-toggle{
+      display:inline-flex;align-items:center;min-height:48px;padding:0;
+      background:none;border:none;cursor:pointer;font-family:inherit;
+      font-size:16px;font-weight:700;text-decoration:underline;color:inherit;
+    }
+    .legal-more[hidden]{display:none;}
+  }
+  @media (min-width:761px){
+    .legal-more{display:block!important;}
+    .legal-toggle{display:none!important;}
+  }
 </style>
 </head>
 <body>
@@ -431,7 +446,7 @@
     <div class="brand">
       <div class="logo">
         <div class="l1">Affinity<sup>&reg;</sup></div>
-        <div class="l2">CELLULAR<sup>&reg;</sup></div>
+        <div class="l2">CELLULAR</div>
       </div>
       <div class="brand-divider"></div>
       <div class="years-badge">
@@ -549,7 +564,7 @@
     </div>
     <div class="guarantee">
       <svg width="26" height="26" viewBox="0 0 24 24" fill="#0d2542"><path d="M12 1l9 4v6c0 5.5-3.8 10.7-9 12-5.2-1.3-9-6.5-9-12V5l9-4z"/><path d="M8.5 12.2l2.3 2.3 4.7-5" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <div><b>30-DAY MONEY-BACK GUARANTEE:</b> Not happy? Return your phone within 30 days for your money back. <a href="https://affinitycellular.com/Support/Returns" target="_blank" rel="noopener">See Return Policy</a>.</div>
+      <div><b>30-DAY MONEY-BACK GUARANTEE:</b> Not happy? Return your phone within 30 days for your money back. <a href="return-policy.html">See Return Policy</a>.</div>
     </div>
   </div>
 </section>
@@ -655,12 +670,15 @@
   <div class="d-links">
     <a href="privacy-policy.html">Privacy Policy</a> &nbsp;|&nbsp;
     <a href="terms.html">Terms &amp; Conditions</a> &nbsp;|&nbsp;
-    <a href="https://affinitycellular.com/Support/Returns" target="_blank" rel="noopener">Return Policy</a> &nbsp;|&nbsp;
+    <a href="return-policy.html">Return Policy</a> &nbsp;|&nbsp;
     <a href="https://affinitycellular.com/" target="_blank" rel="noopener">AffinityCellular.com</a>
   </div>
   <p>*3 Months Free offer: available to new customers only on select plans &mdash; $0 for the first three months of unlimited service on one line. After the promotional period, plans start as low as $15/month. Limited-time offer; <a href="terms.html">terms and conditions</a> apply.</p>
-  <p>30-Day Money-Back Guarantee: phones may be returned within 30 days of purchase &mdash; provided total usage is under 30 minutes of talk time, 30 text messages, or 30 MB of data (whichever comes first) &mdash; for a refund of the activation fee, handset cost, and prorated plan cost. The cost of additional services is not refundable. See the full <a href="https://affinitycellular.com/Support/Returns" target="_blank" rel="noopener">Return Policy</a> for details.</p>
+  <button type="button" class="legal-toggle" data-legal-toggle>Read full disclosures</button>
+<div class="legal-more" hidden>
+  <p>30-Day Money-Back Guarantee: phones may be returned within 30 days of purchase &mdash; provided total usage is under 30 minutes of talk time, 30 text messages, or 30 MB of data (whichever comes first) &mdash; for a refund of the activation fee, handset cost, and prorated plan cost. The cost of additional services is not refundable. See the full <a href="return-policy.html">Return Policy</a> for details.</p>
   <p>Testimonials reflect the experiences of individual customers; savings and results may vary. Affinity Cellular operates on the Verizon nationwide network. Verizon is a trademark of its respective owner; references do not imply endorsement or affiliation. Questions about how your information is collected and used? See the <a href="privacy-policy.html">Privacy &amp; CPNI Policy</a>, email <a href="mailto:help@affinitycellular.com">help@affinitycellular.com</a>, or call customer support at (833)&nbsp;679-1090. Affinity Cellular, 4245 Kemp Blvd, Suite 120, Wichita Falls, TX 76308.</p>
+</div>
 </div>
 <div class="footrule"></div>
 
@@ -726,6 +744,13 @@ renderTestimonials();
 
 
 
+</script>
+<script>
+  (function(){
+    var btn=document.querySelector('[data-legal-toggle]');
+    var more=document.querySelector('.legal-more');
+    if(btn&&more){btn.addEventListener('click',function(){more.hidden=false;btn.hidden=true;});}
+  })();
 </script>
 </body>
 </html>

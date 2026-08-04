@@ -807,6 +807,26 @@
     .legal-links a{font-size:16px;min-height:48px;display:inline-flex;align-items:center;padding:0 6px;}
     .legal-copyright{font-size:16px;}
   }
+
+  /* ============ LEGAL FOOTER COLLAPSE (mobile) ============ */
+  .legal-toggle{display:none;}
+  @media (max-width:760px){
+    .legal-toggle{
+      display:inline-flex;align-items:center;min-height:48px;padding:0;
+      background:none;border:none;cursor:pointer;font-family:inherit;
+      font-size:16px;font-weight:700;text-decoration:underline;color:inherit;
+    }
+    .legal-more[hidden]{display:none;}
+  }
+  @media (min-width:761px){
+    .legal-more{display:block!important;}
+    .legal-toggle{display:none!important;}
+  }
+
+  @media (max-width:760px){
+    .legal-copy,.legal-copy p{text-align:left;}
+    .legal-copy{font-size:16px;line-height:1.55;}
+  }
 </style>
 </head>
 <body>
@@ -1312,7 +1332,7 @@
       <span class="dot" aria-hidden="true"></span>
       <a href="privacy-policy.html">Terms &amp; Conditions</a>
       <span class="dot" aria-hidden="true"></span>
-      <a href="https://affinitycellular.com/Support/Returns" target="_blank" rel="noopener">Return Policy</a>
+      <a href="return-policy.html">Return Policy</a>
       <span class="dot" aria-hidden="true"></span>
       <a href="privacy-policy.html">Your Privacy Choices</a>
       <span class="dot" aria-hidden="true"></span>
@@ -1320,10 +1340,13 @@
     </nav>
     <div class="legal-copy">
       <p>*Special offer: $0 for the first three months of service for new customers only, limited to the first 150 lines. After the promotional period, plans start at $15/mo. for Unlimited Talk &amp; Text and $20/mo. for Talk, Text &amp; Data. Offer may be modified or withdrawn at any time. Taxes, surcharges, and additional services may apply and are not included in advertised pricing.</p>
-      <p>&dagger;30-Day Money-Back Guarantee: purchases are covered by Affinity Cellular's 30-day money-back guarantee. The guarantee applies until you use 30 minutes of talk time, 30 text messages, or 30&nbsp;MB of data, or until 30 days after purchase &mdash; whichever comes first. Eligible refunds include the activation fee, handset cost, and prorated plan charges; additional services are non-refundable. See the full <a href="https://affinitycellular.com/Support/Returns" target="_blank" rel="noopener">Return Policy</a> for details.</p>
+      <button type="button" class="legal-toggle" data-legal-toggle>Read full disclosures</button>
+<div class="legal-more" hidden>
+      <p>&dagger;30-Day Money-Back Guarantee: purchases are covered by Affinity Cellular's 30-day money-back guarantee. The guarantee applies until you use 30 minutes of talk time, 30 text messages, or 30&nbsp;MB of data, or until 30 days after purchase &mdash; whichever comes first. Eligible refunds include the activation fee, handset cost, and prorated plan charges; additional services are non-refundable. See the full <a href="return-policy.html">Return Policy</a> for details.</p>
       <p>Savings claims are based on average reported customer savings compared to prior carrier bills; individual savings will vary depending on your current plan and usage. Coverage and 5G availability vary by location and device. Third-party names and logos are trademarks of their respective owners and do not imply endorsement.</p>
       <p>By submitting your phone number or calling the number on this page, you consent to be contacted by Affinity Cellular by phone, and to receive marketing calls and text messages, including through automated technology. Consent is not a condition of purchase. Message and data rates may apply; reply STOP to opt out of texts at any time. For information on how your personal information is collected, used, and shared &mdash; including your state privacy rights and how to opt out of the sale or sharing of personal information &mdash; see the <a href="privacy-policy.html">Privacy Policy</a>.</p>
       <p>Affinity Cellular, 4245 Kemp Blvd, Suite 120, Wichita Falls, TX 76308 &middot; Customer Support: <a href="tel:8336791090">(833) 679-1090</a> &middot; <a href="mailto:help@affinitycellular.com">help@affinitycellular.com</a></p>
+    </div>
     </div>
     <p class="legal-copyright">&copy; 2026 Affinity Cellular&reg;. All rights reserved.</p>
   </div>
@@ -1398,6 +1421,13 @@
     document.querySelectorAll('[data-qualify]').forEach(function(el){el.addEventListener('click',openModal);});
     modal.querySelectorAll('[data-close-modal]').forEach(function(el){el.addEventListener('click',closeModal);});
     document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
+  })();
+</script>
+<script>
+  (function(){
+    var btn=document.querySelector('[data-legal-toggle]');
+    var more=document.querySelector('.legal-more');
+    if(btn&&more){btn.addEventListener('click',function(){more.hidden=false;btn.hidden=true;});}
   })();
 </script>
 </body>
