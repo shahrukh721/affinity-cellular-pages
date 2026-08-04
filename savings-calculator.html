@@ -322,7 +322,7 @@
     background:var(--red);border-radius:10px;padding:16px 34px;text-align:center;
     box-shadow:0 4px 14px rgba(0,0,0,.3);margin-right:190px;
   }
-  .fc-callbox .fcb-kicker{font-size:12.5px;font-weight:800;letter-spacing:.8px;line-height:1.35;}
+  .fc-callbox .fcb-kicker{font-size:12.5px;font-weight:800;letter-spacing:.8px;line-height:1.35;text-transform:uppercase;}
   .fc-callbox .fcb-num{
     display:flex;align-items:center;justify-content:center;gap:12px;
     font-size:34px;font-weight:900;letter-spacing:.5px;margin-top:6px;line-height:1.1;
@@ -621,6 +621,20 @@
     .offer-cards{grid-template-columns:1fr;}
     .res-title{font-size:26px;}
     .fc-title{text-transform:none;font-size:24px;}
+    .fc-callbox{
+      background:none;box-shadow:none;padding:0;margin-right:0;display:block;width:100%;
+    }
+    .fc-callbox .fcb-kicker{
+      text-transform:none;font-size:17px;font-weight:700;letter-spacing:.2px;
+      color:#e8eef6;margin-bottom:12px;
+    }
+    .fc-callbox .fcb-kicker br{display:none;}
+    .fc-callbox .fcb-num{
+      background:var(--red);border-radius:10px;min-height:56px;
+      font-size:26px;margin-top:0;padding:0 18px;
+      box-shadow:0 4px 14px rgba(0,0,0,.3);
+    }
+    .fcb-hours{font-size:16px;color:#c9d5e3;margin-top:12px;}
     .fc-check{font-size:16.5px;}
     .fine-print,.site-footer p{font-size:16px;line-height:1.55;}
     .f-links a{font-size:16px;}
@@ -1039,7 +1053,7 @@
       </div>
     </div>
     <a class="fc-callbox" href="tel:8557638221">
-      <div class="fcb-kicker">CALL NOW TO SPEAK WITH<br>A U.S.-BASED SPECIALIST</div>
+      <div class="fcb-kicker">Call now to speak with <br>a U.S.-based specialist</div>
       <div class="fcb-num">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="#fff">
           <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.24.2 2.45.57 3.57a1 1 0 0 1-.24 1.02l-2.21 2.2z"/>
