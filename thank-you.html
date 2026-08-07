@@ -440,6 +440,23 @@
 
   .bbb-seal-link{display:inline-block;line-height:0;}
   .bbb-seal-link img{height:42px;width:auto;max-width:100%;display:block;border:0;}
+
+  /* ===== UNIFIED FOOTER (all pages) ===== */
+  .site-footer{background:var(--navy);color:#aab8c9;margin-top:0;padding:32px 0 36px;}
+  .footer-inner{max-width:1160px;margin:0 auto;padding:0 24px;}
+  .footer-seal{margin-bottom:18px;}
+  .footer-seal .bbb-seal-link{display:inline-block;line-height:0;}
+  .footer-seal .bbb-seal-link img{height:42px;width:auto;border:0;display:block;}
+  .site-footer .f-links{display:flex;flex-wrap:wrap;gap:12px;align-items:center;font-size:14px;font-weight:700;margin-bottom:18px;}
+  .site-footer .f-links a{color:#fff;display:inline-block;padding:8px 2px;text-decoration:none;}
+  .site-footer .f-links a:hover{text-decoration:underline;}
+  .site-footer .f-links span{color:#5d7189;}
+  .site-footer p{font-size:12px;line-height:1.6;margin-bottom:10px;color:#aab8c9;}
+  .site-footer p a{color:#cdd9e6;text-decoration:underline;}
+  .site-footer .legal-toggle{display:inline-flex;align-items:center;min-height:44px;padding:0;background:none;border:none;cursor:pointer;font-family:inherit;font-size:13px;font-weight:700;text-decoration:underline;color:#cdd9e6;}
+  .site-footer .legal-more[hidden]{display:none;}
+  @media(min-width:761px){.site-footer .legal-more{display:block!important;}.site-footer .legal-toggle{display:none!important;}}
+  @media(max-width:760px){.site-footer{order:9;}.site-footer p,.site-footer .f-links a,.site-footer .legal-toggle{font-size:16px;}}
 </style>
 </head>
 <body>
@@ -583,10 +600,7 @@
       <svg width="26" height="26" viewBox="0 0 24 24" fill="#0d2542"><path d="M12 1l9 4v6c0 5.5-3.8 10.7-9 12-5.2-1.3-9-6.5-9-12V5l9-4z"/><path d="M8.5 12.2l2.3 2.3 4.7-5" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
       <div><b>30-Day Money-Back Guarantee:</b> Return your phone within 30 days for a full refund of your activation fee, handset cost, and prorated plan cost &mdash; provided usage stays under 30 minutes of talk, 30 texts, and 30MB of data. <a href="return-policy.html">See Return Policy</a>.</div>
     </div>
-    <div class="guarantee">
-      <a class="bbb-seal-link" href="https://www.bbb.org/us/tx/wichita-falls/profile/mobile-phone-service/affinity-cellular-0875-91137126/#sealclick" target="_blank" rel="nofollow noopener"><img src="https://seal-dallas.bbb.org/seals/blue-seal-200-42-bbb-91137126.png" alt="Affinity Cellular BBB Business Review"></a>
-      <div>Talk to a real, live U.S.-based agent.</div>
-    </div>
+    <div class="guarantee"><div>Talk to a real, live U.S.-based agent.</div></div>
   </div>
 </section>
 
@@ -687,21 +701,30 @@
   </div>
 </section>
 
-<div class="disclaimer">
-  <div class="d-links">
-    <a href="privacy-policy.html">Privacy Policy</a> &nbsp;|&nbsp;
-    <a href="terms.html">Terms &amp; Conditions</a> &nbsp;|&nbsp;
-    <a href="return-policy.html">Return Policy</a> &nbsp;|&nbsp;
-    <a href="https://affinitycellular.com/" target="_blank" rel="noopener">AffinityCellular.com</a>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-seal"><a class="bbb-seal-link" href="https://www.bbb.org/us/tx/wichita-falls/profile/mobile-phone-service/affinity-cellular-0875-91137126/#sealclick" target="_blank" rel="nofollow noopener"><img src="https://seal-dallas.bbb.org/seals/blue-seal-200-42-bbb-91137126.png" alt="Affinity Cellular BBB Business Review"></a></div>
+    <div class="f-links">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <span>|</span>
+      <a href="terms.html">Terms &amp; Conditions</a>
+      <span>|</span>
+      <a href="return-policy.html">Return Policy</a>
+      <span>|</span>
+      <a href="https://affinitycellular.com/" target="_blank" rel="noopener">AffinityCellular.com</a>
+      <span>|</span>
+      <a href="tel:8557638221">855-763-8221</a>
+    </div>
+    <p>*3 Months Free offer: available to new customers only on select plans. $0 for the first three months of unlimited talk &amp; text on one line. Data plans are also available starting at $20/month. After the promotional period, unlimited talk &amp; text plans start at $15/month; **talk, text &amp; data plans start at $20/month. Limited-time offer; <a href="terms.html">terms and conditions</a> apply.</p>
+    <button type="button" class="legal-toggle" data-legal-toggle>Read full disclosures</button>
+    <div class="legal-more" hidden>
+    <p>30-Day Money-Back Guarantee: phones may be returned within 30 days of purchase &mdash; provided total usage is under 30 minutes of talk time, 30 text messages, or 30 MB of data (whichever comes first) &mdash; for a refund of the activation fee, handset cost, and prorated plan cost. The cost of additional services is not refundable. See the full <a href="return-policy.html">Return Policy</a> for details.</p>
+    <p>Testimonials reflect the experiences of individual customers; savings and results may vary. Affinity Cellular operates on the nation&rsquo;s largest and most dependable network. AT&amp;T, T-Mobile, AARP, and AAA are trademarks of their respective owners; references do not imply endorsement or affiliation.</p>
+    <p>Questions about how your information is collected and used? See the <a href="privacy-policy.html">Privacy &amp; CPNI Policy</a>, email <a href="mailto:help@affinitycellular.com">help@affinitycellular.com</a>, or call customer support at (833)&nbsp;679-1090. Affinity Cellular, 4245 Kemp Blvd, Suite 120, Wichita Falls, TX 76308.</p>
+    <p style="margin-top:12px;">&copy; 2026 Affinity Cellular&reg;. All rights reserved.</p>
+    </div>
   </div>
-  <p>*3 Months Free offer: available to new customers only on select plans &mdash; $0 for the first three months of unlimited talk &amp; text on one line. Data plans are also available starting at $20/month. After the promotional period, unlimited talk &amp; text plans start at $15/month; **talk, text &amp; data plans start at $20/month. Limited-time offer; <a href="terms.html">terms and conditions</a> apply.</p>
-  <button type="button" class="legal-toggle" data-legal-toggle>Read full disclosures</button>
-<div class="legal-more" hidden>
-  <p>30-Day Money-Back Guarantee: phones may be returned within 30 days of purchase &mdash; provided total usage is under 30 minutes of talk time, 30 text messages, or 30 MB of data (whichever comes first) &mdash; for a refund of the activation fee, handset cost, and prorated plan cost. The cost of additional services is not refundable. See the full <a href="return-policy.html">Return Policy</a> for details.</p>
-  <p>Testimonials reflect the experiences of individual customers; savings and results may vary. Affinity Cellular operates on the nation&rsquo;s largest and most dependable network. Questions about how your information is collected and used? See the <a href="privacy-policy.html">Privacy &amp; CPNI Policy</a>, email <a href="mailto:help@affinitycellular.com">help@affinitycellular.com</a>, or call customer support at (833)&nbsp;679-1090. Affinity Cellular, 4245 Kemp Blvd, Suite 120, Wichita Falls, TX 76308.</p>
-</div>
-</div>
-<div class="footrule"></div>
+</footer>
 
 <script>
 /* ---------- Testimonials ---------- */

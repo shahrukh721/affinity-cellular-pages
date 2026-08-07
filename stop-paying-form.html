@@ -865,6 +865,23 @@
 
   .bbb-seal-link{display:inline-block;line-height:0;}
   .bbb-seal-link img{height:42px;width:auto;max-width:100%;display:block;border:0;}
+
+  /* ===== UNIFIED FOOTER (all pages) ===== */
+  .site-footer{background:var(--navy);color:#aab8c9;margin-top:0;padding:32px 0 36px;}
+  .footer-inner{max-width:1160px;margin:0 auto;padding:0 24px;}
+  .footer-seal{margin-bottom:18px;}
+  .footer-seal .bbb-seal-link{display:inline-block;line-height:0;}
+  .footer-seal .bbb-seal-link img{height:42px;width:auto;border:0;display:block;}
+  .site-footer .f-links{display:flex;flex-wrap:wrap;gap:12px;align-items:center;font-size:14px;font-weight:700;margin-bottom:18px;}
+  .site-footer .f-links a{color:#fff;display:inline-block;padding:8px 2px;text-decoration:none;}
+  .site-footer .f-links a:hover{text-decoration:underline;}
+  .site-footer .f-links span{color:#5d7189;}
+  .site-footer p{font-size:12px;line-height:1.6;margin-bottom:10px;color:#aab8c9;}
+  .site-footer p a{color:#cdd9e6;text-decoration:underline;}
+  .site-footer .legal-toggle{display:inline-flex;align-items:center;min-height:44px;padding:0;background:none;border:none;cursor:pointer;font-family:inherit;font-size:13px;font-weight:700;text-decoration:underline;color:#cdd9e6;}
+  .site-footer .legal-more[hidden]{display:none;}
+  @media(min-width:761px){.site-footer .legal-more{display:block!important;}.site-footer .legal-toggle{display:none!important;}}
+  @media(max-width:760px){.site-footer{order:9;}.site-footer p,.site-footer .f-links a,.site-footer .legal-toggle{font-size:16px;}}
 </style>
 </head>
 <body>
@@ -1390,38 +1407,33 @@
       </div>
     </div>
   </div>
-  <div class="trust-bbb" style="text-align:center;padding:10px 20px 0;">
-    <a class="bbb-seal-link" href="https://www.bbb.org/us/tx/wichita-falls/profile/mobile-phone-service/affinity-cellular-0875-91137126/#sealclick" target="_blank" rel="nofollow noopener"><img src="https://seal-dallas.bbb.org/seals/blue-seal-200-42-bbb-91137126.png" alt="Affinity Cellular BBB Business Review"></a>
-    <p style="font-size:16px;font-weight:800;color:#12336e;margin-top:10px;">Real, Live U.S.-Based Agents</p>
-  </div>
+  <div class="trust-bbb" style="text-align:center;padding:10px 20px 0;"><p style="font-size:16px;font-weight:800;color:#12336e;margin-top:10px;">Real, Live U.S.-Based Agents</p></div>
   <p class="fine-print">*Special offer: $0 for the first three months of service. Available to new customers only.</p>
 </section>
 
 <!-- ================= LEGAL FOOTER ================= -->
-<footer class="legal-footer">
-  <div class="container">
-    <nav class="legal-links" aria-label="Legal">
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-seal"><a class="bbb-seal-link" href="https://www.bbb.org/us/tx/wichita-falls/profile/mobile-phone-service/affinity-cellular-0875-91137126/#sealclick" target="_blank" rel="nofollow noopener"><img src="https://seal-dallas.bbb.org/seals/blue-seal-200-42-bbb-91137126.png" alt="Affinity Cellular BBB Business Review"></a></div>
+    <div class="f-links">
       <a href="privacy-policy.html">Privacy Policy</a>
-      <span class="dot" aria-hidden="true"></span>
+      <span>|</span>
       <a href="terms.html">Terms &amp; Conditions</a>
-      <span class="dot" aria-hidden="true"></span>
+      <span>|</span>
       <a href="return-policy.html">Return Policy</a>
-      <span class="dot" aria-hidden="true"></span>
-      <a href="privacy-policy.html">Your Privacy Choices</a>
-      <span class="dot" aria-hidden="true"></span>
-      <a href="mailto:help@affinitycellular.com">Contact Us</a>
-    </nav>
-    <div class="legal-copy">
-      <p>*Special offer: $0 for the first three months of service for new customers only, limited slots available. After the promotional period, plans start at $15/mo. for Unlimited Talk &amp; Text and $20/mo. for Talk, Text &amp; Data. Offer may be modified or withdrawn at any time. Taxes, surcharges, and additional services may apply and are not included in advertised pricing.</p>
-      <button type="button" class="legal-toggle" data-legal-toggle>Read full disclosures</button>
-<div class="legal-more" hidden>
-      <p>&dagger;30-Day Money-Back Guarantee: purchases are covered by Affinity Cellular's 30-day money-back guarantee. The guarantee applies until you use 30 minutes of talk time, 30 text messages, or 30&nbsp;MB of data, or until 30 days after purchase &mdash; whichever comes first. Eligible refunds include the activation fee, handset cost, and prorated plan charges; additional services are non-refundable. See the full <a href="return-policy.html">Return Policy</a> for details.</p>
-      <p>Savings claims are based on average reported customer savings compared to prior carrier bills; individual savings will vary depending on your current plan and usage. Coverage and 5G availability vary by location and device. Third-party names and logos are trademarks of their respective owners and do not imply endorsement.</p>
-      <p>By submitting your phone number or calling the number on this page, you consent to be contacted by Affinity Cellular by phone, and to receive marketing calls and text messages, including through automated technology. Consent is not a condition of purchase. Message and data rates may apply; reply STOP to opt out of texts at any time. For information on how your personal information is collected, used, and shared &mdash; including your state privacy rights and how to opt out of the sale or sharing of personal information &mdash; see the <a href="privacy-policy.html">Privacy Policy</a>.</p>
-      <p>Affinity Cellular, 4245 Kemp Blvd, Suite 120, Wichita Falls, TX 76308 &middot; Customer Support: <a href="tel:8336791090">(833) 679-1090</a> &middot; <a href="mailto:help@affinitycellular.com">help@affinitycellular.com</a></p>
+      <span>|</span>
+      <a href="https://affinitycellular.com/" target="_blank" rel="noopener">AffinityCellular.com</a>
+      <span>|</span>
+      <a href="tel:8557638221">855-763-8221</a>
     </div>
+    <p>*3 Months Free offer: available to new customers only on select plans. $0 for the first three months of unlimited talk &amp; text on one line. Data plans are also available starting at $20/month. After the promotional period, unlimited talk &amp; text plans start at $15/month; **talk, text &amp; data plans start at $20/month. Limited-time offer; <a href="terms.html">terms and conditions</a> apply.</p>
+    <button type="button" class="legal-toggle" data-legal-toggle>Read full disclosures</button>
+    <div class="legal-more" hidden>
+    <p>30-Day Money-Back Guarantee: phones may be returned within 30 days of purchase &mdash; provided total usage is under 30 minutes of talk time, 30 text messages, or 30 MB of data (whichever comes first) &mdash; for a refund of the activation fee, handset cost, and prorated plan cost. The cost of additional services is not refundable. See the full <a href="return-policy.html">Return Policy</a> for details.</p>
+    <p>Testimonials reflect the experiences of individual customers; savings and results may vary. Affinity Cellular operates on the nation&rsquo;s largest and most dependable network. AT&amp;T, T-Mobile, AARP, and AAA are trademarks of their respective owners; references do not imply endorsement or affiliation.</p>
+    <p>Questions about how your information is collected and used? See the <a href="privacy-policy.html">Privacy &amp; CPNI Policy</a>, email <a href="mailto:help@affinitycellular.com">help@affinitycellular.com</a>, or call customer support at (833)&nbsp;679-1090. Affinity Cellular, 4245 Kemp Blvd, Suite 120, Wichita Falls, TX 76308.</p>
+    <p style="margin-top:12px;">&copy; 2026 Affinity Cellular&reg;. All rights reserved.</p>
     </div>
-    <p class="legal-copyright">&copy; 2026 Affinity Cellular&reg;. All rights reserved.</p>
   </div>
 </footer>
 
