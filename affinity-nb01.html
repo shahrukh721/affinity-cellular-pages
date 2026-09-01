@@ -1,0 +1,1625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0e2a5c">
+<title>Affinity Cellular — Unlimited Talk, Text &amp; 5GB Data | $20/mo</title>
+<link rel="preload" as="image" href="images/lp/hero-couple.jpg" media="(min-width: 761px)">
+<link rel="preload" as="image" href="images/lp/hero-couple-mobile.jpg" media="(max-width: 760px)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#12336e;
+    --navy-dark:#0e2a5c;
+    --navy-deep:#0b234e;
+    --red:#d7212c;
+    --red-bright:#e31e26;
+    --yellow:#ffd100;
+    --gold:#f6c445;
+    --blue-pale:#e9f1fa;
+    --blue-icon:#d9e6f5;
+    --gray-text:#4a5568;
+    --gray-light:#8a94a6;
+    --border:#dfe6ef;
+    --white:#ffffff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Archivo',Arial,Helvetica,sans-serif;
+    color:var(--navy);
+    background:#fff;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img{max-width:100%;display:block;}
+  .container{max-width:1160px;margin:0 auto;padding:0 24px;}
+
+  /* ============ HEADER ============ */
+  .site-header{
+    background:var(--navy-dark);
+    color:#fff;
+    padding:14px 0;
+  }
+  .header-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+  }
+  .logo{line-height:1;color:#fff;text-decoration:none;}
+  .logo .logo-top{
+    font-weight:900;
+    font-style:italic;
+    font-size:34px;
+    letter-spacing:-.5px;
+    display:inline-flex;
+    align-items:flex-start;
+  }
+  .logo .reg{font-size:11px;font-style:normal;font-weight:600;margin:2px 0 0 2px;}
+  .logo .logo-sub{
+    font-weight:500;
+    font-size:15.5px;
+    letter-spacing:5.5px;
+    margin-top:2px;
+  }
+  .header-call{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    text-align:left;
+  }
+  .header-call .clock-badge{
+    width:52px;height:52px;flex:0 0 52px;
+    border:2.5px solid #fff;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .header-call .clock-badge svg{width:30px;height:30px;}
+  .header-call .call-label{font-weight:700;font-size:15px;}
+  .header-call .call-number{
+    font-weight:900;font-size:34px;letter-spacing:.5px;line-height:1.05;
+    color:#fff;text-decoration:none;display:block;
+  }
+  .header-call .call-hours{font-size:13px;font-weight:500;opacity:.95;margin-top:2px;}
+  .hamburger{
+    background:none;border:0;cursor:pointer;padding:6px;
+    display:flex;flex-direction:column;gap:6px;
+  }
+  .hamburger span{display:block;width:38px;height:5px;border-radius:3px;background:#fff;}
+
+  /* ============ HERO ============ */
+  .hero{
+    position:relative;
+    background:linear-gradient(105deg,#f7fafd 0%,#eef4fa 45%,#dde9f4 100%);
+    overflow:hidden;
+  }
+  .hero-photo{
+    position:absolute;top:0;right:0;bottom:0;width:62%;
+    background:url('images/lp/hero-couple.jpg') center right/cover no-repeat,
+               linear-gradient(115deg,#c8d8e8 0%,#a9c0d6 50%,#8fb0cc 100%);
+  }
+  .hero-photo::before{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(90deg,#f2f7fc 0%,rgba(242,247,252,.65) 22%,rgba(242,247,252,0) 55%);
+  }
+  .hero-inner{
+    position:relative;z-index:2;
+    padding:44px 0 54px;
+    display:grid;
+    grid-template-columns:minmax(0,560px) 1fr;
+    gap:24px;
+  }
+  .hero-h1{
+    font-weight:900;
+    font-size:52px;
+    line-height:1.02;
+    letter-spacing:-.5px;
+    color:var(--navy);
+    text-transform:uppercase;
+  }
+  .hero-h1 .accent{color:var(--red-bright);}
+  .hero-divider{
+    width:120px;height:4px;background:var(--navy);
+    margin:16px 0 14px;border-radius:2px;
+  }
+  .hero-try{
+    font-weight:800;font-size:30px;letter-spacing:.5px;color:var(--navy);
+    text-transform:uppercase;
+  }
+  .hero-free-line{display:flex;flex-direction:column;align-items:flex-start;gap:10px;margin:2px 0 16px;}
+  .hero-free{
+    color:var(--red-bright);
+    font-weight:900;
+    font-size:74px;
+    line-height:.95;
+    letter-spacing:.5px;
+    white-space:nowrap;
+  }
+  .hero-free .hero-price-mo{font-size:.42em;letter-spacing:0;}
+  .hero-free-months{
+    display:inline-block;background:var(--yellow);color:var(--navy);
+    font-size:22px;font-weight:900;letter-spacing:.3px;text-transform:uppercase;
+    padding:7px 14px;border-radius:8px;
+  }
+  .hero-checks{list-style:none;margin:6px 0 20px;}
+  .hero-checks li{
+    display:flex;align-items:center;gap:10px;
+    font-weight:700;font-size:18px;color:#1a2b4a;
+    padding:4px 0;
+  }
+  .hero-checks svg{width:22px;height:22px;flex:0 0 22px;}
+  .hero-offer{
+    display:flex;align-items:flex-start;gap:12px;margin-bottom:22px;
+  }
+  .hero-offer .offer-clock{
+    width:40px;height:40px;flex:0 0 40px;
+    border:2.5px solid var(--navy);border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .hero-offer .offer-clock svg{width:24px;height:24px;}
+  .hero-offer .offer-title{
+    color:var(--red-bright);font-weight:800;font-size:19px;text-transform:uppercase;
+    letter-spacing:.2px;
+  }
+  .hero-offer .offer-sub{font-size:15px;font-weight:500;color:#1a2b4a;margin-top:3px;}
+  .btn-cta{
+    display:inline-block;
+    background:linear-gradient(180deg,#e4353d 0%,#c8151f 100%);
+    color:#fff;text-decoration:none;text-align:center;
+    border-radius:10px;
+    padding:16px 44px 14px;
+    box-shadow:0 6px 16px rgba(200,21,31,.35);
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn-cta:hover{transform:translateY(-2px);box-shadow:0 9px 20px rgba(200,21,31,.42);}
+  .btn-cta .cta-main{display:block;font-weight:900;font-size:25px;text-transform:uppercase;letter-spacing:.5px;}
+  .btn-cta .cta-sub{display:block;font-weight:700;font-size:14.5px;text-transform:uppercase;letter-spacing:.6px;margin-top:3px;opacity:.95;}
+
+  .hero-right{position:relative;min-height:420px;}
+  .badge-years{
+    position:absolute;top:6px;right:8px;z-index:3;
+    flex:0 0 auto;
+    width:150px;height:150px;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;
+  }
+  .badge-years .starburst{position:absolute;inset:0;width:100%;height:100%;}
+  .badge-years .badge-inner{position:relative;z-index:1;margin-top:-8px;}
+  .badge-years .badge-num{font-weight:900;font-size:44px;line-height:1;color:var(--navy);}
+  .badge-years .badge-word{font-weight:800;font-size:15px;letter-spacing:1px;color:var(--navy);text-transform:uppercase;}
+  .badge-years .badge-ribbon{
+    position:relative;z-index:1;
+    background:var(--navy);color:#fff;
+    font-weight:700;font-size:9.5px;letter-spacing:.8px;text-transform:uppercase;
+    padding:4px 10px;border-radius:3px;margin-top:4px;
+  }
+  .price-card{
+    position:absolute;right:0;bottom:52px;z-index:3;
+    background:#fff;border-radius:14px;
+    box-shadow:0 10px 30px rgba(15,40,80,.18);
+    padding:22px 34px 20px;
+    text-align:center;
+    min-width:250px;
+  }
+  .price-card .pc-label{font-weight:600;font-size:16px;color:var(--navy);}
+  .price-card .pc-price{
+    font-weight:900;color:var(--navy);line-height:1;
+    display:flex;align-items:baseline;justify-content:center;gap:2px;
+    margin:8px 0 6px;
+  }
+  .price-card .pc-currency{font-size:38px;align-self:flex-start;margin-top:6px;}
+  .price-card .pc-amount{font-size:76px;letter-spacing:-2px;}
+  .price-card .pc-per{font-size:24px;font-weight:800;}
+  .price-card .pc-after{font-weight:600;font-size:15px;color:var(--navy);}
+
+  /* ============ COUNTDOWN ============ */
+  .countdown-bar{background:var(--navy-dark);color:#fff;padding:22px 0;}
+  .countdown-inner{
+    display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap;
+  }
+  .countdown-msg{display:flex;align-items:center;gap:16px;}
+  .countdown-msg .cd-clock{
+    width:56px;height:56px;flex:0 0 56px;
+    border:3px solid #fff;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .countdown-msg .cd-clock svg{width:34px;height:34px;}
+  .countdown-msg p{
+    font-weight:800;font-size:19px;line-height:1.35;text-transform:uppercase;
+    max-width:430px;
+  }
+  .countdown-msg .hurry{color:var(--yellow);}
+  .countdown-timer{display:flex;gap:12px;}
+  .cd-unit{
+    background:#fff;border-radius:8px;
+    width:82px;padding:10px 6px 8px;
+    text-align:center;
+  }
+  .cd-unit .cd-num{
+    font-weight:900;font-size:40px;line-height:1;color:var(--red-bright);
+    font-variant-numeric:tabular-nums;
+  }
+  .cd-unit .cd-label{
+    font-weight:800;font-size:13px;letter-spacing:1px;color:var(--navy);
+    text-transform:uppercase;margin-top:4px;
+  }
+
+  /* ============ PRESS LOGOS ============ */
+  .press{padding:34px 0 30px;border-bottom:1px solid var(--border);}
+  .press-title{
+    text-align:center;font-weight:800;font-size:16px;letter-spacing:1.5px;
+    color:var(--navy);text-transform:uppercase;margin-bottom:24px;
+  }
+  .press-logos{
+    display:flex;align-items:center;justify-content:center;
+    gap:56px;flex-wrap:wrap;
+  }
+  .plogo-img{
+    filter:grayscale(1) brightness(1.25) opacity(.72);
+    width:auto;flex:0 0 auto;
+  }
+
+  /* ============ STEPS ============ */
+  .steps{padding:46px 0 52px;}
+  .steps-title{
+    text-align:center;font-weight:900;font-size:34px;color:var(--navy);
+    text-transform:uppercase;letter-spacing:.2px;margin-bottom:40px;
+  }
+  .steps-title .r{color:var(--red-bright);}
+  .steps-row{
+    display:flex;align-items:flex-start;justify-content:center;gap:8px;
+  }
+  .step{
+    text-align:center;width:190px;position:relative;
+  }
+  .step .step-icon{
+    width:104px;height:104px;margin:0 auto;
+    background:var(--blue-icon);border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    position:relative;
+  }
+  .step .step-icon svg{width:52px;height:52px;}
+  .step .step-num{
+    position:absolute;top:-4px;left:calc(50% - 66px);
+    width:30px;height:30px;border-radius:50%;
+    background:var(--navy);color:#fff;
+    font-weight:800;font-size:15px;
+    display:flex;align-items:center;justify-content:center;
+    border:3px solid #fff;
+    box-shadow:0 2px 6px rgba(0,0,0,.15);
+  }
+  .step h3{
+    font-weight:800;font-size:16.5px;letter-spacing:.5px;color:var(--navy);
+    text-transform:uppercase;margin:16px 0 8px;
+  }
+  .step p{font-size:15px;font-weight:500;color:#33415c;line-height:1.45;}
+  .step-arrow{
+    align-self:center;margin-top:-46px;
+    flex:0 0 56px;display:flex;justify-content:center;
+  }
+  .step-arrow svg{width:46px;height:22px;}
+
+  /* ============ TESTIMONIALS ============ */
+  .testimonials{padding:20px 0 56px;}
+  .t-title{
+    text-align:center;font-weight:900;font-size:32px;color:var(--navy);
+    text-transform:uppercase;margin-bottom:16px;
+  }
+  .t-rating{
+    display:flex;align-items:center;justify-content:center;gap:14px;
+    margin-bottom:30px;flex-wrap:wrap;
+  }
+  .t-rating .stars{display:flex;gap:3px;}
+  .t-rating .stars svg{width:26px;height:26px;}
+  .t-rating .score{font-weight:800;font-size:16px;color:var(--navy);letter-spacing:.3px;}
+  .t-rating .sep{width:1.5px;height:20px;background:#c3cddb;}
+  .t-rating .count{font-weight:800;font-size:16px;color:var(--navy);letter-spacing:.3px;}
+  .t-carousel{
+    display:flex;align-items:stretch;gap:14px;
+  }
+  .t-nav{
+    background:none;border:0;cursor:pointer;color:#93a1b5;
+    display:flex;align-items:center;padding:0 2px;
+  }
+  .t-nav svg{width:22px;height:38px;}
+  .t-nav:hover{color:var(--navy);}
+  .t-cards{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:22px;flex:1;
+  }
+  .t-card{
+    border:1.5px solid var(--border);border-radius:12px;
+    background:#fff;
+    padding:26px 24px 22px;
+    text-align:center;
+    display:flex;flex-direction:column;align-items:center;
+    box-shadow:0 3px 10px rgba(15,40,80,.05);
+  }
+  .t-card .quote-mark{
+    color:#b9c6d8;font-size:44px;line-height:.6;font-family:Georgia,serif;
+    align-self:flex-start;height:18px;
+  }
+  .t-card .t-text{
+    font-size:15.5px;font-weight:500;color:#2b3a55;line-height:1.55;
+    margin:8px 0 16px;
+  }
+  .t-card .t-text b{color:#1a2b4a;}
+  .t-card .stars{display:flex;gap:3px;margin-bottom:12px;}
+  .t-card .stars svg{width:22px;height:22px;}
+  .t-card .t-name{font-weight:800;font-size:17px;color:var(--navy);margin-bottom:8px;}
+  .t-card .t-verified{
+    display:flex;align-items:center;gap:7px;
+    font-weight:700;font-size:14px;color:#1670d6;
+  }
+  .t-card .t-verified svg{width:18px;height:18px;}
+
+  /* ============ FEATURE BAND ============ */
+  .features{background:var(--navy-dark);color:#fff;padding:34px 0;}
+  .features-row{
+    display:grid;grid-template-columns:repeat(4,1fr);
+  }
+  .feature{
+    display:flex;align-items:flex-start;gap:14px;
+    padding:6px 22px;
+  }
+  .feature + .feature{border-left:1.5px solid rgba(255,255,255,.25);}
+  .feature .f-icon{flex:0 0 46px;width:46px;height:46px;display:flex;align-items:center;justify-content:center;}
+  .feature .f-icon svg{width:44px;height:44px;}
+  .feature h3{
+    font-weight:800;font-size:15px;letter-spacing:.4px;text-transform:uppercase;
+    line-height:1.3;margin-bottom:6px;
+  }
+  .feature p{font-size:12.5px;font-weight:500;line-height:1.45;opacity:.92;}
+
+  /* ============ PRICING ============ */
+  .pricing{padding:52px 0 60px;background:#fff;}
+  .pricing-row{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:26px;align-items:stretch;
+  }
+  .plan{
+    border-radius:12px;overflow:hidden;display:flex;flex-direction:column;
+    box-shadow:0 3px 10px rgba(15,40,80,.07);
+  }
+  /* Featured navy plan */
+  .plan-featured{
+    background:linear-gradient(180deg,#153a78 0%,#0f2c5e 100%);
+    color:#fff;text-align:center;position:relative;
+  }
+  .plan-featured .ribbon{
+    background:var(--red-bright);color:#fff;
+    font-weight:800;font-size:16px;letter-spacing:.8px;text-transform:uppercase;
+    padding:11px 10px;
+    margin:20px 26px 8px;
+    position:relative;
+    z-index:1;
+  }
+  .plan-featured .ribbon::before,
+  .plan-featured .ribbon::after{
+    content:"";position:absolute;top:6px;border:11px solid transparent;z-index:-1;
+  }
+  .plan-featured .ribbon::before{left:-16px;border-right-color:#a80f18;}
+  .plan-featured .ribbon::after{right:-16px;border-left-color:#a80f18;}
+  .plan-featured .pf-body{flex:1;padding:14px 24px 18px;display:flex;flex-direction:column;justify-content:center;}
+  .plan-featured .pf-big{
+    font-weight:900;font-size:62px;line-height:.94;text-transform:uppercase;letter-spacing:0;max-width:100%;overflow-wrap:break-word;
+  }
+  .plan-featured .pf-included{
+    font-weight:900;font-size:28px;text-transform:uppercase;letter-spacing:1px;margin-top:8px;
+  }
+  .plan-featured .pf-note{
+    font-size:13.5px;font-weight:500;opacity:.9;margin-top:16px;line-height:1.5;
+  }
+  .plan-featured .pf-footer{
+    background:var(--yellow);color:var(--navy);
+    font-weight:800;font-size:14.5px;letter-spacing:.4px;text-transform:uppercase;
+    padding:13px 10px;
+  }
+  /* White plans */
+  .plan-white{background:#fff;border:1.5px solid var(--border);}
+  .plan-white .pw-header{
+    color:#fff;text-align:center;font-weight:800;text-transform:uppercase;
+    font-size:19px;line-height:1.25;letter-spacing:.5px;
+    padding:12px 10px;
+    margin:10px 10px 0;
+    border-radius:8px;
+  }
+  .plan-white .pw-header.navy{background:var(--navy);}
+  .plan-white .pw-header.red{background:var(--red-bright);}
+  .plan-white .pw-body{padding:20px 28px 26px;flex:1;display:flex;flex-direction:column;}
+  .plan-white .pw-startingat{font-weight:600;font-size:15px;color:#33415c;}
+  .plan-white .pw-price{
+    display:flex;align-items:baseline;gap:2px;line-height:1;margin:6px 0 4px;
+  }
+  .plan-white .pw-currency{font-weight:900;font-size:30px;align-self:flex-start;margin-top:4px;}
+  .plan-white .pw-amount{font-weight:900;font-size:64px;letter-spacing:-2px;}
+  .plan-white .pw-per{font-weight:800;font-size:22px;}
+  .plan-white .pw-price.navy{color:var(--navy);}
+  .plan-white .pw-price.red{color:var(--red-bright);}
+  .plan-white .pw-after{font-size:13.5px;font-weight:500;color:#5a6a84;}
+  .plan-white .pw-divider{height:1.5px;background:var(--border);margin:16px 0 14px;}
+  .plan-white ul{list-style:none;}
+  .plan-white li{
+    display:flex;align-items:center;gap:10px;
+    font-weight:600;font-size:15.5px;color:#1a2b4a;
+    padding:6px 0;
+  }
+  .plan-white li svg{width:18px;height:18px;flex:0 0 18px;}
+
+  /* ============ CALL CTA BAND ============ */
+  .call-band{
+    position:relative;
+    background:var(--navy-dark);
+    color:#fff;
+    overflow:hidden;
+  }
+  .call-band-inner{
+    display:flex;align-items:center;gap:34px;
+    padding:34px 0;
+    position:relative;z-index:2;
+  }
+  .call-left{display:flex;align-items:center;gap:20px;flex-wrap:wrap;flex:1;}
+  .call-phone-icon{
+    width:64px;height:64px;flex:0 0 64px;border-radius:50%;
+    background:#0a1f45;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .call-phone-icon svg{width:32px;height:32px;}
+  .call-copy .call-easy{font-weight:800;font-size:20px;letter-spacing:.5px;text-transform:uppercase;}
+  .call-copy .call-num{
+    font-weight:900;font-size:46px;letter-spacing:.5px;color:#ff4b52;
+    line-height:1.05;text-decoration:none;display:block;
+  }
+  .call-copy .call-site{
+    display:flex;align-items:center;gap:8px;font-weight:700;font-size:16px;margin-top:4px;
+  }
+  .call-copy .call-site svg{width:19px;height:19px;}
+  .call-qr{display:flex;align-items:center;gap:14px;}
+  .call-qr .qr-box{
+    width:96px;height:96px;background:#fff;border-radius:6px;padding:7px;
+  }
+  .call-qr .qr-box img{width:100%;height:100%;image-rendering:pixelated;}
+  .call-qr .qr-label{font-weight:700;font-size:15px;line-height:1.35;}
+  .call-qr .qr-arrow{color:var(--red-bright);margin-top:4px;}
+  .call-qr .qr-arrow svg{width:16px;height:16px;}
+  .call-brand{
+    position:relative;
+    flex:0 0 320px;
+    align-self:stretch;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;
+  }
+  .call-brand::before{
+    content:"";position:absolute;top:-60px;bottom:-60px;left:-30px;right:-100vw;
+    background:#1c4489;
+    transform:skewX(-14deg);
+    z-index:-1;
+  }
+  .call-brand .logo .logo-top{font-size:44px;}
+  .call-brand .logo .logo-sub{font-size:19px;letter-spacing:7px;}
+  .call-brand .brand-tag{
+    font-style:italic;font-weight:600;font-size:15px;margin-top:10px;opacity:.95;
+  }
+
+  /* ============ TRUST FOOTER ============ */
+  .trust{padding:34px 0 20px;}
+  .trust-row{
+    display:grid;grid-template-columns:repeat(3,1fr);
+  }
+  .trust-item{
+    display:flex;align-items:center;justify-content:center;gap:14px;
+    padding:8px 26px;
+  }
+  .trust-item + .trust-item{border-left:1.5px solid var(--border);}
+  .trust-item .tr-icon{flex:0 0 54px;width:54px;height:54px;display:flex;align-items:center;justify-content:center;}
+  .trust-item .tr-icon svg{width:52px;height:52px;}
+  .trust-item h3{font-weight:800;font-size:14.5px;letter-spacing:.4px;text-transform:uppercase;color:var(--navy);margin-bottom:4px;}
+  .trust-item p{font-size:12.5px;font-weight:500;color:#5a6a84;line-height:1.4;}
+  .fine-print{
+    text-align:center;font-size:12.5px;color:#7c8798;font-weight:500;
+    padding:18px 20px 26px;
+  }
+
+  /* ============ LEGAL FOOTER ============ */
+  .legal-footer{
+    background:var(--navy-dark);color:#fff;
+    padding:30px 0 26px;
+  }
+  .legal-links{
+    display:flex;align-items:center;justify-content:center;
+    gap:10px 26px;flex-wrap:wrap;
+    margin-bottom:20px;
+  }
+  .legal-links a{
+    color:#fff;text-decoration:none;
+    font-weight:700;font-size:14px;letter-spacing:.3px;
+    padding:8px 4px;display:inline-block;
+  }
+  .legal-links a:hover{text-decoration:underline;}
+  .legal-links .dot{width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.5);}
+  .legal-copy{
+    max-width:920px;margin:0 auto;
+    font-size:11.5px;line-height:1.6;font-weight:400;
+    color:rgba(255,255,255,.75);
+    text-align:center;
+  }
+  .legal-copy p{margin-bottom:10px;}
+  .legal-copy a{color:rgba(255,255,255,.9);}
+  .legal-copyright{
+    text-align:center;font-size:12px;font-weight:600;
+    color:rgba(255,255,255,.85);
+    margin-top:14px;
+  }
+
+  .cd-static-msg{
+    font-size:19px;font-weight:800;color:#fff;letter-spacing:.3px;text-align:center;
+  }
+
+  /* ============ LEAD FORM (inline + popup) ============ */
+  .lead-modal{position:fixed;inset:0;z-index:2000;display:none;}
+  .lead-modal.open{display:block;}
+  .lead-modal-backdrop{position:absolute;inset:0;background:rgba(11,35,78,.62);}
+  .lead-modal-card{
+    position:relative;max-width:500px;width:calc(100% - 32px);
+    margin:5vh auto 0;background:#fff;border-radius:12px;overflow:hidden;
+    box-shadow:0 18px 60px rgba(0,0,0,.35);
+    display:flex;flex-direction:column;max-height:90vh;
+  }
+  .lead-modal-head{
+    background:var(--navy);color:#fff;font-weight:800;font-size:15.5px;letter-spacing:.6px;
+    padding:15px 46px 15px 18px;position:relative;text-align:center;line-height:1.3;
+  }
+  .lead-modal-close{
+    position:absolute;right:10px;top:50%;transform:translateY(-50%);
+    width:30px;height:30px;border:none;border-radius:50%;background:rgba(255,255,255,.15);
+    color:#fff;font-size:19px;line-height:1;cursor:pointer;font-weight:700;
+  }
+  .lead-modal-close:hover{background:var(--red-bright);}
+  .lead-modal-body{padding:10px;overflow-y:auto;}
+  .lead-modal-body iframe{width:100%;border:none;border-radius:8px;display:block;}
+  .lead-modal-head .lm-sub{display:block;font-size:12px;font-weight:600;color:#c9d5e3;letter-spacing:.2px;margin-top:4px;}
+  .lead-modal-foot{
+    display:flex;align-items:center;justify-content:center;gap:7px;
+    padding:4px 14px 14px;font-size:12px;color:#5d6a78;text-align:center;
+  }
+  .lead-modal-foot a{color:#5d6a78;text-decoration:underline;}
+  body.lead-modal-open{overflow:hidden;}
+
+  /* ============ STICKY URGENCY BAR ============ */
+  .urgent-bar{
+    position:sticky;top:0;z-index:1000;
+    background:var(--red-bright);color:#fff;
+    box-shadow:0 2px 10px rgba(11,35,78,.28);
+  }
+  .urgent-inner{
+    max-width:1160px;margin:0 auto;padding:9px 16px;
+    display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:nowrap;
+  }
+  .urgent-msg{
+    font-size:15px;font-weight:800;letter-spacing:.3px;line-height:1.25;text-align:center;
+    display:flex;align-items:center;gap:9px;min-width:0;
+  }
+  .urgent-msg .u-clock{flex:0 0 auto;display:flex;}
+  .urgent-msg .u-strong{color:var(--yellow);}
+  .urgent-cta{
+    flex:0 0 auto;background:#fff;color:var(--red-bright);text-decoration:none;
+    font-size:14px;font-weight:900;letter-spacing:.6px;
+    padding:9px 18px;border-radius:6px;white-space:nowrap;
+    box-shadow:0 2px 6px rgba(0,0,0,.18);
+    display:flex;align-items:center;gap:7px;
+    transition:transform .12s;
+  }
+  .urgent-cta:hover{transform:scale(1.04);}
+  @media (max-width:640px){
+    .urgent-inner{padding:8px 10px;gap:10px;}
+    .urgent-msg{font-size:12px;gap:6px;}
+    .urgent-cta{font-size:12.5px;padding:8px 12px;}
+  }
+  @media (max-width:360px){
+    .urgent-msg .u-hide-xs{display:none;}
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:1020px){
+    .hero-h1{font-size:44px;}
+    .features-row{grid-template-columns:repeat(2,1fr);row-gap:22px;}
+    .feature:nth-child(3){border-left:0;}
+    .steps-row{flex-wrap:wrap;gap:26px;}
+    .step-arrow{display:none;}
+    .t-cards{grid-template-columns:1fr;}
+    .pricing-row{grid-template-columns:1fr;max-width:460px;margin:0 auto;}
+    .call-band-inner{flex-direction:column;align-items:center;text-align:center;gap:24px;padding:34px 20px 0;}
+    .call-left{flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:16px;}
+    .call-copy .call-site{justify-content:center;}
+    .call-qr{justify-content:center;}
+    .call-qr .qr-label{text-align:left;}
+    .call-brand{
+      flex:0 0 auto;
+      width:auto;align-self:stretch;margin:0 -20px;
+      background:#1c4489;
+      padding:28px 24px 32px;
+    }
+    .call-brand::before{display:none;}
+  }
+  @media (max-width:760px){
+    .header-inner{flex-wrap:wrap;justify-content:center;text-align:center;}
+    .hamburger{position:absolute;right:18px;top:18px;}
+    .site-header{position:relative;}
+    .hero-inner{grid-template-columns:1fr;padding:34px 20px 46px;}
+    .hero-photo{
+      position:relative;width:100%;height:340px;
+      background:url('images/lp/hero-couple-mobile.jpg') center 30%/cover no-repeat;
+    }
+    .hero-photo::before{
+      background:linear-gradient(180deg,rgba(242,247,252,0) 72%,#f2f7fc 100%);
+    }
+    .hero-right{min-height:0;display:flex;flex-direction:column;align-items:center;gap:18px;}
+    .badge-years{position:relative;top:auto;right:auto;}
+    .price-card{position:static;}
+    .hero-h1{font-size:36px;}
+    .hero-free-line{flex-wrap:wrap;gap:10px;}
+    .hero-free{font-size:clamp(30px,13vw,58px);}
+    .hero-try{font-size:clamp(18px,7vw,30px);}
+    .hero-free-months{font-size:22px;}
+    .hero-try{font-size:24px;}
+    .hero-offer .offer-title{font-size:16px;}
+    .btn-cta{display:block;padding:14px 20px 12px;}
+    .btn-cta .cta-main{font-size:21px;}
+    .btn-cta .cta-sub{font-size:12.5px;}
+    .countdown-inner{justify-content:center;text-align:center;}
+    .countdown-msg{flex-direction:column;}
+    .countdown-timer{flex-wrap:wrap;justify-content:center;}
+    .cd-unit{width:66px;}
+    .cd-unit .cd-num{font-size:32px;}
+    .press-logos{gap:28px;}
+    .press-logos .plogo-img{height:22px !important;}
+    .steps-title,.t-title{font-size:25px;}
+    .t-nav{display:none;}
+    .plan-featured .pf-big{font-size:46px;}
+    .trust-row{grid-template-columns:1fr;row-gap:18px;}
+    .trust-item + .trust-item{border-left:0;}
+    .trust-item{width:100%;max-width:320px;margin:0 auto;justify-content:flex-start;}
+    .call-copy .call-num{font-size:38px;}
+    .feature + .feature{border-left:0;}
+    .features-row{grid-template-columns:1fr;}
+  }
+
+  /* ============ MOBILE REDESIGN (mobile-first, senior-friendly) ============ */
+  .m-header,.m-subhead,.m-hero-extra,.m-plan-promo,.m-plan-cta,.m-call-hours,.m-only{display:none;}
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{transition:none!important;animation:none!important;}
+    html{scroll-behavior:auto!important;}
+  }
+  @media (max-width:760px){
+    /* ---- section order ---- */
+    body{display:flex;flex-direction:column;font-size:18px;line-height:1.55;}
+    .m-header{order:0;}
+    .hero{order:1;}
+    .pricing{order:2;}
+    .steps{order:3;}
+    .press{order:4;}
+    .testimonials{order:5;}
+    .features{order:6;}
+    .call-band{order:7;}
+    .trust{order:8;}
+    .legal-footer{order:9;}
+
+    /* ---- remove desktop chrome & extra urgency on mobile ---- */
+    .urgent-bar,.site-header,.countdown-bar{display:none;}
+    .hero-divider,.hero-try,.hero-free-line,.hero-offer,.hero-right,.badge-years{display:none;}
+    .plan-featured{display:none;}
+    .call-qr{display:none;}
+    .m-only-hide{display:none;}
+    .m-only{display:block;}
+
+    /* ---- slim sticky header (56px) ---- */
+    .m-header{
+      display:flex;position:sticky;top:0;z-index:1500;
+      align-items:center;justify-content:space-between;gap:10px;
+      height:56px;padding:0 16px;background:var(--navy);color:#fff;
+      box-shadow:0 2px 8px rgba(11,35,78,.28);
+    }
+    .m-logo{display:flex;flex-direction:column;line-height:1;color:#fff;}
+    .m-logo-top{font-weight:800;font-size:20px;letter-spacing:.2px;}
+    .m-logo-sub{font-size:9px;letter-spacing:3px;color:#dbe4ee;margin-top:2px;}
+    .m-call-btn{
+      display:flex;align-items:center;gap:8px;min-height:48px;padding:0 14px;
+      background:#fff;color:var(--navy);border-radius:8px;font-weight:800;font-size:16px;
+      white-space:nowrap;
+    }
+
+    /* ---- hero: photo behind copy (like desktop), light wash for contrast ---- */
+    .hero{position:relative;display:block;}
+    .hero-photo{
+      position:absolute;inset:0;width:100%;height:100%;
+      background-position:center 18%;background-size:cover;
+    }
+    .hero-photo::before{
+      display:block;content:"";position:absolute;inset:0;
+      background:linear-gradient(180deg,
+        rgba(242,247,252,.97) 0%,
+        rgba(242,247,252,.92) 40%,
+        rgba(242,247,252,.82) 75%,
+        rgba(242,247,252,.68) 100%);
+    }
+    .hero-inner{position:relative;z-index:1;display:block;padding:22px 16px 30px;}
+    .hero-left{display:flex;flex-direction:column;}
+    .hero-h1{order:1;font-size:31px;line-height:1.16;text-transform:none;letter-spacing:0;margin-bottom:4px;}
+    .hero-h1 .accent{color:var(--navy);}
+    .btn-cta .cta-main,.btn-cta .cta-sub{text-transform:none;}
+    .m-subhead{
+      display:block;order:2;font-size:20px;font-weight:700;color:var(--navy);
+      line-height:1.4;margin:8px 0 2px;
+    }
+    .btn-cta{
+      order:3;display:block;margin:16px 0 0;padding:15px 18px;border-radius:10px;
+      text-align:center;
+    }
+    .btn-cta .cta-main{font-size:20px;}
+    .btn-cta .cta-sub{font-size:14.5px;}
+    .m-hero-extra{display:block;order:4;}
+    .m-hero-tel{
+      display:flex;align-items:center;justify-content:center;min-height:48px;
+      margin-top:6px;font-weight:800;font-size:19px;color:var(--navy);text-decoration:underline;
+    }
+    .m-promo-badge{
+      margin-top:8px;text-align:center;font-size:16px;font-weight:700;color:var(--navy);
+      background:var(--blue-pale);border-radius:8px;padding:11px 12px;line-height:1.45;
+    }
+    .m-promo-terms{margin-top:8px;text-align:center;font-size:16px;color:var(--gray-text);line-height:1.5;}
+    .hero-checks{order:5;margin:16px 0 0;}
+    .hero-checks li{font-size:17px;padding:8px 0;}
+
+    /* ---- pricing cards: identical structure, navy pills, promo-first ---- */
+    .pricing{padding:34px 0 38px;}
+    .plan-white .pw-header.red{background:var(--navy);}
+    .plan-white .pw-price.red{color:var(--navy);}
+    .pw-startingat,.pw-after{display:none;}
+    .m-plan-promo{
+      display:block;text-align:center;font-size:17px;font-weight:800;color:var(--navy);
+      margin:6px 12px 0;line-height:1.4;
+    }
+    .plan-white ul li{font-size:17px;}
+    .m-plan-cta{
+      display:flex;align-items:center;justify-content:center;min-height:52px;
+      margin:16px 14px 16px;background:var(--red-bright);color:#fff;border-radius:10px;
+      font-weight:800;font-size:18px;box-shadow:0 3px 10px rgba(215,33,44,.3);
+    }
+
+    /* ---- typography: sentence case, readable sizes ---- */
+    h2,h3,h4,.call-easy,.pw-header{text-transform:none!important;letter-spacing:.2px!important;}
+    .call-easy{font-size:20px;}
+    .steps h2,.testimonials h2,.features h2{font-size:26px;}
+    .trust-item p,.feature p,.step p{font-size:16.5px;line-height:1.5;}
+
+    /* ---- press logos: higher contrast ---- */
+    .plogo-img{filter:grayscale(1) brightness(.45) contrast(1.5);opacity:1;}
+
+    /* ---- final CTA band ---- */
+    .call-num{font-size:32px;min-height:48px;display:inline-flex;align-items:center;}
+    .call-site{min-height:48px;display:inline-flex;align-items:center;text-decoration:underline;}
+    .m-call-hours{display:block;font-size:16px;color:#d5dde7;margin-top:6px;}
+
+    /* ---- legal floor: nothing below 16px ---- */
+    .fine-print{font-size:16px;line-height:1.5;}
+    .legal-copy{font-size:16px;line-height:1.55;}
+    .legal-links a{font-size:16px;min-height:48px;display:inline-flex;align-items:center;padding:0 6px;}
+    .legal-copyright{font-size:16px;}
+  }
+
+  /* ============ LEGAL FOOTER COLLAPSE (mobile) ============ */
+  .legal-toggle{display:none;}
+  @media (max-width:760px){
+    .legal-toggle{
+      display:inline-flex;align-items:center;min-height:48px;padding:0;
+      background:none;border:none;cursor:pointer;font-family:inherit;
+      font-size:16px;font-weight:700;text-decoration:underline;color:inherit;
+    }
+    .legal-more[hidden]{display:none;}
+  }
+  @media (min-width:761px){
+    .legal-more{display:block!important;}
+    .legal-toggle{display:none!important;}
+  }
+
+  @media (max-width:760px){
+    .legal-copy,.legal-copy p{text-align:left;}
+    .legal-copy{font-size:16px;line-height:1.55;}
+  }
+
+  .qualify-note{font-size:13px;color:#5d6a78;font-weight:600;line-height:1.4;margin-top:6px;}
+  @media (max-width:760px){.qualify-note{font-size:16px;}}
+
+  .bbb-seal-link{display:inline-block;line-height:0;}
+  .bbb-seal-link img{height:42px;width:auto;max-width:100%;display:block;border:0;}
+
+  /* ===== UNIFIED FOOTER (all pages) ===== */
+  .site-footer{background:var(--navy);color:#aab8c9;margin-top:0;padding:32px 0 36px;}
+  .footer-inner{max-width:1160px;margin:0 auto;padding:0 24px;}
+  .footer-seal{margin-bottom:18px;}
+  .footer-seal .bbb-seal-link{display:inline-block;line-height:0;}
+  .footer-seal .bbb-seal-link img{height:42px;width:auto;border:0;display:block;}
+  .site-footer .f-links{display:flex;flex-wrap:wrap;gap:12px;align-items:center;font-size:14px;font-weight:700;margin-bottom:18px;}
+  .site-footer .f-links a{color:#fff;display:inline-block;padding:8px 2px;text-decoration:none;}
+  .site-footer .f-links a:hover{text-decoration:underline;}
+  .site-footer .f-links span{color:#5d7189;}
+  .site-footer p{font-size:12px;line-height:1.6;margin-bottom:10px;color:#aab8c9;}
+  .site-footer p a{color:#cdd9e6;text-decoration:underline;}
+  .site-footer .legal-toggle{display:inline-flex;align-items:center;min-height:44px;padding:0;background:none;border:none;cursor:pointer;font-family:inherit;font-size:13px;font-weight:700;text-decoration:underline;color:#cdd9e6;}
+  .site-footer .legal-more[hidden]{display:none;}
+  @media(min-width:761px){.site-footer .legal-more{display:block!important;}.site-footer .legal-toggle{display:none!important;}}
+  @media(max-width:760px){.site-footer{order:9;}.site-footer p,.site-footer .f-links a,.site-footer .legal-toggle{font-size:16px;}}
+
+  /* ============ MOBILE V2 (exact phone design) ============ */
+  .mobile-v2{display:none;}
+  .mobile-v2 *{box-sizing:border-box;}
+  @media(max-width:760px){
+    .mobile-v2{display:flex;flex-direction:column;background:#eef2f7;}
+    .m-header,.urgent-bar,.site-header,.hero,.countdown-bar,.press,.steps,.testimonials,.features,.pricing,.call-band,.trust,.trust-bbb{display:none!important;}
+    .mv-header{order:0;} .mv-urgent{order:1;} .mv-hero{order:2;} .mv-alert{order:3;}
+    .mv-form-card{order:4;} .mv-features{order:5;} .mv-callbar{order:6;}
+  }
+  .mv-header{background:#0d2542;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 16px;}
+  .mv-logo{display:inline-block;text-decoration:none;border-bottom:2px solid rgba(255,255,255,.85);padding-bottom:3px;line-height:1;}
+  .mv-logo-top{display:block;color:#fff;font-family:Verdana,Geneva,sans-serif;font-weight:800;font-size:20px;letter-spacing:-.3px;}
+  .mv-logo-top sup{font-size:10px;font-weight:400;vertical-align:super;}
+  .mv-logo-sub{display:block;color:#fff;font-family:Verdana,Geneva,sans-serif;font-size:10px;letter-spacing:4px;margin-top:2px;}
+  .mv-callnow{display:flex;align-items:center;gap:9px;text-decoration:none;color:#fff;}
+  .mv-callnow svg{width:19px;height:19px;flex:0 0 auto;}
+  .mv-cn{display:flex;flex-direction:column;line-height:1.1;}
+  .mv-cn-label{font-size:11.5px;font-weight:600;}
+  .mv-cn-num{font-size:17px;font-weight:800;letter-spacing:.3px;}
+  .mv-urgent{background:#e01b22;color:#fff;display:flex;align-items:center;justify-content:center;gap:8px;padding:8px 14px;text-align:center;}
+  .mv-urgent svg{width:18px;height:18px;flex:0 0 auto;}
+  .mv-urgent span{font-size:12px;font-weight:800;letter-spacing:.4px;line-height:1.2;}
+  .mv-hero{text-align:center;padding:14px 20px 2px;}
+  .mv-h-get{color:#0d2542;font-weight:800;font-size:22px;letter-spacing:.3px;line-height:1;}
+  .mv-h-months{color:#e01b22;font-weight:900;font-size:38px;letter-spacing:-.8px;line-height:1;margin:2px 0;white-space:nowrap;}
+  @media(max-width:390px){.mv-h-months{font-size:34px;}}
+  @media(max-width:340px){.mv-h-months{font-size:30px;}}
+  .mv-h-divider{width:60px;height:4px;background:#0d2542;border-radius:2px;margin:8px auto;}
+  .mv-h-unl{color:#0d2542;font-weight:800;font-size:18px;letter-spacing:.2px;}
+  .mv-h-price{color:#0d2542;font-weight:800;font-size:19px;letter-spacing:.2px;margin-top:2px;}
+  .mv-h-price span{color:#e01b22;}
+  .mv-h-sub{color:#5d6a78;font-size:14.5px;font-weight:400;margin-top:6px;line-height:1.35;}
+  .mv-features{display:flex;padding:16px 8px 6px;}
+  .mv-feat{flex:1;text-align:center;padding:0 6px;position:relative;}
+  .mv-feat+.mv-feat::before{content:"";position:absolute;left:0;top:6px;bottom:22px;width:1px;background:#cdd6e2;}
+  .mv-feat-ico{width:64px;height:64px;border-radius:50%;background:#0d2542;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;}
+  .mv-feat-ico svg{width:30px;height:30px;}
+  .mv-feat-lbl{color:#0d2542;font-weight:800;font-size:15px;line-height:1.25;}
+  .mv-alert{background:#fdf4dc;border:1px solid #f4e6bf;border-radius:10px;margin:8px 16px 10px;padding:12px 16px;text-align:center;}
+  .mv-alert-top{display:flex;align-items:center;justify-content:center;gap:9px;color:#e01b22;font-weight:800;font-size:19px;line-height:1.2;}
+  .mv-alert-top svg{width:22px;height:22px;flex:0 0 auto;}
+  .mv-alert-sub{color:#0d2542;font-weight:800;font-size:15px;margin-top:5px;}
+  .mv-form-card{background:#fff;border-radius:14px;margin:4px 16px 16px;box-shadow:0 8px 26px rgba(13,37,66,.16);overflow:hidden;}
+  .mv-form-head{background:#0d2542;display:flex;align-items:center;gap:14px;padding:16px 20px;}
+  .mv-fh-ico svg{width:40px;height:40px;display:block;}
+  .mv-fh-title{display:block;color:#fff;font-weight:800;font-size:23px;line-height:1.1;}
+  .mv-fh-sub{display:block;color:#c9d5e3;font-size:14.5px;margin-top:2px;}
+  .mv-form-body{padding:6px;}
+  .mv-form-body iframe{width:100%;border:none;display:block;min-height:600px;}
+  .mv-callbar{display:flex;align-items:center;gap:14px;background:#e7eef6;border-radius:12px;margin:16px;padding:16px 18px;text-decoration:none;}
+  .mv-cb-ico{width:48px;height:48px;border-radius:50%;background:#0d2542;display:flex;align-items:center;justify-content:center;flex:0 0 auto;}
+  .mv-cb-ico svg{width:22px;height:22px;}
+  .mv-cb-txt{display:flex;flex-direction:column;line-height:1.15;}
+  .mv-cb-q{color:#5d6a78;font-size:15px;}
+  .mv-cb-num{color:#0d2542;font-weight:800;font-size:21px;}
+  .mv-cb-arrow{width:20px;height:20px;margin-left:auto;flex:0 0 auto;}
+</style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '27557002777334969');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=27557002777334969&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+</head>
+<body>
+
+<!-- ============ MOBILE V2 (exact phone design; mobile only) ============ -->
+<div class="mobile-v2">
+  <header class="mv-header">
+    <a class="mv-logo" href="#top" aria-label="Affinity Cellular">
+      <span class="mv-logo-top">Affinity<sup>&reg;</sup></span>
+      <span class="mv-logo-sub">CELLULAR</span>
+    </a>
+    <a class="mv-callnow" href="tel:8003970559">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span class="mv-cn"><span class="mv-cn-label">Call Now</span><span class="mv-cn-num">800-397-0559</span></span>
+    </a>
+  </header>
+
+  <div class="mv-urgent">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M5 3L3 5M21 5l-2-2"/></svg>
+    <span>LIMITED TIME OFFER FOR QUALIFYING NEW CUSTOMERS</span>
+  </div>
+
+  <section class="mv-hero">
+    <div class="mv-h-get">UNLIMITED TALK, TEXT &amp; 5GB DATA</div>
+    <div class="mv-h-months">JUST $20/MO.</div>
+    <div class="mv-h-divider"></div>
+        <div class="mv-h-sub">For qualifying new customers on select plans.</div>
+  </section>
+
+  <section class="mv-features">
+    <div class="mv-feat">
+      <div class="mv-feat-ico"><svg viewBox="0 0 24 24" fill="#fff"><path d="M20 2H8a2 2 0 0 0-2 2v2H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h1v3l3.2-3H16a2 2 0 0 0 2-2v-2h2a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zM8 4h12v9h-2V8a2 2 0 0 0-2-2H8V4z" fill="none" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/><path d="M7.6 11.1c.7 1.3 1.8 2.4 3.1 3.1l1-1a.6.6 0 0 1 .6-.15c.55.2 1.15.3 1.75.3a.5.5 0 0 1 .5.5v1.6a.5.5 0 0 1-.5.5A8.5 8.5 0 0 1 6.5 9a.5.5 0 0 1 .5-.5h1.6a.5.5 0 0 1 .5.5c0 .6.1 1.2.3 1.75a.6.6 0 0 1-.15.6l-1 1z"/></svg></div>
+      <div class="mv-feat-lbl">Unlimited<br>Talk &amp; Text</div>
+    </div>
+    <div class="mv-feat">
+      <div class="mv-feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 5.5h3"/><circle cx="12" cy="18" r="1" fill="#fff" stroke="none"/></svg></div>
+      <div class="mv-feat-lbl">Keep Your<br>Phone &amp; Number</div>
+    </div>
+    <div class="mv-feat">
+      <div class="mv-feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a1.8 1.8 0 0 0-1.8 1.8v14.4A1.8 1.8 0 0 0 7 21h10a1.8 1.8 0 0 0 1.8-1.8V8z"/><path d="M14 3v5h5"/><path d="M8.5 12h5M8.5 15.5h4"/><line x1="4.5" y1="20" x2="19.5" y2="4.5" stroke="#e01b22" stroke-width="2.2"/></svg></div>
+      <div class="mv-feat-lbl">No<br>Contract</div>
+    </div>
+  </section>
+
+  <div class="mv-alert">
+    <div class="mv-alert-top">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#e01b22" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M5 3L3 5M21 5l-2-2"/></svg>
+      Don&rsquo;t Miss Out on This $20/Mo. Offer!
+    </div>
+    <div class="mv-alert-sub">Check if you qualify while this offer is available.</div>
+  </div>
+
+  <div class="mv-form-card">
+    <div class="mv-form-head">
+      <span class="mv-fh-ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="10" r="3"/><path d="M6.5 18.5a6 6 0 0 1 11 0"/></svg></span>
+      <span><span class="mv-fh-title">See If You Qualify</span><span class="mv-fh-sub">It only takes about 30 seconds.</span></span>
+    </div>
+    <div class="mv-form-body">
+      <iframe
+        src="https://link.leadstacker.com/widget/form/lugGPdmetpkZ9u6yAGf1"
+        style="width:100%;border:none;border-radius:0 0 14px 14px"
+        id="mv-inline-lugGPdmetpkZ9u6yAGf1"
+        data-layout="{'id':'INLINE'}"
+        data-trigger-type="alwaysShow" data-trigger-value=""
+        data-activation-type="alwaysActivated" data-activation-value=""
+        data-deactivation-type="neverDeactivate" data-deactivation-value=""
+        data-form-name="Form 1" data-height="620"
+        data-layout-iframe-id="mv-inline-lugGPdmetpkZ9u6yAGf1"
+        data-form-id="lugGPdmetpkZ9u6yAGf1" title="Form 1"></iframe>
+    </div>
+  </div>
+
+  <a class="mv-callbar" href="tel:8003970559">
+    <span class="mv-cb-ico"><svg viewBox="0 0 24 24" fill="#fff"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.24.2 2.45.57 3.57a1 1 0 0 1-.24 1.02l-2.21 2.2z"/></svg></span>
+    <span class="mv-cb-txt"><span class="mv-cb-q">Prefer to speak with someone?</span><span class="mv-cb-num">Call 800-397-0559</span></span>
+    <svg class="mv-cb-arrow" viewBox="0 0 24 24" fill="none" stroke="#0d2542" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
+  </a>
+</div>
+
+
+<!-- ================= MOBILE SLIM HEADER ================= -->
+<header class="m-header">
+  <a class="m-logo" href="#" aria-label="Affinity Cellular home">
+    <span class="m-logo-top">Affinity<span style="font-size:9px;vertical-align:super;">&reg;</span></span>
+    <span class="m-logo-sub">CELLULAR</span>
+  </a>
+  <a class="m-call-btn" href="tel:8003970559">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.7 3.6 5 6.4 6.4l2.1-2.1c.3-.3.7-.4 1-.2 1.1.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4.3c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.3 1.9z"/></svg>
+    Call 800-397-0559
+  </a>
+</header>
+
+<!-- ================= STICKY URGENCY BAR ================= -->
+<div class="urgent-bar">
+  <div class="urgent-inner">
+    <div class="urgent-msg">
+      <span class="u-clock">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M10 2h4"/></svg>
+      </span>
+      <span>Don&rsquo;t Miss Out: <span class="u-strong">$20/MO. &mdash; UNLIMITED TALK, TEXT &amp; 5GB DATA</span><span class="u-hide-xs"> &mdash; Limited-Time Offer for New Customers</span></span>
+    </div>
+    <a class="urgent-cta" href="tel:8003970559">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.7 3.6 5 6.4 6.4l2.1-2.1c.3-.3.7-.4 1-.2 1.1.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4.3c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.3 1.9z"/></svg>
+      CALL NOW
+    </a>
+  </div>
+</div>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="#" aria-label="Affinity Cellular home">
+      <span class="logo-top">Affinity<span class="reg">&reg;</span></span>
+      <div class="logo-sub">CELLULAR</div>
+    </a>
+    <div class="header-call">
+      <div class="clock-badge" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.6 2.6"/><path d="M9 3h6"/><path d="M12 3v2"/>
+        </svg>
+      </div>
+      <div>
+        <div class="call-label">Call Now! We're Here to Help</div>
+        <a class="call-number" href="tel:8003970559">800-397-0559</a>
+        <div class="call-hours">Mon&ndash;Fri 8am&ndash;8pm CT</div>
+      </div>
+    </div>
+    <button class="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-photo" role="img" aria-label="Happy senior couple looking at a smartphone together"></div>
+  <div class="container hero-inner">
+    <div class="hero-left">
+      <h1 class="hero-h1">Stop paying <span class="accent">$100+</span><br>for cell service!</h1>
+      <div class="m-subhead">Unlimited talk, text &amp; 5GB data for just $20 a month.</div>
+      <div class="hero-divider"></div>
+      <div class="hero-try">Try Affinity Cellular</div>
+      <div class="hero-free-line">
+        <span class="hero-free">ONLY $20<span class="hero-price-mo">/mo.</span></span>
+        <span class="hero-free-months">+ NO CONTRACT!*</span>
+      </div>
+      <ul class="hero-checks">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="#12336e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" stroke-width="2"/><path d="M8 12.5l2.6 2.6L16 9.5"/></svg>
+          Unlimited Talk, Text &amp; 5GB Data &mdash; Only $20 a Month*
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="#12336e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" stroke-width="2"/><path d="M8 12.5l2.6 2.6L16 9.5"/></svg>
+          Need More Data? Larger Data Plans Available
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="#12336e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" stroke-width="2"/><path d="M8 12.5l2.6 2.6L16 9.5"/></svg>
+          No Contract.
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="#12336e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" stroke-width="2"/><path d="M8 12.5l2.6 2.6L16 9.5"/></svg>
+          Keep Your Phone &amp; Number
+        </li>
+      </ul>
+      <div class="hero-offer">
+        <div class="offer-clock" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#12336e" stroke-width="2.2" stroke-linecap="round">
+            <circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.6 2.6"/><path d="M9 3h6"/>
+          </svg>
+        </div>
+        <div>
+          <div class="offer-title">Limited Time Offer &ndash; Just $20/Mo.!*</div>
+          <div class="offer-sub">Available to new customers on select plans.</div>
+        </div>
+      </div>
+      <a class="btn-cta" href="#" data-qualify>
+        <span class="cta-main">Get Started for $20 Now:</span>
+        <span class="cta-sub">Lock In Your $20/Mo. Rate &raquo;</span>
+      </a>
+      <div class="m-hero-extra">
+        <a class="m-hero-tel" href="tel:8003970559">Or call 800-397-0559</a>
+        <div class="m-promo-badge">Limited-time offer for new customers.</div>
+        <div class="m-promo-terms">$20/mo. for unlimited talk, text &amp; 5GB data &mdash; available to new customers on select plans.*</div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <!-- 15-years badge removed -->
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= COUNTDOWN ================= -->
+<section class="countdown-bar">
+  <div class="container countdown-inner">
+    <div class="countdown-msg">
+      <div class="cd-clock" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.6 2.6"/><path d="M9 3h6"/>
+        </svg>
+      </div>
+      <p><span class="hurry">Hurry!</span> This offer won't last forever. The $20/mo. rate is only available for a limited time to new customers on select plans.</p>
+    </div>
+    <div class="cd-static-msg">Limited-time offer. Call today to lock in your rate.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRESS ================= -->
+<section class="press">
+  <div class="container">
+    <div class="press-title">As Seen In and Featured On</div>
+    <div class="press-logos">
+      <img class="plogo-img" loading="lazy" src="images/lp/logo-forbes.svg" alt="Forbes" style="height:26px">
+      <img class="plogo-img" loading="lazy" src="images/lp/logo-usatoday.svg" alt="USA Today" style="height:34px">
+      <img class="plogo-img" loading="lazy" src="images/lp/logo-cr.svg" alt="Consumer Reports" style="height:34px">
+      <img class="plogo-img" loading="lazy" src="images/lp/logo-marketwatch.svg" alt="MarketWatch" style="height:22px">
+      <img class="plogo-img" loading="lazy" src="images/lp/logo-usnews.svg" alt="U.S. News &amp; World Report" style="height:26px">
+    </div>
+    <p class="logo-note" style="text-align:center;font-size:12px;color:#8a94a6;margin-top:12px;">Logos are trademarks of their respective owners and do not imply endorsement.</p>
+  </div>
+</section>
+
+<!-- ================= STEPS ================= -->
+<section class="steps">
+  <div class="container">
+    <h2 class="steps-title">Switching is <span class="r">easy.</span> Saving is <span class="r">instant.</span></h2>
+    <div class="steps-row">
+      <div class="step">
+        <div class="step-icon">
+          <span class="step-num">1</span>
+          <svg viewBox="0 0 48 48" fill="none" stroke="#12336e" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="14" y="6" width="20" height="36" rx="3.5"/>
+            <path d="M20 36h8"/>
+            <path d="M19 21l3.6 3.6L29 18"/>
+          </svg>
+        </div>
+        <h3>Choose Your Plan</h3>
+        <p>Pick the plan that's right for you.</p>
+      </div>
+      <div class="step-arrow" aria-hidden="true">
+        <svg viewBox="0 0 46 22" fill="none"><path d="M2 11h36M31 4l8 7-8 7" stroke="#7fa3d1" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="step">
+        <div class="step-icon">
+          <span class="step-num">2</span>
+          <svg viewBox="0 0 48 48" fill="none" stroke="#12336e" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="14" y="6" width="20" height="36" rx="3.5"/>
+            <path d="M21 19l-3 3 3 3"/><path d="M18 22h12"/>
+            <path d="M27 33l3-3-3-3"/><path d="M30 30H18"/>
+          </svg>
+        </div>
+        <h3>Keep Your Phone</h3>
+        <p>Bring your own phone or get a new one.</p>
+      </div>
+      <div class="step-arrow" aria-hidden="true">
+        <svg viewBox="0 0 46 22" fill="none"><path d="M2 11h36M31 4l8 7-8 7" stroke="#7fa3d1" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="step">
+        <div class="step-icon">
+          <span class="step-num">3</span>
+          <svg viewBox="0 0 48 48" fill="none">
+            <rect x="14" y="6" width="20" height="36" rx="3.5" stroke="#12336e" stroke-width="2.6"/>
+            <circle cx="24" cy="16" r="6.5" fill="#12336e"/>
+            <text x="24" y="18" text-anchor="middle" font-size="4.6" font-weight="800" fill="#fff" font-family="Arial">555</text>
+            <text x="24" y="26" text-anchor="middle" font-size="4.6" font-weight="800" fill="#12336e" font-family="Arial">123</text>
+            <text x="24" y="32" text-anchor="middle" font-size="4.6" font-weight="800" fill="#12336e" font-family="Arial">4567</text>
+          </svg>
+        </div>
+        <h3>Keep Your Number</h3>
+        <p>We make it easy to switch.</p>
+      </div>
+      <div class="step-arrow" aria-hidden="true">
+        <svg viewBox="0 0 46 22" fill="none"><path d="M2 11h36M31 4l8 7-8 7" stroke="#7fa3d1" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="step">
+        <div class="step-icon">
+          <span class="step-num">4</span>
+          <svg viewBox="0 0 48 48" fill="none">
+            <circle cx="24" cy="24" r="17" fill="#12336e"/>
+            <path d="M16.5 24.5l5 5L31.5 19" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>Start Saving</h3>
+        <p>Activate and start saving right away.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section class="testimonials">
+  <div class="container">
+    <h2 class="t-title">Thousands of Customers Are Already Saving</h2>
+    <div class="t-rating">
+      <div class="stars" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="#f7b500"><path d="M12 2l3 6.6 7 .8-5.2 4.8L18.3 21 12 17.4 5.7 21l1.5-6.8L2 9.4l7-.8z"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f7b500"><path d="M12 2l3 6.6 7 .8-5.2 4.8L18.3 21 12 17.4 5.7 21l1.5-6.8L2 9.4l7-.8z"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f7b500"><path d="M12 2l3 6.6 7 .8-5.2 4.8L18.3 21 12 17.4 5.7 21l1.5-6.8L2 9.4l7-.8z"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f7b500"><path d="M12 2l3 6.6 7 .8-5.2 4.8L18.3 21 12 17.4 5.7 21l1.5-6.8L2 9.4l7-.8z"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f7b500"><path d="M12 2l3 6.6 7 .8-5.2 4.8L18.3 21 12 17.4 5.7 21l1.5-6.8L2 9.4l7-.8z"/></svg>
+      </div>
+      <span class="score">4.8 OUT OF 5 STARS</span>
+      <span class="sep" aria-hidden="true"></span>
+      <span class="count">OVER 25,000+ REVIEWS</span>
+    </div>
+    <div class="t-carousel">
+      <button class="t-nav" aria-label="Previous reviews">
+        <svg viewBox="0 0 22 38" fill="none"><path d="M18 3L5 19l13 16" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="t-cards">
+        <div class="t-card">
+          <span class="quote-mark">&ldquo;</span>
+          <p class="t-text">I was paying over $120 a month with my old provider. <b>Affinity Cellular cut my bill in half</b> and the service is great!&rdquo;</p>
+          <div class="stars" aria-label="5 out of 5 stars">
+            <svg viewBox="0 0 24 24" fill="#f7b500"><path d="M12 2l3 6.6 7 .8-5.2 4.8L18.3 21 12 17.4 5.7 21l1.5-6.8L2 9.4l7-.8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f7b500"><path d="M12 2l3 6.6 7 .8-5.2 4.8L18.3 21 12 17.4 5.7 21l1.5-6.8L2 9.4l7-.8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f7b500"><path d="M12 2l3 6.6 7 .8-5.2 4.8L18.3 21 12 17.4 5.7 21l1.5-6.8L2 9.4l7-.8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f7b500"><path d="M12 2l3 6.6 7 .8-5.2 4.8L18.3 21 12 17.4 5.7 21l1.5-6.8L2 9.4l7-.8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f7b500"><path d="M12 2l3 6.6 7 .8-5.2 4.8L18.3 21 12 17.4 5.7 21l1.5-6.8L2 9.4l7-.8z"/></svg>
+          </div>
+          <div class="t-name">&ndash; Linda M.</div>
+          <div class="t-verified">
+            <svg viewBox="0 0 24 24" fill="#1670d6"><path d="M12 1l2.6 2 3.3-.4 1.2 3 3 1.2-.4 3.3 2 2.6-2 2.6.4 3.3-3 1.2-1.2 3-3.3-.4-2.6 2-2.6-2-3.3.4-1.2-3-3-1.2.4-3.3-2-2.6 2-2.6-.4-3.3 3-1.2 1.2-3 3.3.4z"/><path d="M8.4 12.4l2.4 2.4 4.8-5" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Verified Customer
+          </div>
+        </div>
+        <div class="t-card">
+          <span class="quote-mark">&ldquo;</span>
+          <p class="t-text">Switching was so easy and I kept my number. <b>The customer service is the best I've ever experienced!</b></p>
+          <div class="stars" aria-label="5 out of 5 stars">
+            <svg viewBox="0 0 24 24" fill="#f7b500"><path d="M12 2l3 6.6 7 .8-5.2 4.8L18.3 21 12 17.4 5.7 21l1.5-6.8L2 9.4l7-.8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f7b500"><path d="M12 2l3 6.6 7 .8-5.2 4.8L18.3 21 12 17.4 5.7 21l1.5-6.8L2 9.4l7-.8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f7b500"><path d="M12 2l3 6.6 7 .8-5.2 4.8L18.3 21 12 17.4 5.7 21l1.5-6.8L2 9.4l7-.8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f7b500"><path d="M12 2l3 6.6 7 .8-5.2 4.8L18.3 21 12 17.4 5.7 21l1.5-6.8L2 9.4l7-.8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f7b500"><path d="M12 2l3 6.6 7 .8-5.2 4.8L18.3 21 12 17.4 5.7 21l1.5-6.8L2 9.4l7-.8z"/></svg>
+          </div>
+          <div class="t-name">&ndash; Richard T.</div>
+          <div class="t-verified">
+            <svg viewBox="0 0 24 24" fill="#1670d6"><path d="M12 1l2.6 2 3.3-.4 1.2 3 3 1.2-.4 3.3 2 2.6-2 2.6.4 3.3-3 1.2-1.2 3-3.3-.4-2.6 2-2.6-2-3.3.4-1.2-3-3-1.2.4-3.3-2-2.6 2-2.6-.4-3.3 3-1.2 1.2-3 3.3.4z"/><path d="M8.4 12.4l2.4 2.4 4.8-5" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Verified Customer
+          </div>
+        </div>
+        <div class="t-card">
+          <span class="quote-mark">&ldquo;</span>
+          <p class="t-text">I love that there are <b>no contracts or hidden fees.</b> Honest pricing and great coverage!&rdquo;</p>
+          <div class="stars" aria-label="5 out of 5 stars">
+            <svg viewBox="0 0 24 24" fill="#f7b500"><path d="M12 2l3 6.6 7 .8-5.2 4.8L18.3 21 12 17.4 5.7 21l1.5-6.8L2 9.4l7-.8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f7b500"><path d="M12 2l3 6.6 7 .8-5.2 4.8L18.3 21 12 17.4 5.7 21l1.5-6.8L2 9.4l7-.8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f7b500"><path d="M12 2l3 6.6 7 .8-5.2 4.8L18.3 21 12 17.4 5.7 21l1.5-6.8L2 9.4l7-.8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f7b500"><path d="M12 2l3 6.6 7 .8-5.2 4.8L18.3 21 12 17.4 5.7 21l1.5-6.8L2 9.4l7-.8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="#f7b500"><path d="M12 2l3 6.6 7 .8-5.2 4.8L18.3 21 12 17.4 5.7 21l1.5-6.8L2 9.4l7-.8z"/></svg>
+          </div>
+          <div class="t-name">&ndash; Patricia K.</div>
+          <div class="t-verified">
+            <svg viewBox="0 0 24 24" fill="#1670d6"><path d="M12 1l2.6 2 3.3-.4 1.2 3 3 1.2-.4 3.3 2 2.6-2 2.6.4 3.3-3 1.2-1.2 3-3.3-.4-2.6 2-2.6-2-3.3.4-1.2-3-3-1.2.4-3.3-2-2.6 2-2.6-.4-3.3 3-1.2 1.2-3 3.3.4z"/><path d="M8.4 12.4l2.4 2.4 4.8-5" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Verified Customer
+          </div>
+        </div>
+      </div>
+      <button class="t-nav" aria-label="Next reviews">
+        <svg viewBox="0 0 22 38" fill="none"><path d="M4 3l13 16L4 35" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FEATURE BAND ================= -->
+<section class="features">
+  <div class="container features-row">
+    <div class="feature">
+      <div class="f-icon" aria-hidden="true">
+        <!-- USA map -->
+        <svg viewBox="0 0 64 44" fill="#fff"><path d="M2 8l7-3 6 1 5-2 7 2 8-1 9 2 8-2 6 3 4 6-2 6-4 3 1 5-5 6-7 2-6-2-5 3-6-1-4 2-5-4-6 1-5-5 1-6-4-5 2-6z"/></svg>
+      </div>
+      <div>
+        <h3>Nationwide<br>Coverage</h3>
+        <p>On the nation's largest and most dependable network.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <div class="f-icon" aria-hidden="true">
+        <!-- headset -->
+        <svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10 28v-6a14 14 0 0128 0v6"/>
+          <rect x="6" y="26" width="8" height="12" rx="3" fill="#fff"/>
+          <rect x="34" y="26" width="8" height="12" rx="3" fill="#fff"/>
+          <path d="M38 38a8 8 0 01-8 6h-4"/>
+        </svg>
+      </div>
+      <div>
+        <h3>Live U.S.-Based<br>Agents</h3>
+        <p>Real people. Real help. Right here in the USA.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <div class="f-icon" aria-hidden="true">
+        <!-- dollar tag -->
+        <svg viewBox="0 0 48 48" fill="none">
+          <path d="M6 22L22 6h14a6 6 0 016 6v14L26 42a4 4 0 01-5.6 0L6 27.6A4 4 0 016 22z" fill="#fff"/>
+          <circle cx="33" cy="15" r="3" fill="#0e2a5c"/>
+          <text x="22" y="31" text-anchor="middle" font-size="16" font-weight="800" fill="#0e2a5c" font-family="Arial">$</text>
+        </svg>
+      </div>
+      <div>
+        <h3>Save Hundreds<br>Every Year</h3>
+        <p>Our customers save an average of $700+ a year.</p>
+        <p class="qualify-note">Based on an August 2026 comparison of switching customers&rsquo; self-reported prior monthly bills versus Affinity Cellular pricing. Individual savings vary.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <div class="f-icon" aria-hidden="true">
+        <!-- shield dollar -->
+        <svg viewBox="0 0 48 48" fill="none">
+          <path d="M24 3l17 6v13c0 11-7 19-17 23C14 41 7 33 7 22V9l17-6z" fill="#fff"/>
+          <text x="24" y="30" text-anchor="middle" font-size="18" font-weight="800" fill="#0e2a5c" font-family="Arial">$</text>
+        </svg>
+      </div>
+      <div>
+        <h3>No Contracts.<br>No Surprises.</h3>
+        <p>Simple, affordable plans with no hidden fees.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRICING ================= -->
+<section class="pricing" id="plans">
+  <div class="container pricing-row">
+    <div class="plan plan-featured">
+      <div class="ribbon">Limited Time Offer</div>
+      <div class="pf-body">
+        <div class="pf-big">30-Day</div>
+        <div class="pf-included">Money-Back<br>Guarantee!</div>
+        <p class="pf-note">New customers only.<br>Limited slots available.</p>
+      </div>
+      <div class="pf-footer">Don't Miss Out &ndash; Claim Yours Today!</div>
+    </div>
+
+    
+
+    <div class="plan plan-white">
+      <div class="pw-header navy">Unlimited Talk, Text<br>&amp; 5GB Data</div>
+      <div class="pw-body">
+        <div class="pw-startingat">starting at</div>
+        <div class="pw-price navy">
+          <span class="pw-currency">$</span><span class="pw-amount">20</span><span class="pw-per">/mo.</span>
+        </div>
+        <div class="pw-after">Flat monthly rate</div>
+        <div class="m-plan-promo">Just $20/mo. &mdash; no contract.</div>
+        <div class="qualify-note" style="text-align:center;">Available to new customers on select plans.</div>
+        <div class="pw-divider"></div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#1670d6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>Unlimited Talk, Text &amp; 5GB Data</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#1670d6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>No Contract</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#1670d6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>Change Anytime</li>
+        </ul>
+        <a class="m-plan-cta" href="#" data-qualify>Get started for $20/mo</a>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+<!-- ================= CALL CTA BAND ================= -->
+<section class="call-band">
+  <div class="container call-band-inner">
+    <div class="call-left">
+      <div class="call-phone-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="#fff"><path d="M6.6 2.8c.6-.6 1.6-.5 2.1.2l2.1 2.9c.4.6.4 1.4-.1 1.9l-1.3 1.3a14.4 14.4 0 005.5 5.5l1.3-1.3c.5-.5 1.3-.5 1.9-.1l2.9 2.1c.7.5.8 1.5.2 2.1l-1.6 1.6c-.7.7-1.7 1-2.6.7-6.5-1.9-11.6-7-13.5-13.5-.3-.9 0-1.9.7-2.6l1.6-1.6z"/></svg>
+      </div>
+      <div class="call-copy">
+        <div class="call-easy m-only-hide">Call Today &ndash; Plans From Just $20/mo.</div>
+        <div class="qualify-note" style="color:#c9d5e3;">Available to new customers on select plans.</div>
+        <div class="call-easy m-only">Call today &mdash; plans from just $20 a month</div>
+        <a class="call-num" href="tel:8003970559">800-397-0559</a>
+        <a class="call-site" href="https://affinitycellular.com/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.4 4 5.6 4 9s-1.5 6.6-4 9c-2.5-2.4-4-5.6-4-9s1.5-6.6 4-9z"/></svg>
+          AffinityCellular.com
+        </a>
+        <div class="m-call-hours">Mon&ndash;Fri 8am&ndash;8pm CT</div>
+      </div>
+      <div class="call-qr">
+        <div class="qr-box">
+          <img loading="lazy" width="82" height="82" src="images/lp/qr-code.png" alt="QR code — scan to learn more at AffinityCellular.com">
+        </div>
+        <div>
+          <div class="qr-label">Scan to<br>Learn More</div>
+          <div class="qr-arrow" aria-hidden="true">
+            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 2l11 6-11 6z"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="call-brand">
+      <div class="logo">
+        <span class="logo-top">Affinity<span class="reg">&reg;</span></span>
+        <div class="logo-sub">CELLULAR</div>
+      </div>
+      <div class="brand-tag">Great Service.<br>Better Value.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TRUST FOOTER ================= -->
+<section class="trust">
+  <div class="container">
+    <div class="trust-row">
+      <div class="trust-item">
+        <div class="tr-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" stroke="#12336e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="24" cy="24" r="19"/>
+            <path d="M16 24l5.5 5.5L33 18"/>
+            <circle cx="15" cy="34" r="7" fill="#fff"/>
+            <text x="15" y="37" text-anchor="middle" font-size="8" font-weight="800" fill="#12336e" font-family="Arial" stroke="none">30</text>
+          </svg>
+        </div>
+        <div>
+          <h3>30 Day<br>Guarantee&dagger;</h3>
+          <p>&dagger;Return within 30 days for a refund of your activation fee, handset cost, and prorated plan cost &mdash; provided usage stays under 30 minutes of talk, 30 texts, and 30MB of data.</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="tr-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none">
+            <path d="M24 4l16 5.5v12c0 10.5-6.6 18-16 22-9.4-4-16-11.5-16-22v-12L24 4z" fill="#12336e"/>
+            <rect x="18" y="21" width="12" height="10" rx="1.8" fill="#fff"/>
+            <path d="M20.5 21v-3.2a3.5 3.5 0 017 0V21" stroke="#fff" stroke-width="2.4" fill="none"/>
+          </svg>
+        </div>
+        <div>
+          <h3>Secure &amp;<br>Trusted</h3>
+          <p>Your information is safe with us.</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="tr-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48">
+            <circle cx="24" cy="24" r="20" fill="#f2f5f9" stroke="#c9d4e2" stroke-width="1.5"/>
+            <g clip-path="url(#flagClip)">
+              <rect x="6" y="14" width="36" height="20" fill="#fff"/>
+              <rect x="6" y="14" width="36" height="2.9" fill="#c8283a"/>
+              <rect x="6" y="19.7" width="36" height="2.9" fill="#c8283a"/>
+              <rect x="6" y="25.4" width="36" height="2.9" fill="#c8283a"/>
+              <rect x="6" y="31.1" width="36" height="2.9" fill="#c8283a"/>
+              <rect x="6" y="14" width="15" height="11.4" fill="#12336e"/>
+            </g>
+            <defs><clipPath id="flagClip"><circle cx="24" cy="24" r="19"/></clipPath></defs>
+          </svg>
+        </div>
+        <div>
+          <h3>USA Based<br>Company</h3>
+          <p>Proudly serving customers for over 15 years.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="trust-bbb" style="text-align:center;padding:10px 20px 0;"><p style="font-size:16px;font-weight:800;color:#12336e;margin-top:10px;">Real, Live U.S.-Based Agents</p></div>
+  <p class="fine-print">*$20/mo. plan includes unlimited talk, text &amp; 5GB data. Available to new customers only.</p>
+</section>
+
+<!-- ================= LEGAL FOOTER ================= -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-seal"><a class="bbb-seal-link" href="https://www.bbb.org/us/tx/wichita-falls/profile/mobile-phone-service/affinity-cellular-0875-91137126/#sealclick" target="_blank" rel="nofollow noopener"><img src="https://seal-dallas.bbb.org/seals/blue-seal-200-42-bbb-91137126.png" alt="Affinity Cellular BBB Business Review"></a></div>
+    <div class="f-links">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <span>|</span>
+      <a href="terms.html">Terms &amp; Conditions</a>
+      <span>|</span>
+      <a href="return-policy.html">Return Policy</a>
+      <span>|</span>
+      <a href="https://affinitycellular.com/" target="_blank" rel="noopener">AffinityCellular.com</a>
+      <span>|</span>
+      <a href="tel:8003970559">800-397-0559</a>
+    </div>
+    <p>*$20/month plan: available to new customers only on select plans. Includes unlimited talk, unlimited text &amp; 5GB of data on one line. Limited-time offer; <a href="terms.html">terms and conditions</a> apply.</p>
+    <button type="button" class="legal-toggle" data-legal-toggle>Read full disclosures</button>
+    <div class="legal-more" hidden>
+    <p>30-Day Money-Back Guarantee: phones may be returned within 30 days of purchase &mdash; provided total usage is under 30 minutes of talk time, 30 text messages, or 30 MB of data (whichever comes first) &mdash; for a refund of the activation fee, handset cost, and prorated plan cost. The cost of additional services is not refundable. See the full <a href="return-policy.html">Return Policy</a> for details.</p>
+    <p>Testimonials reflect the experiences of individual customers; savings and results may vary. Affinity Cellular operates on the nation&rsquo;s largest and most dependable network. AT&amp;T, T-Mobile, AARP, and AAA are trademarks of their respective owners; references do not imply endorsement or affiliation.</p>
+    <p>Questions about how your information is collected and used? See the <a href="privacy-policy.html">Privacy &amp; CPNI Policy</a>, email <a href="mailto:help@affinitycellular.com">help@affinitycellular.com</a>, or call customer support at (833)&nbsp;679-1090. Auto Club Cellular1 LLC (d/b/a Affinity Cellular&reg;), 4245 Kemp Blvd, Suite 120, Wichita Falls, TX 76308.</p>
+    <p style="margin-top:12px;">&copy; 2026 Auto Club Cellular1 LLC. Affinity Cellular&reg; is a brand of Auto Club Cellular1 LLC. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ================= QUALIFY POPUP ================= -->
+<div class="lead-modal" id="lead-modal" role="dialog" aria-modal="true" aria-label="Check if you qualify for this offer">
+  <div class="lead-modal-backdrop" data-close-modal></div>
+  <div class="lead-modal-card">
+    <div class="lead-modal-head">
+      CHECK IF YOU QUALIFY FOR THIS OFFER
+      <span class="lm-sub">$20/mo. unlimited plan for qualifying new customers &mdash; takes about 30 seconds</span>
+      <button class="lead-modal-close" data-close-modal aria-label="Close">&times;</button>
+    </div>
+    <div class="lead-modal-body">
+      <iframe
+        src="https://link.leadstacker.com/widget/form/lugGPdmetpkZ9u6yAGf1"
+        style="width:100%;height:2301px;border:none;border-radius:8px"
+        id="popup-lugGPdmetpkZ9u6yAGf1"
+        data-layout="{'id':'INLINE'}"
+        data-trigger-type="alwaysShow"
+        data-trigger-value=""
+        data-activation-type="alwaysActivated"
+        data-activation-value=""
+        data-deactivation-type="neverDeactivate"
+        data-deactivation-value=""
+        data-form-name="Form 1"
+        data-height="2301"
+        data-layout-iframe-id="popup-lugGPdmetpkZ9u6yAGf1"
+        data-form-id="lugGPdmetpkZ9u6yAGf1"
+        title="Form 1">
+      </iframe>
+    <div class="lead-modal-foot">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#5d6a78" stroke-width="2"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+      <span>Your information is secure and handled per our <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms.html">Terms &amp; Conditions</a>. No obligation.</span>
+    </div>
+  </div>
+</div>
+<script src="https://link.leadstacker.com/js/form_embed.js"></script>
+
+<script>
+  (function(){
+    var modal=document.getElementById('lead-modal');
+    function openModal(e){if(e)e.preventDefault();modal.classList.add('open');document.body.classList.add('lead-modal-open');}
+    function closeModal(){modal.classList.remove('open');document.body.classList.remove('lead-modal-open');}
+    document.querySelectorAll('[data-qualify]').forEach(function(el){el.addEventListener('click',openModal);});
+    modal.querySelectorAll('[data-close-modal]').forEach(function(el){el.addEventListener('click',closeModal);});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
+  })();
+</script>
+<script>
+  (function(){
+    var btn=document.querySelector('[data-legal-toggle]');
+    var more=document.querySelector('.legal-more');
+    if(btn&&more){btn.addEventListener('click',function(){more.hidden=false;btn.hidden=true;});}
+  })();
+</script>
+</body>
+</html>
+
+<!-- ================= QUALIFY POPUP ================= -->
+<div class="lead-modal" id="lead-modal" role="dialog" aria-modal="true" aria-label="Check if you qualify for this offer">
+  <div class="lead-modal-backdrop" data-close-modal></div>
+  <div class="lead-modal-card">
+    <div class="lead-modal-head">
+      CHECK IF YOU QUALIFY FOR THIS OFFER
+      <span class="lm-sub">$20/mo. unlimited plan for qualifying new customers &mdash; takes about 30 seconds</span>
+      <button class="lead-modal-close" data-close-modal aria-label="Close">&times;</button>
+    </div>
+    <div class="lead-modal-body">
+      <iframe
+        src="https://link.leadstacker.com/widget/form/lugGPdmetpkZ9u6yAGf1"
+        style="width:100%;height:2301px;border:none;border-radius:8px"
+        id="popup-lugGPdmetpkZ9u6yAGf1"
+        data-layout="{'id':'INLINE'}"
+        data-trigger-type="alwaysShow"
+        data-trigger-value=""
+        data-activation-type="alwaysActivated"
+        data-activation-value=""
+        data-deactivation-type="neverDeactivate"
+        data-deactivation-value=""
+        data-form-name="Form 1"
+        data-height="2301"
+        data-layout-iframe-id="popup-lugGPdmetpkZ9u6yAGf1"
+        data-form-id="lugGPdmetpkZ9u6yAGf1"
+        title="Form 1">
+      </iframe>
+    <div class="lead-modal-foot">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#5d6a78" stroke-width="2"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+      <span>Your information is secure and handled per our <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms.html">Terms &amp; Conditions</a>. No obligation.</span>
+    </div>
+  </div>
+</div>
+<script src="https://link.leadstacker.com/js/form_embed.js"></script>
+
+<script>
+  (function(){
+    var modal=document.getElementById('lead-modal');
+    function openModal(e){if(e)e.preventDefault();modal.classList.add('open');document.body.classList.add('lead-modal-open');}
+    function closeModal(){modal.classList.remove('open');document.body.classList.remove('lead-modal-open');}
+    document.querySelectorAll('[data-qualify]').forEach(function(el){el.addEventListener('click',openModal);});
+    modal.querySelectorAll('[data-close-modal]').forEach(function(el){el.addEventListener('click',closeModal);});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
+  })();
+</script>
+<script>
+  (function(){
+    var btn=document.querySelector('[data-legal-toggle]');
+    var more=document.querySelector('.legal-more');
+    if(btn&&more){btn.addEventListener('click',function(){more.hidden=false;btn.hidden=true;});}
+  })();
+</script>
+</body>
+</html>
