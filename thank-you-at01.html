@@ -510,12 +510,12 @@
   .ty-alert-top{color:#d7212c;font-weight:900;font-size:21px;}
   .ty-alert-sub{color:#0d2542;font-size:15.5px;line-height:1.35;margin-top:2px;}
   .ty-red{color:#d7212c;font-weight:800;}
-  .ty-callbtn{display:flex;align-items:center;gap:16px;background:#d7212c;border-radius:12px;margin:12px 16px;padding:16px 20px;text-decoration:none;box-shadow:0 5px 16px rgba(215,33,44,.32);}
-  .ty-callbtn svg{width:34px;height:34px;flex:0 0 auto;}
-  .ty-cb-num{display:block;color:#fff;font-weight:900;font-size:27px;letter-spacing:.3px;line-height:1;}
-  .ty-cb-sub{display:block;color:#fff;font-size:16px;font-weight:600;margin-top:4px;}
-  .ty-features{display:flex;padding:16px 8px 8px;}
-  .ty-feat{flex:1;text-align:center;padding:0 3px;}
+  .ty-callbtn{display:flex;align-items:center;justify-content:center;gap:clamp(10px,3vw,16px);background:#d7212c;border-radius:12px;margin:12px 16px;padding:16px clamp(10px,3.5vw,20px);text-decoration:none;box-shadow:0 5px 16px rgba(215,33,44,.32);}
+  .ty-callbtn svg{width:clamp(26px,7vw,34px);height:auto;flex:0 0 auto;}
+  .ty-cb-num{display:block;color:#fff;font-weight:900;font-size:clamp(19px,6vw,27px);letter-spacing:.3px;line-height:1;white-space:nowrap;}
+  .ty-cb-sub{display:block;color:#fff;font-size:clamp(13px,4.2vw,16px);font-weight:600;margin-top:4px;}
+  .ty-features{display:flex;flex-wrap:wrap;justify-content:center;row-gap:14px;padding:16px 8px 8px;}
+  .ty-feat{flex:0 0 33.33%;max-width:33.33%;text-align:center;padding:0 3px;}
   .ty-feat-ico{width:52px;height:52px;border-radius:50%;background:#0d2542;display:flex;align-items:center;justify-content:center;margin:0 auto 8px;}
   .ty-feat-ico svg{width:24px;height:24px;}
   .ty-feat-lbl{color:#0d2542;font-weight:800;font-size:12px;line-height:1.2;}
