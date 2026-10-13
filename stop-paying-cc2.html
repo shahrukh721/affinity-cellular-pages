@@ -857,8 +857,8 @@
   @media(max-width:760px){
     .mobile-v2{display:flex;flex-direction:column;background:#eef2f7;}
     .m-header,.urgent-bar,.site-header,.hero,.countdown-bar,.press,.steps,.testimonials,.features,.pricing,.call-band,.trust,.trust-bbb{display:none!important;}
-    .mv-header{order:0;} .mv-urgent{order:1;} .mv-hero{order:2;} .mv-alert{order:3;}
-    .mv-form-card{order:4;} .mv-features{order:5;} .mv-callbar{order:6;}
+    .mv-header{order:0;} .mv-urgent{order:1;} .mv-hero{order:2;} .mv-photo{order:3;} .mv-alert{order:4;}
+    .mv-form-card{order:5;} .mv-features{order:6;} .mv-callbar{order:7;}
   }
   .mv-header{background:#0d2542;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 16px;}
   .mv-logo{display:inline-block;text-decoration:none;border-bottom:2px solid rgba(255,255,255,.85);padding-bottom:3px;line-height:1;}
@@ -874,7 +874,15 @@
   .mv-urgent svg{width:18px;height:18px;flex:0 0 auto;}
   .mv-urgent span{font-size:12px;font-weight:800;letter-spacing:.4px;line-height:1.2;}
   .mv-hero{text-align:center;padding:14px 20px 2px;}
-  .mv-h-get{color:#0d2542;font-weight:800;font-size:13.5px;letter-spacing:1px;line-height:1.3;}
+  .mv-h1{color:#0d2542;font-weight:900;font-size:clamp(28px,8.4vw,34px);line-height:1.06;letter-spacing:-.4px;text-transform:uppercase;}
+  .mv-h1 span{color:#e01b22;}
+  .mv-try{color:#0d2542;font-weight:800;font-size:17px;letter-spacing:.8px;margin-top:9px;text-transform:uppercase;}
+  .mv-price{color:#e01b22;font-weight:900;font-size:clamp(34px,10.5vw,42px);line-height:1;letter-spacing:-.5px;margin:2px 0 8px;text-transform:uppercase;}
+  .mv-price small{font-size:.55em;font-weight:900;}
+  .mv-checks{list-style:none;margin:10px auto 2px;padding:0;max-width:330px;text-align:left;}
+  .mv-checks li{display:flex;align-items:flex-start;gap:8px;color:#1a2b4a;font-weight:700;font-size:14.5px;line-height:1.35;padding:4px 0;}
+  .mv-checks svg{width:18px;height:18px;flex:0 0 18px;margin-top:1px;}
+  .mv-photo{height:210px;background:url('images/lp/hero-couple-mobile.jpg') center 30%/cover no-repeat;margin-top:10px;}
   .mv-h-months{color:#e01b22;font-weight:900;font-size:clamp(28px,8.6vw,34px);letter-spacing:-.5px;line-height:1.08;margin:4px 0 2px;}
   .mv-h-divider{width:60px;height:4px;background:#0d2542;border-radius:2px;margin:8px auto;}
   .mv-h-unl{color:#0d2542;font-weight:800;font-size:18px;letter-spacing:.2px;}
@@ -1036,12 +1044,20 @@ src="https://www.facebook.com/tr?id=27557002777334969&ev=PageView&noscript=1"
   </div>
 
   <section class="mv-hero">
-    <div class="mv-h-get">CELL PHONE PLANS FOR ADULTS 55+</div>
-    <div class="mv-h-months">START AT JUST $15/MO.</div>
+    <div class="mv-h1">STOP PAYING <span>$100+</span><br>FOR CELL SERVICE!</div>
+    <div class="mv-try">Try Affinity Cellular</div>
+    <div class="mv-price">FROM $15<small>/mo.</small></div>
     <div class="cc-note">Valid US credit card required</div>
-    <div class="mv-h-divider"></div>
-        <div class="mv-h-sub">For qualifying new customers on select plans.</div>
+    <ul class="mv-checks">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="#12336e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" stroke-width="2"/><path d="M8 12.5l2.6 2.6L16 9.5"/></svg>Unlimited Talk + Text &mdash; From Just $15 a Month*</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="#12336e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" stroke-width="2"/><path d="M8 12.5l2.6 2.6L16 9.5"/></svg>Plans with Data Available</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="#12336e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" stroke-width="2"/><path d="M8 12.5l2.6 2.6L16 9.5"/></svg>No Contract &mdash; Order Easily by Phone</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="#12336e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" stroke-width="2"/><path d="M8 12.5l2.6 2.6L16 9.5"/></svg>Bring Your Current Phone &mdash; Keep Your Number</li>
+    </ul>
+    <div class="mv-h-sub">For qualifying new customers on select plans.</div>
   </section>
+
+  <div class="mv-photo" role="img" aria-label="Happy senior couple looking at a smartphone together"></div>
 
   <section class="mv-features">
     <div class="mv-feat">
@@ -1073,7 +1089,7 @@ src="https://www.facebook.com/tr?id=27557002777334969&ev=PageView&noscript=1"
     </div>
     <div class="mv-form-body" style="padding:14px;">
       <a class="btn-cta" href="#" data-qualify style="display:block;text-align:center;">
-        <span class="cta-main">See If You Qualify</span>
+        <span class="cta-main">Check My Options:</span>
         <span class="cta-sub">Takes About 60 Seconds &raquo;</span>
       </a>
     </div>
