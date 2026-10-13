@@ -893,7 +893,9 @@
   .mv-sticky-cta{position:fixed;left:12px;right:12px;bottom:12px;z-index:900;display:block;
     background:linear-gradient(180deg,#e4353d 0%,#c8151f 100%);color:#fff;text-align:center;
     font-weight:900;font-size:19px;letter-spacing:.5px;text-transform:uppercase;text-decoration:none;
-    padding:17px 10px;border-radius:12px;box-shadow:0 8px 24px rgba(200,21,31,.5);}
+    padding:17px 10px;border-radius:12px;box-shadow:0 8px 24px rgba(200,21,31,.5);
+    transform:translateY(96px);opacity:0;pointer-events:none;transition:transform .25s ease,opacity .25s ease;}
+  .mv-sticky-cta.show{transform:none;opacity:1;pointer-events:auto;}
   body.lead-modal-open .mv-sticky-cta{display:none;}
   .mv-h-months{color:#e01b22;font-weight:900;font-size:clamp(28px,8.6vw,34px);letter-spacing:-.5px;line-height:1.08;margin:4px 0 2px;}
   .mv-h-divider{width:60px;height:4px;background:#0d2542;border-radius:2px;margin:8px auto;}
@@ -1852,6 +1854,14 @@ src="https://www.facebook.com/tr?id=27557002777334969&ev=PageView&noscript=1"
     modal.querySelectorAll('[data-close-modal]').forEach(function(el){el.addEventListener('click',closeModal);});
     document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
     if(location.hash==='#qualify')openModal();
+    var heroCta=document.querySelector('.mv-cta'),stickyCta=document.querySelector('.mv-sticky-cta');
+    if(heroCta&&stickyCta){
+      if('IntersectionObserver' in window){
+        new IntersectionObserver(function(en){
+          stickyCta.classList.toggle('show',!en[0].isIntersecting&&en[0].boundingClientRect.top<0);
+        },{threshold:0}).observe(heroCta);
+      }else{stickyCta.classList.add('show');}
+    }
     setTimeout(function(){if(!qfDismissed&&!modal.classList.contains('open'))openModal();},6000);
   })();
 </script>
