@@ -474,7 +474,7 @@
   .ty-callnow svg{width:22px;height:22px;flex:0 0 auto;}
   .ty-cn{display:flex;flex-direction:column;line-height:1.1;text-align:right;}
   .ty-cn-label{font-size:12px;font-weight:700;letter-spacing:.5px;}
-  .ty-cn-num{font-size:20px;font-weight:800;letter-spacing:.3px;}
+  .ty-cn-num{font-size:clamp(15px,5.2vw,20px);font-weight:800;letter-spacing:.3px;white-space:nowrap;}
   .ty-urgent{background:#d7212c;color:#fff;display:flex;align-items:center;justify-content:center;gap:9px;padding:11px 14px;text-align:center;}
   .ty-urgent svg{width:17px;height:17px;flex:0 0 auto;}
   .ty-urgent span{font-size:13px;font-weight:800;letter-spacing:.3px;line-height:1.2;}
@@ -512,8 +512,8 @@
   .ty-red{color:#d7212c;font-weight:800;}
   .ty-callbtn{display:flex;align-items:center;justify-content:center;gap:clamp(10px,3vw,16px);background:#d7212c;border-radius:12px;margin:12px 16px;padding:16px clamp(10px,3.5vw,20px);text-decoration:none;box-shadow:0 5px 16px rgba(215,33,44,.32);}
   .ty-callbtn svg{width:clamp(26px,7vw,34px);height:auto;flex:0 0 auto;}
-  .ty-cb-num{display:block;color:#fff;font-weight:900;font-size:clamp(19px,6vw,27px);letter-spacing:.3px;line-height:1;white-space:nowrap;}
-  .ty-cb-sub{display:block;color:#fff;font-size:clamp(13px,4.2vw,16px);font-weight:600;margin-top:4px;}
+  .ty-cb-num{display:block;color:#fff;font-weight:900;font-size:clamp(15px,5.6vw,27px);letter-spacing:.3px;line-height:1;white-space:nowrap;}
+  .ty-cb-sub{display:block;color:#fff;font-size:clamp(11.5px,3.9vw,16px);font-weight:600;margin-top:4px;}
   .ty-features{display:flex;flex-wrap:wrap;justify-content:center;row-gap:14px;padding:16px 8px 8px;}
   .ty-feat{flex:0 0 33.33%;max-width:33.33%;text-align:center;padding:0 3px;}
   .ty-feat-ico{width:52px;height:52px;border-radius:50%;background:#0d2542;display:flex;align-items:center;justify-content:center;margin:0 auto 8px;}
@@ -565,6 +565,16 @@
   .rb-cta{display:inline-block;margin-top:3px;font-weight:800;}
   .rb-cta a{color:#f6b21b;text-decoration:none;}
   .rb-cta a:hover{text-decoration:underline;}
+
+/* Narrow phones: the call buttons give up their own chrome before the phone
+   number is allowed to shrink further or break. */
+@media (max-width:360px){
+  .ty-callnow{gap:6px}
+  .ty-callnow svg{width:18px;height:18px}
+  .ty-cn-label{font-size:10.5px;letter-spacing:.2px}
+  .ty-callbtn{gap:8px;padding:14px 10px;margin:12px 10px}
+  .ty-callbtn svg{width:22px}
+}
 </style>
 <!-- Meta Pixel Code -->
 <script>
@@ -578,6 +588,7 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '27557002777334969');
 fbq('track', 'PageView');
+fbq('trackCustom', 'QualifiedLead');
 </script>
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=27557002777334969&ev=PageView&noscript=1"
