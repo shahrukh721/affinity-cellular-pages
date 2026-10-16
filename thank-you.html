@@ -588,7 +588,7 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '27557002777334969');
 fbq('track', 'PageView');
-try{if(!sessionStorage.getItem('ql_fired')){fbq('trackCustom', 'QualifiedLead');sessionStorage.setItem('ql_fired','1');}}catch(e){fbq('trackCustom', 'QualifiedLead');}
+if(/[?&]q=1(&|$)/.test(location.search)){try{if(!sessionStorage.getItem('ql_fired')){fbq('trackCustom', 'QualifiedLead');sessionStorage.setItem('ql_fired','1');}}catch(e){fbq('trackCustom', 'QualifiedLead');}}
 </script>
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=27557002777334969&ev=PageView&noscript=1"
