@@ -34,6 +34,7 @@ src="https://www.facebook.com/tr?id=27557002777334969&ev=PageView&noscript=1"
     --bg:#f5f8fc; --border:#dfe6ef; --gold:#f5b50a;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
+  html{overflow-x:hidden;}
   body{font-family:'Archivo',Arial,Helvetica,sans-serif;background:#fff;color:var(--navy);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
   img{display:block;max-width:100%;}
   a{color:inherit;}
@@ -249,19 +250,20 @@ src="https://www.facebook.com/tr?id=27557002777334969&ev=PageView&noscript=1"
     .tsec .wrap{position:relative;}
     .tnav{display:flex;justify-content:center;align-items:center;gap:14px;margin-top:12px;}
     .tnav button{position:absolute;top:42%;z-index:2;}
-    #tprev{left:-6px;} #tnext{right:-6px;}
+    #tprev{left:2px;} #tnext{right:2px;}
     .tnav button{width:38px;height:38px;border-radius:50%;border:1.5px solid var(--border);background:#fff;font-size:17px;color:var(--navy);cursor:pointer;}
     .tdots{display:flex;gap:6px;}
     .tdots i{width:8px;height:8px;border-radius:50%;background:#c6d2e0;}
     .tdots i.on{background:var(--navy);}
     .wh-grid{grid-template-columns:1fr;gap:16px;}
     .wh h2{max-width:none;}
-    .sticky{display:block;position:fixed;left:0;right:0;bottom:0;z-index:600;}
+    .sticky{display:block;position:fixed;left:0;right:0;bottom:0;z-index:600;
+      transform:translateY(110%);opacity:0;pointer-events:none;transition:transform .25s ease,opacity .25s ease;}
+    .sticky.show{transform:none;opacity:1;pointer-events:auto;}
     .sticky a{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--navy);color:#fff;text-decoration:none;font-weight:900;font-size:19px;letter-spacing:.4px;margin:0 12px 8px;padding:15px 10px;border-radius:40px;box-shadow:0 8px 22px rgba(5,20,45,.45);}
     .sticky .st-timer{display:flex;align-items:center;justify-content:center;gap:9px;background:#fff;border-top:1px solid var(--border);padding:8px 10px;font-weight:800;font-size:13.5px;color:var(--navy);}
     .sticky .st-timer b{background:var(--red);color:#fff;border-radius:6px;padding:3px 9px;font-variant-numeric:tabular-nums;}
-    body{padding-bottom:118px;}
-    .ft{padding-bottom:36px;}
+    .ft{padding-bottom:118px;}
   }
 
 </style>
@@ -450,6 +452,16 @@ src="https://www.facebook.com/tr?id=27557002777334969&ev=PageView&noscript=1"
       if(st)st.textContent=mm+':'+ss;
     }
     tick();setInterval(tick,1000);
+  })();
+  // sticky call bar appears after the offer CTA scrolls out of view
+  (function(){
+    var cta=document.querySelector('.cta'),st=document.querySelector('.sticky');
+    if(!cta||!st)return;
+    if('IntersectionObserver' in window){
+      new IntersectionObserver(function(en){
+        st.classList.toggle('show',!en[0].isIntersecting&&en[0].boundingClientRect.top<0);
+      },{threshold:0}).observe(cta);
+    }else{st.classList.add('show');}
   })();
   // testimonial carousel (mobile)
   (function(){
