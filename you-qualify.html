@@ -34,13 +34,16 @@ src="https://www.facebook.com/tr?id=27557002777334969&ev=PageView&noscript=1"
     --bg:#f5f8fc; --border:#dfe6ef; --gold:#f5b50a;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
-  body{font-family:'Archivo',Arial,Helvetica,sans-serif;background:#fff;color:var(--navy);-webkit-font-smoothing:antialiased;}
+  body{font-family:'Archivo',Arial,Helvetica,sans-serif;background:#fff;color:var(--navy);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
   img{display:block;max-width:100%;}
   a{color:inherit;}
   .wrap{max-width:1280px;margin:0 auto;padding:0 22px;}
 
   /* ticker (mobile) */
-  .ticker{display:none;background:var(--red);color:#fff;text-align:center;font-weight:800;font-size:13px;letter-spacing:.3px;padding:9px 12px;}
+  .ticker{display:none;background:var(--red);color:#fff;font-weight:800;font-size:13px;letter-spacing:.3px;padding:8px 0;overflow:hidden;}
+  .tk{display:flex;width:max-content;animation:tkscroll 16s linear infinite;}
+  .tk-i{white-space:nowrap;padding:0 30px;}
+  @keyframes tkscroll{to{transform:translateX(-50%);}}
   .ticker b{color:#ffd100;}
 
   /* header */
@@ -132,7 +135,7 @@ src="https://www.facebook.com/tr?id=27557002777334969&ev=PageView&noscript=1"
   @media(min-width:1281px){.pcol{margin-right:calc((1280px - 100vw)/2 - 22px);}}
   @media(min-width:901px) and (max-width:1280px){.pcol{margin-right:-22px;}}
   .pcol img{width:100%;height:560px;object-fit:cover;object-position:72% 14%;border-radius:0;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 16%);mask-image:linear-gradient(90deg,transparent 0,#000 16%);}
-  .pquote{position:absolute;right:18px;bottom:20px;font-family:'Caveat',cursive;font-weight:700;font-size:22px;color:var(--navy);line-height:1.15;text-align:center;width:180px;
+  .pquote{position:absolute;right:40px;bottom:22px;font-family:'Caveat',cursive;font-weight:700;font-size:21px;color:var(--navy);line-height:1.2;text-align:center;width:190px;overflow-wrap:break-word;
     background:rgba(255,255,255,.72);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
     border-radius:12px;padding:10px 12px;box-shadow:0 4px 14px rgba(13,37,66,.12);}
 
@@ -185,6 +188,7 @@ src="https://www.facebook.com/tr?id=27557002777334969&ev=PageView&noscript=1"
     .vd{display:none;} .vm{display:inline;}
     .cta .tx b .vd{display:none;} .cta .tx b .vm{display:inline;}
     .hd{padding:7px 0;}
+    .hd-item.hd-phone-wrap{display:none;}
     .hd-in{flex-wrap:wrap;justify-content:center;align-items:center;gap:5px 14px;}
     .hd-item.hd-flag,.hd-item.hd-rev{display:none;}
     .logo b{font-size:17px;} .logo i{font-size:7.5px;letter-spacing:3px;}
@@ -200,17 +204,17 @@ src="https://www.facebook.com/tr?id=27557002777334969&ev=PageView&noscript=1"
     .m-pill .ic{width:26px;height:26px;flex:0 0 26px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:13px;}
     .m-pill b{color:var(--green);}
     .hero-grid{position:relative;}
-    .hcol{position:relative;z-index:1;padding-bottom:0;min-height:236px;}
+    .hcol{position:relative;z-index:1;padding-bottom:0;text-align:center;}
     .hcol .lead{max-width:none;}
-    .pcol{position:absolute;top:44px;right:-22px;width:44%;z-index:0;margin-right:0;}
+    .pcol{display:none;}
     .pcol img{height:175px;object-position:67% 10%;}
     .pquote{font-size:13.5px;width:116px;right:4px;top:auto;bottom:6px;padding:6px 8px;border-radius:10px;}
-    .hcol .h1,.hcol .h2,.hcol .lead{max-width:56%;}
+    .hcol .h1,.hcol .h2,.hcol .lead{max-width:none;}
     .bens{display:none;}
     .hero{padding:8px 0 14px;}
-    .m-pill{margin-bottom:8px;padding:6px 12px;font-size:12px;}
+    .m-pill{display:flex;width:max-content;max-width:100%;margin:0 auto 10px;padding:6px 12px;font-size:12px;justify-content:center;}
     .m-pill .ic{width:21px;height:21px;flex-basis:21px;font-size:11px;}
-    .h1{font-size:30px;}
+    .h1{font-size:clamp(23px,7vw,30px);white-space:nowrap;}
     .h2{font-size:17px;margin:6px 0 4px;}
     .lead{font-size:13px;line-height:1.45;}
     .ox{padding:10px 12px 6px;}
@@ -232,7 +236,7 @@ src="https://www.facebook.com/tr?id=27557002777334969&ev=PageView&noscript=1"
     .trust{padding:11px 0;}
     .tr .ic{width:34px;height:34px;flex-basis:34px;} .tr .ic svg{width:17px;height:17px;}
     .tr b{font-size:9.5px;}
-    .offer{margin-top:10px;}
+    .offer{margin-top:8px;}
     .tr-in{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;}
     .tr{flex-direction:column;text-align:center;gap:7px;flex:initial;}
     .tr:first-child{display:none;}
@@ -264,7 +268,12 @@ src="https://www.facebook.com/tr?id=27557002777334969&ev=PageView&noscript=1"
 </head>
 <body>
 
-<div class="ticker"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" style="vertical-align:-2px"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 3h6"/></svg> LIMITED-TIME PROMOTION &nbsp;|&nbsp; Sign up today and get <b>3 MONTHS FREE!</b></div>
+<div class="ticker"><div class="tk">
+  <span class="tk-i">&#9201; LIMITED-TIME PROMOTION &nbsp;|&nbsp; Sign up today and get <b>3 MONTHS FREE!</b></span>
+  <span class="tk-i" aria-hidden="true">&#9201; LIMITED-TIME PROMOTION &nbsp;|&nbsp; Sign up today and get <b>3 MONTHS FREE!</b></span>
+  <span class="tk-i" aria-hidden="true">&#9201; LIMITED-TIME PROMOTION &nbsp;|&nbsp; Sign up today and get <b>3 MONTHS FREE!</b></span>
+  <span class="tk-i" aria-hidden="true">&#9201; LIMITED-TIME PROMOTION &nbsp;|&nbsp; Sign up today and get <b>3 MONTHS FREE!</b></span>
+</div></div>
 
 <header class="hd">
   <div class="wrap hd-in">
@@ -292,7 +301,7 @@ src="https://www.facebook.com/tr?id=27557002777334969&ev=PageView&noscript=1"
         <div class="step todo"><span class="ic">2</span><span class="tx"><b>Step 2: Call to Activate</b><span>ACTION REQUIRED</span></span></div>
       </div>
       <div class="m-pill"><span class="ic">&#10003;</span><span>Your Eligibility Check is <b>COMPLETE!</b></span></div>
-      <h1 class="h1"><span class="hl">You Qualify!</span></h1>
+      <h1 class="h1"><span class="hl">You Qualify<span id="yq-name"></span>!</span></h1>
       <div class="h2">One final step to claim your <span class="vm">special </span>offer.</div>
       <p class="lead"><span class="vd">Your special Affinity Cellular promotion is ready. Speak with a U.S.-based specialist to complete your activation and get your 3 months FREE.*</span><span class="vm">Your 3 months FREE promotion is ready. Call now to complete your activation with a U.S.-based specialist.*</span></p>
       <div class="bens">
@@ -412,6 +421,18 @@ src="https://www.facebook.com/tr?id=27557002777334969&ev=PageView&noscript=1"
   <div class="st-timer"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0d2542" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 3h6"/></svg> Offer available today only! <b id="st-cd">15:00</b></div>
 </div>
 
+<script>
+  // Personalize headline from redirect params (?fname= / &first_name= / &name=)
+  (function(){
+    try{
+      var p=new URLSearchParams(location.search);
+      var n=p.get('fname')||p.get('first_name')||p.get('name')||'';
+      n=n.trim().split(/\s+/)[0].replace(/[^A-Za-z'-]/g,'').slice(0,14);
+      if(n){n=n.charAt(0).toUpperCase()+n.slice(1).toLowerCase();
+        document.getElementById('yq-name').textContent=', '+n;}
+    }catch(e){}
+  })();
+</script>
 <script>
   // 15-minute countdown, persists per browser session
   (function(){
