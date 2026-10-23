@@ -447,6 +447,7 @@ src="https://www.facebook.com/tr?id=27557002777334969&ev=PageView&noscript=1"
         st=document.getElementById('st-cd');
     function tick(){
       var left=Math.max(0,Math.floor((dl-Date.now())/1000));
+      if(left<=0){dl=Date.now()+15*60*1000;try{sessionStorage.setItem(KEY,String(dl));}catch(e){}left=15*60;}
       var m=Math.floor(left/60),s=left%60;
       var mm=('0'+m).slice(-2),ss=('0'+s).slice(-2);
       m1.textContent=mm[0];m2.textContent=mm[1];s1.textContent=ss[0];s2.textContent=ss[1];
