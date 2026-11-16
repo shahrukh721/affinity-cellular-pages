@@ -34,6 +34,9 @@
   .badge{position:absolute;top:14px;right:14px;font-size:10px;font-weight:800;letter-spacing:.6px;border-radius:4px;padding:3px 7px;text-transform:uppercase;}
   .badge.active{background:#e4f5e8;color:var(--green);border:1px solid #bfe5c9;}
   .badge.parked{background:#f1f3f6;color:#7a8698;border:1px solid #dde3ea;}
+  .tags{margin-top:10px;display:flex;gap:6px;flex-wrap:wrap;}
+  .tag{font-size:11px;font-weight:800;letter-spacing:.4px;border-radius:4px;padding:3px 8px;background:#eef2f7;color:#3d4c61;border:1px solid #dde3ea;}
+  .tag.code{background:#fdf0d7;color:#8a6410;border-color:#f0dfae;}
   @media (max-width:640px){.cards{grid-template-columns:1fr;}.card .name{padding-right:58px;}}
 </style>
 </head>
@@ -54,36 +57,43 @@
       <div class="name">Stop Paying $100+</div>
       <div class="desc">Direct-response offer page &mdash; price-first hero, plan cards, call band. Qualify form opens in a popup.</div>
       <span class="file">stop-paying.html</span>
+      <div class="tags"><span class="tag code">AF01</span><span class="tag">877-810-7461</span></div>
     </a>
     <a class="card" href="stop-paying-form.html"><span class="badge active">Active</span>
       <div class="name">Stop Paying $100+ (Form-First)</div>
       <div class="desc">Split test &mdash; qualify form embedded at the top of the page instead of a popup.</div>
       <span class="file">stop-paying-form.html</span>
+      <div class="tags"><span class="tag code">AF01</span><span class="tag">877-810-7461</span></div>
     </a>
     <a class="card" href="stop-paying-cc.html"><span class="badge active">Active</span>
       <div class="name">Stop Paying $100+ (CC)</div>
       <div class="desc">Credit-card-qualifier variant with its own dedicated popup form.</div>
       <span class="file">stop-paying-cc.html</span>
+      <div class="tags"><span class="tag code">AF01</span><span class="tag">877-810-7461</span></div>
     </a>
     <a class="card" href="stop-paying-cc2.html"><span class="badge active">Active</span>
       <div class="name">Stop Paying $100+ (CC2)</div>
       <div class="desc">CC variant with the designed two-step eligibility modal (AF02 form), 6-second auto-popup, sticky mobile CTA, and FAQ section.</div>
       <span class="file">stop-paying-cc2.html</span>
+      <div class="tags"><span class="tag code">AF02</span><span class="tag">877-810-7461</span></div>
     </a>
     <a class="card" href="why-seniors-switching.html"><span class="badge active">Active</span>
       <div class="name">Why Seniors Are Switching</div>
       <div class="desc">Advertorial article with comparison table, testimonials, and offer sidebar.</div>
       <span class="file">why-seniors-switching.html</span>
+      <div class="tags"><span class="tag code">AF01</span><span class="tag">877-810-7461</span></div>
     </a>
     <a class="card" href="why-seniors-cc.html"><span class="badge active">Active</span>
       <div class="name">Why Seniors (CC)</div>
       <div class="desc">Advertorial split test with the credit-card qualifier and dedicated form.</div>
       <span class="file">why-seniors-cc.html</span>
+      <div class="tags"><span class="tag code">AF01</span><span class="tag">877-810-7461</span></div>
     </a>
     <a class="card" href="savings-calculator.html"><span class="badge active">Active</span>
       <div class="name">Savings Calculator</div>
       <div class="desc">Interactive bill-savings estimator with personalized results panel.</div>
       <span class="file">savings-calculator.html</span>
+      <div class="tags"><span class="tag code">AF01</span><span class="tag">877-810-7461</span></div>
     </a>
   </div>
 
@@ -93,11 +103,13 @@
       <div class="name">AT01 Lander</div>
       <div class="desc">Mobile-first, form-first variant &mdash; photo hero, inline qualify flow, hero call line and tap-to-call bar.</div>
       <span class="file">at01.html</span>
+      <div class="tags"><span class="tag">800-397-0559</span></div>
     </a>
     <a class="card" href="thank-you-at01.html"><span class="badge active">Active</span>
       <div class="name">Thank You (AT01)</div>
       <div class="desc">AT01 confirmation page &mdash; call push with the AT01 funnel number.</div>
       <span class="file">thank-you-at01.html</span>
+      <div class="tags"><span class="tag">800-397-0559</span></div>
     </a>
   </div>
 
@@ -107,11 +119,13 @@
       <div class="name">Thank You &mdash; "You Qualify"</div>
       <div class="desc">Qualified-lead destination: countdown offer card, call CTAs, optional first-name greeting. Main funnel forms redirect here.</div>
       <span class="file">thank-you.html</span>
+      <div class="tags"><span class="tag code">AF01</span><span class="tag code">AF02</span><span class="tag">877-810-7461</span></div>
     </a>
     <a class="card" href="not-eligible.html"><span class="badge active">Active</span>
       <div class="name">Not Eligible</div>
       <div class="desc">Destination for visitors who don&rsquo;t meet the offer requirements. Minimal page, no phone number.</div>
       <span class="file">not-eligible.html</span>
+      <div class="tags"><span class="tag code">AF02</span><span class="tag">no phone on page</span></div>
     </a>
     <a class="card" href="you-qualify.html"><span class="badge parked">Parked</span>
       <div class="name">Previous Thank-You Design</div>
